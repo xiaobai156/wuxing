@@ -1,0 +1,42 @@
+﻿[
+  {
+    "name": "信封论坛",
+    "url": "https://zqliou.kify1-fbyi6-lmeykn.xyz:16677/",
+    "region": "top",
+    "period": 201,
+    "expected_wuxing": "土行",
+    "enabled": true
+  },
+  {
+    "name": "八级心动",
+    "url": "https://cwdcaqzn.7mj0h-75k3q-cbuvqb.work:16677/#am",
+    "region": "top",
+    "period": 201,
+    "expected_wuxing": "水行",
+    "enabled": true
+  },
+  {
+    "name": "一如既往",
+    "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626030.html",
+    "region": "top",
+    "period": 209,
+    "expected_wuxing": "木行",
+    "enabled": true
+  },
+  {
+    "name": "一本万利",
+    "url": "https://mflmcobome.26222hi.app:2569/htm/bbs/top040.html",
+    "region": "bottom",
+    "period": 201,
+    "expected_wuxing": "木行",
+    "enabled": true
+  },
+  {
+    "name": "男儿本色",
+    "url": "https://mxiscni.nkh6s-vfni4-lwgfvw.xyz:16677/topic/257907.html",
+    "region": "top",
+    "period": 201,
+    "expected_wuxing": "木行",
+    "enabled": true
+  }
+]

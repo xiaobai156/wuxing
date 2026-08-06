@@ -1,0 +1,119 @@
+﻿{
+  "generated_at": "2026-08-01T07:20:14.159555+00:00",
+  "period": 211,
+  "bat_command": "杀五行_修复版2-单期.bat 211 --timeout 8 --workers 8 --config migration\\sites.v2.preview.json --cache migration\\formal-final-cache.json",
+  "bat_exit_code": 0,
+  "output_files": {
+    "success": "C:\\Users\\Administrator\\Desktop\\每天工具\\数据系列\\杀五行_修复版2\\outputs\\success\\211期-五行.txt",
+    "failure": "C:\\Users\\Administrator\\Desktop\\每天工具\\数据系列\\杀五行_修复版2\\outputs\\failure\\211期-五行-失败.txt",
+    "cache": "C:\\Users\\Administrator\\Desktop\\每天工具\\数据系列\\杀五行_修复版2\\migration\\formal-final-cache.json"
+  },
+  "site_count": 153,
+  "success_count": 104,
+  "failure_count": 49,
+  "failure_codes": {
+    "TARGET_NOT_FOUND": 42,
+    "POSITION_WINDOW": 3,
+    "ENTRY_NOT_FOUND": 2,
+    "KEYWORD_MISMATCH": 1,
+    "FETCH_TIMEOUT": 1
+  },
+  "baseline_compare": {
+    "baseline_count": 153,
+    "current_success_count": 104,
+    "missing_from_current": [
+      "一呼百应",
+      "一身仙气",
+      "世界美好",
+      "产生共鸣",
+      "今非昔比",
+      "信封论坛",
+      "光阴似箭",
+      "八步毛哥",
+      "八级心动",
+      "北悸安涼",
+      "千言万语",
+      "可爱孤儿",
+      "同心叶力",
+      "夜泊秦淮",
+      "大地主",
+      "天青润薮",
+      "小筑望星",
+      "山水诗意",
+      "平特网心",
+      "心如刀割",
+      "提心吊胆",
+      "春满乡村",
+      "暴风骤雨",
+      "桃李不言",
+      "歧路亡羊",
+      "满汉全席",
+      "满面春风",
+      "澳门创富网",
+      "澳门第二四不像",
+      "澳门精吊桶",
+      "狀元紅",
+      "猪狗不如",
+      "男儿本色",
+      "百万资料",
+      "神机",
+      "笨鸟先飞",
+      "算法文心",
+      "精枝玉叶",
+      "置身事外",
+      "而立之年",
+      "花容月貌",
+      "藏宝阁",
+      "诸葛神通",
+      "豪放不羁",
+      "迷迷糊糊",
+      "锦上添花",
+      "随便项链",
+      "零零散散",
+      "风雨无阻"
+    ],
+    "unexpected_current": [],
+    "changed_wuxing": [],
+    "interpretation": "仅记录差异，不把实时源站缺期或内容变化自动归因于代码错误。"
+  },
+  "special_validation": {
+    "八级心动": {
+      "result": "ENTRY_NOT_FOUND",
+      "detail": "精确点击后页面缺少八级心动专属锚点，拒绝把来者不笑正文当作目标记录。",
+      "cache_211": null
+    },
+    "男儿本色": {
+      "result": "ENTRY_NOT_FOUND",
+      "detail": "指定期数的专属入口未找到唯一匹配，未写缓存。"
+    }
+  },
+  "cache_guard": {
+    "history_schema_validated": true,
+    "baji_211_not_overwritten": true,
+    "conflicting_cache_write_rejected_by_test": true,
+    "written_211_count": 104,
+    "historical_cache_repair": "未执行，需用户单独确认。"
+  },
+  "dual_run": {
+    "sample_report": "C:\\Users\\Administrator\\Desktop\\每天工具\\数据系列\\杀五行_修复版2\\migration\\dual-run-report.json",
+    "sample_count": 5,
+    "sample_same_count": 5,
+    "full_run_status": "completed_in_batches",
+    "full_run_report": "C:\\Users\\Administrator\\Desktop\\每天工具\\数据系列\\杀五行_修复版2\\migration\\dual-run-full-report.json",
+    "full_run_batch_dir": "C:\\Users\\Administrator\\Desktop\\每天工具\\数据系列\\杀五行_修复版2\\migration\\dual-run-batches",
+    "full_run_site_count": 153,
+    "full_run_same_count": 113,
+    "full_run_difference_count": 40,
+    "full_run_report_not_promoted": true
+  },
+  "verification": {
+    "unittest_count": 283,
+    "unittest_status": "passed",
+    "ruff_status": "passed",
+    "compileall_status": "passed",
+    "ocr_js_compile": "passed",
+    "cross_document_join_guard": "passed",
+    "cache_write_acceptance": "passed",
+    "core_coverage_excluding_transitional_legacy": "79%"
+  }
+}

@@ -1,0 +1,31 @@
+# M1 旧版行为基线
+
+- 基线来源：`C:\Users\Administrator\Desktop\每天工具\数据系列\杀五行-修复版`
+- 冻结日期：2026-07-31
+- Python 验收环境：`py -3`
+- 正式站点数量：153
+- 缓存站点条目：168
+- 缓存 `updated_period`：211
+- 自动测试：209 项全部通过
+- 真实正式输出：`legacy-211期-五行.txt`
+- 211期正式失败文件：不存在（旧版该次运行为 0 失败）
+
+## 关键文件 SHA256
+
+```text
+wuxing_crawler.py                 A5BC855DEC7CA48C0CFEAAA2A37BF974982ED3823865E5643EFD9F3A9850BD40
+wuxing_multi_period.py            C35669A789EDF1C0F87D4F953579C27819991AED19399EF6BDBE1DAB45D6B02F
+wuxing_duplicate_flexible.py      6C0CD4874E536996D0F7A2BF2C7513E3AEBE99DC44C88E2415A883C35E0A26EB
+failed_site_validator.py          833A79BA649D6A8D9C7E67F43141FC9A7C12D46DC2755F98ACB56F567922B9E5
+sites.json                        63EB4F82C3938C271A175E2DF48E844F4BBE5EFABFB77F991D0A4480316F0A06
+recent_10_cache.json              A4CC508775E6F98D9952F750E6D88F9D893BA7C96A9AA57C507D76158A911A5B
+test_wuxing_parser.py             597182C297E8F47CEB2D691F13968910B4A549B1EF4D458217ABA98BD09E8ACD
+```
+
+`legacy-211期-五行.txt` 的 SHA256：
+
+```text
+92BD9186E3FF76C0DA5C37DCE4CAB109259DABB5DF57B1364FE8D8B8515C07B4
+```
+
+本目录只用于迁移对照，测试和双跑不能反向写入旧版代码、正式缓存或正式输出。

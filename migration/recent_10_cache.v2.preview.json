@@ -1,0 +1,2121 @@
+﻿{
+  "schema_version": 2,
+  "updated_period": 216,
+  "sites": [
+    {
+      "site_id": "site-0009-4e1ee9b749",
+      "name": "随便项链",
+      "url": "https://zcphjs.ce83x-ms2rz-orwude.work:12277/#/users/3475",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:45:52.652215+00:00",
+          "source_digest": "9209efc9a21857236d30aa97c70ba288c995c70e081604a19747e22a031f219e",
+          "rule_version": "site.site-0009-4e1ee9b749.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0008-f8201fdf92",
+      "name": "溥天同庆",
+      "url": "https://vbxl5.wp5pl-3ztz5-cwgbti.xyz/topic/222779.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:45:53.929619+00:00",
+          "source_digest": "0f3790aa7c9a7f2c156dff7eff2965ff566064576cfbab9e72bc5ce0c5575885",
+          "rule_version": "site.site-0008-f8201fdf92.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0010-b1775c18ee",
+      "name": "可爱孤儿",
+      "url": "https://zcphjs.ce83x-ms2rz-orwude.work:12277/#/users/3031",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:45:55.609259+00:00",
+          "source_digest": "0f93d4793cc67c41d143e080536831d99fb8ccaa64deb6f1734923666e07c014",
+          "rule_version": "site.site-0010-b1775c18ee.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0011-f0b4fc6477",
+      "name": "笨鸟先飞",
+      "url": "https://zcphjs.ce83x-ms2rz-orwude.work:12277/#/users/116157",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:45:57.935545+00:00",
+          "source_digest": "05f469fc521d9c9e35ccc16113210be0d28698f688cffdf578176f0c14cfab6c",
+          "rule_version": "site.site-0011-f0b4fc6477.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0003-77f46aa16b",
+      "name": "平特网心",
+      "url": "https://tulprhfc.wghcb-bnmgm-hyymaz.work:16655/topic/453352.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:45:59.639834+00:00",
+          "source_digest": "488ecaa6ff8a1617fada69b38a2f1a6928a08667168f1e1a8972194a4b484e46",
+          "rule_version": "site.site-0003-77f46aa16b.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0015-a182d0ce19",
+      "name": "眉飞色舞",
+      "url": "https://flirclg.d9n5a-2i9au-ezvqgb.xyz:16677/topic/479159.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:46:02.572844+00:00",
+          "source_digest": "486cb8331e62828cc2a602ca2a14d4c09e0d2ae09ac5e007e461a7d13568595b",
+          "rule_version": "site.site-0015-a182d0ce19.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0016-8547420dfc",
+      "name": "雷锋",
+      "url": "https://dvglkfp.mueyy-uiuci-vtqiod.work:16677/topic/205677.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:46:07.312484+00:00",
+          "source_digest": "183aaffb12687b7e8f18176fd4b7949bd4fe0345b443b9840aa165fcd9041202",
+          "rule_version": "site.site-0016-8547420dfc.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0002-f4c70b14ee",
+      "name": "澳门第二四不像",
+      "url": "https://hsnvkhhc.edqtp-en8ri-yiczbn.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:46:14.857425+00:00",
+          "source_digest": "4ea7d06e4f8605649b360eefb5796302ec5929ed7f4758026b8f3d17697f2e45",
+          "rule_version": "site.site-0002-f4c70b14ee.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0001-8e5b933fa1",
+      "name": "澳门创富网",
+      "url": "https://nyekjhvz.kr4ar-cgeaj-aekfox.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:46:15.598091+00:00",
+          "source_digest": "e238d4d0021d499b5e467baa3f62b044f5dade503ee08a19d761d4a261493a10",
+          "rule_version": "site.site-0001-8e5b933fa1.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0006-fe65c32d71",
+      "name": "桃李不言",
+      "url": "https://e7rzi6.t5ti5-at6k5-fugxpa.work/topic/469841.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:46:17.310399+00:00",
+          "source_digest": "f6e2b39862f4086a9df6d3ff7a096d50f0253ef405c7ef386b664f262a0b3bfb",
+          "rule_version": "site.site-0006-fe65c32d71.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0018-4f39690954",
+      "name": "精牌谜语",
+      "url": "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273111.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:46:18.223830+00:00",
+          "source_digest": "85324009281077f49984a15ca246cffa798231139e67ac7bc8d495e059982d9a",
+          "rule_version": "site.site-0018-4f39690954.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0019-f39f04f2d7",
+      "name": "精牌谜语第二版",
+      "url": "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273106.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:46:18.419174+00:00",
+          "source_digest": "76b44fab10592a95a46da5a3bcef273743fdeb8bc3a1759c94cf3ca81252b60e",
+          "rule_version": "site.site-0019-f39f04f2d7.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0022-7ad98ae3d2",
+      "name": "广西仔第二版",
+      "url": "https://jldzuea.0xkqd-q7ng5-boerfb.xyz:16677/topic/677573.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:46:22.287996+00:00",
+          "source_digest": "6956f07ae2b5f65e26ab68a9734bce34d1ebcb9b969e581af086373bea5cda8e",
+          "rule_version": "site.site-0022-7ad98ae3d2.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0007-27df04be2c",
+      "name": "同心叶力",
+      "url": "https://e7rzi6.t5ti5-at6k5-fugxpa.work/topic/227015.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:46:30.270648+00:00",
+          "source_digest": "5391baba171873f24e618773b016acac8f7f5ebca07075461bf666da63c69881",
+          "rule_version": "site.site-0007-27df04be2c.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0012-63393f8c3a",
+      "name": "无懈可击",
+      "url": "https://jogavu.6bl6s-ilo1w-yfnvvl.work:16677/topic/678127.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:46:35.881441+00:00",
+          "source_digest": "281a98b310d07d0612553d30af0cfc10081d6cf25d31d7eb6bae22bfefd66cd8",
+          "rule_version": "site.site-0012-63393f8c3a.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0024-41c8d0efe2",
+      "name": "精彩预言",
+      "url": "https://www28651a.com/read.php?tid=470",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:46:37.121651+00:00",
+          "source_digest": "2f501fb00d69a42e72e42060a117482670e76703fe56f0d60584718096cb69a5",
+          "rule_version": "site.site-0024-41c8d0efe2.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0025-832954da93",
+      "name": "人才资料",
+      "url": "https://www28651a.com/read.php?tid=369",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:46:37.273772+00:00",
+          "source_digest": "1489fe508f9e86a2d4f184ded0123a801989865156babc8bd8db48e018226a1f",
+          "rule_version": "site.site-0025-832954da93.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0027-8353c3f1dd",
+      "name": "慈善网",
+      "url": "https://4.www337731a.com:2053/gsb/28.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:46:50.791027+00:00",
+          "source_digest": "17223f74f03c541afdebc051f14106e7200f8cc508d9c8739cbac2d7993b8159",
+          "rule_version": "site.site-0027-8353c3f1dd.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0013-879766e68a",
+      "name": "澳门精吊桶",
+      "url": "https://yylxuru.en4hs-c1zt6-qzcdin.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:46:51.872457+00:00",
+          "source_digest": "c1243e649b396da8578ef246f4dc39e1ad14024df72cbbe81e1ae628474cdc16",
+          "rule_version": "site.site-0013-879766e68a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0014-f3ac719532",
+      "name": "置身事外",
+      "url": "https://cxmdjok.8wtwc-boven-glylvt.xyz:16677/topic/437741.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:46:53.287040+00:00",
+          "source_digest": "c129a84620601b0b04059311fdd34466b98b9e26d24890debeb0980843bd3d81",
+          "rule_version": "site.site-0014-f3ac719532.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0028-ee325dc515",
+      "name": "财神驾到",
+      "url": "https://666.97561.com/read.php?tid=650",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:46:58.318449+00:00",
+          "source_digest": "64c11babeaedfedab6a47ac0c5c80c51361fe6bb1e85afee8174c885ce2b5b1a",
+          "rule_version": "site.site-0028-ee325dc515.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0017-c256422e3a",
+      "name": "低眉折腰",
+      "url": "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/678240.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:47:07.065945+00:00",
+          "source_digest": "84985234c7de524afb8e5b7f60a63d12a0d8bc29fc476bdd107eae425732476f",
+          "rule_version": "site.site-0017-c256422e3a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0020-33d6b97858",
+      "name": "广西仔",
+      "url": "https://jldzuea.0xkqd-q7ng5-boerfb.xyz:16677/topic/677608.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:47:07.802151+00:00",
+          "source_digest": "88f675cad4357a9d85731fcf6965d4514710dcdc0a0d1c0c6db78dd152b6a9a5",
+          "rule_version": "site.site-0020-33d6b97858.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0023-fd27f5d341",
+      "name": "产生共鸣",
+      "url": "https://g63.52619c.com:8443/tie1/1614.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:47:28.338066+00:00",
+          "source_digest": "3f23b1ee3968e5a13d2dccb21413e4b692a69d7fee20fb7d988315c54bd9f271",
+          "rule_version": "site.site-0023-fd27f5d341.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0021-6a8d69d055",
+      "name": "零零散散",
+      "url": "https://jldzuea.0xkqd-q7ng5-boerfb.xyz:16677/topic/455533.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:47:37.824463+00:00",
+          "source_digest": "8cad7bd1ba98c56b4b68a7891c2164e9b3519eb7516619716e537a3bbc25087d",
+          "rule_version": "site.site-0021-6a8d69d055.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0026-f9fc8f41aa",
+      "name": "狀元紅",
+      "url": "https://3.www112291a.com:2053/gengxin/16.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:47:47.273612+00:00",
+          "source_digest": "3c8c04e405c932010ca85e93b62aeab8647ae32ab92d3b2972c99fed1a4b6f21",
+          "rule_version": "site.site-0026-f9fc8f41aa.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0029-5d916fd0bc",
+      "name": "心如刀割",
+      "url": "https://6f4poq.7uyqo-2dy2h-jiepqa.work/topic/485549.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:47:58.169620+00:00",
+          "source_digest": "a5f623435a14debb18ed5de36ea94f716b1655b286ca2feebf45499d9f295001",
+          "rule_version": "site.site-0029-5d916fd0bc.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0039-0fec320499",
+      "name": "澳门第三四不像",
+      "url": "https://hsnvkhhc.edqtp-en8ri-yiczbn.xyz:16677/topic/572238.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:48:00.105026+00:00",
+          "source_digest": "82e3d2b7dc37043fec1af923e145bdb45103b2eb20d4bedf684e6a6d6355d1c9",
+          "rule_version": "site.site-0039-0fec320499.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0030-a426726369",
+      "name": "豪放不羁",
+      "url": "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/467884.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:48:10.051324+00:00",
+          "source_digest": "6857d0a68a04c16807555df78dde1c98dda6c898a3415e91b9be5e20a4d623ea",
+          "rule_version": "site.site-0030-a426726369.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0031-d205e71e4d",
+      "name": "信口雌黄",
+      "url": "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/439186.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:48:21.075656+00:00",
+          "source_digest": "1ed47222ce3c64399591d46477b45d7f6f172d2ee3cada2f8d760dc1da53b678",
+          "rule_version": "site.site-0031-d205e71e4d.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0032-202743b81d",
+      "name": "今非昔比",
+      "url": "https://uqhuqalo.vbcyr-idr4l-jouqgu.xyz:16633/topic/417591.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:48:33.482192+00:00",
+          "source_digest": "1108294f81a35dcc2f43e9872b1e392bdded04d8004c7f298795ac0c0ecc11ca",
+          "rule_version": "site.site-0032-202743b81d.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0043-cd1526a2d3",
+      "name": "稳稳稳",
+      "url": "https://sepfsazm.th2pfx-4s7mu-aafjnm.xyz:16677/topic/680722.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:48:38.471181+00:00",
+          "source_digest": "b6c3268c7650248ef03f19246640cde52fe0b0718fdf8634b8704be60b2bf624",
+          "rule_version": "site.site-0043-cd1526a2d3.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0033-5114947fc8",
+      "name": "雕虫小事",
+      "url": "https://sqddimfu.evs71-kia2b-gshsdc.xyz:16677/topic/226258.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:48:45.613130+00:00",
+          "source_digest": "4cbd97ee45171129fd6ffb33cd2d66e6f7c8e56ba955e4bb99a59fd27165db71",
+          "rule_version": "site.site-0033-5114947fc8.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0035-75b85fbe13",
+      "name": "千言万语",
+      "url": "https://gboqrz.d2cda-p5u2y-gwxmnf.work/topic/465446.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:48:57.992774+00:00",
+          "source_digest": "8899b614d18ffcf1cb6144a3a1a9478928f74044b881d0911ff2bd534ee81bc5",
+          "rule_version": "site.site-0035-75b85fbe13.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0036-de6934f015",
+      "name": "损人利己",
+      "url": "https://ekhivjcg.llnnt-l11x5-bywtoe.xyz:16677/topic/469882.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:49:08.340142+00:00",
+          "source_digest": "ffe409404deb18a46a1bef9fac7b731b94a4613c315974075f0bb278dd9a13d7",
+          "rule_version": "site.site-0036-de6934f015.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0047-6206b22c7c",
+      "name": "骂骂咧咧",
+      "url": "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/558018.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:49:11.602302+00:00",
+          "source_digest": "a7c46955f1da639a86da416ad383515cb2775556f35f88b4153f85181737308b",
+          "rule_version": "site.site-0047-6206b22c7c.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0038-e4a4163cb6",
+      "name": "一呼百应",
+      "url": "https://kfsujebc.djiz8-4tqt6-hubani.xyz:16677/topic/280932.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:49:20.594222+00:00",
+          "source_digest": "803d19cb746912fb18e2518ea4c639896238aa41bab9573eca1230d909117687",
+          "rule_version": "site.site-0038-e4a4163cb6.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0040-bb479ace8b",
+      "name": "王六杀一行",
+      "url": "https://qzpwvvvb.a3qgk-l2h5k-opahdg.xyz:16677/topic/254842.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:49:25.020944+00:00",
+          "source_digest": "9cfe3928689a80a59b7853ae30d0c972baa97902b6dd30f23e8671c86e438cc1",
+          "rule_version": "site.site-0040-bb479ace8b.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0042-500a22d559",
+      "name": "猪狗不如",
+      "url": "https://cwaskgxv.hzpd5-2r09a-wieopn.xyz:16677/topic/282016.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:49:45.709314+00:00",
+          "source_digest": "16153a3cee9f93b9f28f2dc7312d9fe8aca8981efc4e584562100f39730220e8",
+          "rule_version": "site.site-0042-500a22d559.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0041-124373f0f9",
+      "name": "百万资料",
+      "url": "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:49:58.091778+00:00",
+          "source_digest": "3743a02b3b2f38237c78b394fbed3082e17fc2c0ec96e9a34058445d8ae8ea24",
+          "rule_version": "site.site-0041-124373f0f9.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0045-a1adbe05c3",
+      "name": "精枝玉叶",
+      "url": "https://gboqrz.sm0a0-x9x2c-xyvjdr.work/topic/205464.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:50:09.334562+00:00",
+          "source_digest": "7f03b5f4c0421f7767fabc90064985cb014e2d31fce69d05dedf9f3bd64433d0",
+          "rule_version": "site.site-0045-a1adbe05c3.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0046-79987777df",
+      "name": "头昏眼花",
+      "url": "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/206556.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:50:22.833547+00:00",
+          "source_digest": "fa4d2d63a087939c2a71b0114b14996c0f424fb90211e849f4e47ec720cd1369",
+          "rule_version": "site.site-0046-79987777df.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0048-fe7b446e26",
+      "name": "降龙有悔",
+      "url": "https://useaul.z3rj5-9jlwg-dynocd.xyz:16677/topic/461374.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:50:28.146254+00:00",
+          "source_digest": "eee3e09e65f7e05c01e11b55dd76800589c619a475c191071d37e2fe81ff4984",
+          "rule_version": "site.site-0048-fe7b446e26.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0057-273e404575",
+      "name": "后继有人",
+      "url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/article/admin/6a143f7ebf0a6cb1dd38fb8f?url=lqz",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:50:29.013980+00:00",
+          "source_digest": "036efc9f5c31bc6a3573263ca1b7b55d9c68e7d426e7a56074386b6ecb7599d5",
+          "rule_version": "site.site-0057-273e404575.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0058-965f8fb460",
+      "name": "轰动大陆",
+      "url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/article/admin/6a144657597e16d57eacb65e?url=lqz",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:50:29.900631+00:00",
+          "source_digest": "2e004a0db076dc2f2bc2fcccc28af935b67fef4467087abad97b455e0ec7bacb",
+          "rule_version": "site.site-0058-965f8fb460.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0059-3e413da85a",
+      "name": "彻头彻尾",
+      "url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/article/admin/6a1449c2597e16d57eacb67a?url=lqz",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:50:34.067198+00:00",
+          "source_digest": "13ef6e031ba966f68ccb72b293753a9a36256fc2dbe85a40bc3e8e1e5f46e582",
+          "rule_version": "site.site-0059-3e413da85a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0060-d209a4ea3f",
+      "name": "共享财富",
+      "url": "https://skgdjjmz.l54vq-9httr-cmdnip.work:29477/article/admin/6a042f7e4ea5c20141013e17?url=xdr",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:50:35.137423+00:00",
+          "source_digest": "5dc1bfca35331a712bdc4b22de004e4b8790f63830f61aa7463d841995919670",
+          "rule_version": "site.site-0060-d209a4ea3f.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0061-95a87048ff",
+      "name": "爆发钱庄",
+      "url": "https://flrmed.u3l95-7ktwf-clwwtq.work:29455/article/admin/6a13fd7b741e3e91a04e59d1?url=sgnn",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:50:38.276478+00:00",
+          "source_digest": "ae43553e2463b20ee847f1d8c2389751c2e3c5fe49ed1dbf27980ce208c7206f",
+          "rule_version": "site.site-0061-95a87048ff.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0049-22f1d6227a",
+      "name": "满汉全席",
+      "url": "https://useaul.z3rj5-9jlwg-dynocd.xyz:16677/topic/384879.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:50:41.317550+00:00",
+          "source_digest": "da3da210842439ccb8d04bf6b3ded5e997b36fe65b9bebe6def3b740a675f69b",
+          "rule_version": "site.site-0049-22f1d6227a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0051-0945f170a0",
+      "name": "违害就利",
+      "url": "https://pwqviw.1tcpi-45qgo-qddfnk.work:16677/topic/272922.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:50:48.469793+00:00",
+          "source_digest": "4466da59e911fdb8f9406db47c9dcb6c9d6ea10205461b96dea5a51f2b3f272b",
+          "rule_version": "site.site-0051-0945f170a0.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0065-131ff7a5cd",
+      "name": "六玄",
+      "url": "https://tjetrfr.jocy8-cy4wk-fmpeer.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:51:15.875825+00:00",
+          "source_digest": "bf08bf46e7c733b5b99e0e1020295aa37368658752f5c2fc04cd02359b5a10d0",
+          "rule_version": "site.site-0065-131ff7a5cd.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0053-53318283da",
+      "name": "光阴似箭",
+      "url": "https://vmfvzmh.7jh1y-qgjk8-lavfxb.work:16677/topic/782038.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:51:18.159807+00:00",
+          "source_digest": "c1cade18167992f5e1b3107416548fffedc1824c07f5c8040fde7dda46c5f1ab",
+          "rule_version": "site.site-0053-53318283da.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0055-be23da2829",
+      "name": "恭喜发财",
+      "url": "https://odyaxne.1k8bk-9hlzy-spgmbw.xyz:16677/topic/446757.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:51:38.858691+00:00",
+          "source_digest": "ce3bdb6408b40c960266edcdc445af90d7cf911967edf002251bc06365989a10",
+          "rule_version": "site.site-0055-be23da2829.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0062-d6ebbe8f62",
+      "name": "重岩叠障",
+      "url": "https://pwqviw.1tcpi-45qgo-qddfnk.work:16677/topic/291140.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:51:58.776897+00:00",
+          "source_digest": "439d761b0a3b49646882ec5c192e5cbeab5a7eb5526cf3027fefd1e7d6ee3e38",
+          "rule_version": "site.site-0062-d6ebbe8f62.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0069-2e3440d844",
+      "name": "皇甫青崖",
+      "url": "https://msbqxti.zhx2n-7v5x3-ivdpud.xyz:16677/topic/682733.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:52:05.197752+00:00",
+          "source_digest": "ced5ae14162e4620f9a1304850ad126582740f78b979a7859e6f6a3f46ffabe6",
+          "rule_version": "site.site-0069-2e3440d844.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0063-9abe74bd09",
+      "name": "算法文心",
+      "url": "https://yqjfwqsc.1dayz-aetgp-kbjidr.xyz:16677/topic/682017.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:52:11.014278+00:00",
+          "source_digest": "1b2ef35226ea4a133f24b2370d3b18be8d5d98394e19661eac83be418a0d9c2d",
+          "rule_version": "site.site-0063-9abe74bd09.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0056-e58d313fe2",
+      "name": "藏宝阁",
+      "url": "https://huqtzej.vvlq2-j4i8n-lisghq.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:52:13.739992+00:00",
+          "source_digest": "903d3fec4b7fb5a59a817c894534b849e414f09b81ef72cd7dd39c055c7a676e",
+          "rule_version": "site.site-0056-e58d313fe2.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0064-a51c8333d2",
+      "name": "斤斤计较",
+      "url": "https://yqjfwqsc.1dayz-aetgp-kbjidr.xyz:16677/topic/637955.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:52:16.978960+00:00",
+          "source_digest": "524bf67e0b53f68a37afbb93c6e3a82f6778507d553ab92d48c994f0226f834b",
+          "rule_version": "site.site-0064-a51c8333d2.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0066-245f240a66",
+      "name": "北悸安涼",
+      "url": "https://mfhfepu.ow55j-i5hbb-icetss.xyz/topic/768602.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:52:38.706226+00:00",
+          "source_digest": "52c3260581acf5bc581397cd54276317b19499ce848a8dbe4a7df738f3aaebf8",
+          "rule_version": "site.site-0066-245f240a66.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0054-046b299ba7",
+      "name": "信封论坛",
+      "url": "https://zqliou.kify1-fbyi6-lmeykn.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:52:38.876436+00:00",
+          "source_digest": "4807008a85715bda399e25c13300d15038a73eb6d19ceb770f780b0a0ee46547",
+          "rule_version": "site.site-0054-046b299ba7.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0067-2c9d2f993c",
+      "name": "歧路亡羊",
+      "url": "https://ykeejph.z9koz-18xjn-pvglgy.xyz:16677/topic/677751.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:53:02.841395+00:00",
+          "source_digest": "462ed9c1aa77d543cb67b000202987894e0b87ea159fae9bcf574052a220e2a0",
+          "rule_version": "site.site-0067-2c9d2f993c.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0068-9f3bc1fe06",
+      "name": "神机",
+      "url": "https://wxaxdfc.523mo-z7mla-owjdon.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:53:29.278549+00:00",
+          "source_digest": "f5eca2be063742f2e9dbc153e5959f89062a027dcc91fff25e5bb5ff68db0bc1",
+          "rule_version": "site.site-0068-9f3bc1fe06.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0079-59829c0139",
+      "name": "财富沟通",
+      "url": "https://herymche.x6l2j-h6kfu-qdresg.work:29466/article/admin/6a0443464ea5c20141013e72?url=txbb",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:53:33.918345+00:00",
+          "source_digest": "06fa4acb74a83867d3f6ef27b7aaf8a1149ad5df1d7305d4227d29e6280074b5",
+          "rule_version": "site.site-0079-59829c0139.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0080-a8fb6e82e4",
+      "name": "六彩雄鹰",
+      "url": "https://herymche.x6l2j-h6kfu-qdresg.work:29466/article/admin/6a0439524ea5c20141013e3f?url=txbb",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:53:35.355737+00:00",
+          "source_digest": "06a8b3dff37865d2bf1f2831377e9a7b00e0429f8cda51c3686e45c1ff63a722",
+          "rule_version": "site.site-0080-a8fb6e82e4.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0081-51658ef5a0",
+      "name": "以意逆志",
+      "url": "https://www28651a.com/read.php?tid=541",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:53:37.345412+00:00",
+          "source_digest": "ff2dda65fb9992c81fd5de36569fb8d1f85b588d41fc1355229b94ecfe337ba9",
+          "rule_version": "site.site-0081-51658ef5a0.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0071-10a2a14c02",
+      "name": "夜泊秦淮",
+      "url": "https://qnbezan.l1qb0-icltl-eyddev.xyz:16677/topic/504956.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:53:46.022685+00:00",
+          "source_digest": "f7f963df964caf565ef57c8b35a2a4018cb3c4761b875273a2b42f99680b4c34",
+          "rule_version": "site.site-0071-10a2a14c02.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0072-1ff548147a",
+      "name": "浮生未歇",
+      "url": "https://evvuoswc.2n3pw-mjk5d-wndmjh.xyz:16677/topic/287366.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:53:57.744509+00:00",
+          "source_digest": "67fa1a1e8f38614145747c4f0a70c91752363b765796cd9c0d15450dc8c2257e",
+          "rule_version": "site.site-0072-1ff548147a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0084-4290892b35",
+      "name": "帅气小子",
+      "url": "https://czcvzk.4n5g7-o871g-hqmkwz.work:29422/article/admin/6a09648e291caff3edcb8afd?url=tsp",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:53:58.771105+00:00",
+          "source_digest": "cc447dedb292baf1554786e65f9df150589add254a280fda8ed5e4b8a874ccce",
+          "rule_version": "site.site-0084-4290892b35.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0085-4b320524ef",
+      "name": "澳财彩民",
+      "url": "https://czcvzk.4n5g7-o871g-hqmkwz.work:29422/article/admin/6a095770291caff3edcb8a7d?url=tsp",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:00.726064+00:00",
+          "source_digest": "e87fbf6307071ffc8263169577ddaa6845d9076e0d6e19372597c4df3c2e8149",
+          "rule_version": "site.site-0085-4b320524ef.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0086-bbed720ce3",
+      "name": "博码招财",
+      "url": "https://czcvzk.4n5g7-o871g-hqmkwz.work:29422/article/admin/6a094d6a291caff3edcb8a23?url=tsp",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:01.739121+00:00",
+          "source_digest": "6d93d63f416afa894a8c603d0e7ff346547172c8db3609df83b8bd4d0e854059",
+          "rule_version": "site.site-0086-bbed720ce3.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0087-c6444c44ff",
+      "name": "暴富贵族",
+      "url": "https://sndaygl.egjtc-sgs8w-taclan.work:29400/article/admin/6a140e024346bc68aea4ef3a?url=nmw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:02.738475+00:00",
+          "source_digest": "a96fda574eedb02385f22b3e5e19fe97487807ef7242500615b36d068059c1c0",
+          "rule_version": "site.site-0087-c6444c44ff.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0088-74c11a3083",
+      "name": "血肉相连",
+      "url": "https://herymche.x6l2j-h6kfu-qdresg.work:29466/article/admin/6a0451a44ea5c20141013e99?url=txbb",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:04.985378+00:00",
+          "source_digest": "8c39c502d42cb9a007c2ee17eab2aae4c7a6f056b9629a0288eaa861f5d4487b",
+          "rule_version": "site.site-0088-74c11a3083.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0074-ec56968ff3",
+      "name": "十全十美",
+      "url": "https://uinpwmgx.5jl59-ok78a-ctvois.xyz:16677/topic/448284.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:05.873065+00:00",
+          "source_digest": "8c37521fbb4bdac0e0b08f5f09f96c65a0bfbe514c7a633469fcf801d8736533",
+          "rule_version": "site.site-0074-ec56968ff3.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0089-d5258343f4",
+      "name": "发财之道",
+      "url": "https://oofsukyp.7u9l0-zq8hd-obpxwe.work:29455/article/admin/6a02d8538bad0a3579e9f770?url=home",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:54:06.920966+00:00",
+          "source_digest": "18bc553e0bad321c06eccbda042b7b040e4213288739252fe81177e33bd443dd",
+          "rule_version": "site.site-0089-d5258343f4.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0090-6f3ffa0ab4",
+      "name": "财神致富",
+      "url": "https://oofsukyp.7u9l0-zq8hd-obpxwe.work:29455/article/admin/6a02df8e6bedb2a8313d5882?url=home",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:08.101531+00:00",
+          "source_digest": "4dd7c5de18cfefd12be4b2b971ca31dc2f410f495b01775575c35457518f7e3a",
+          "rule_version": "site.site-0090-6f3ffa0ab4.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0091-d00eaac9ca",
+      "name": "如意天行",
+      "url": "https://18118.73829.com/read.php?tid=844",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:21.458958+00:00",
+          "source_digest": "39c30fb176b3190fb8a4a20efdb2ff4364b943376640fb8df2199f8d7b3b738d",
+          "rule_version": "site.site-0091-d00eaac9ca.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0075-559fb4f012",
+      "name": "八级心动",
+      "url": "https://cwdcaqzn.7mj0h-75k3q-cbuvqb.work:16677/#am",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:21.469948+00:00",
+          "source_digest": "62558a362db7b769188bc7ebce3aadffdb82b823a98632267e42ca9ea47056e2",
+          "rule_version": "site.site-0075-559fb4f012.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0093-64b9d02bcb",
+      "name": "声势浩大",
+      "url": "https://fymxwnyg.ttmzc-muvns-udlfln.work:29455/article/admin/6a0968e6291caff3edcb8b4e?url=lhbd",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:54:22.415035+00:00",
+          "source_digest": "c102d35fb7c768a021dc16c250c6dcd5b78554df8882c271f0c7035a2ec0d88c",
+          "rule_version": "site.site-0093-64b9d02bcb.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0076-85dced96eb",
+      "name": "飞瀑流泉",
+      "url": "https://buzfwpox.pwp8o-vfhi5-xmrytn.xyz:16677/topic/464877.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:27.550239+00:00",
+          "source_digest": "26816490aec1b9339857100d6d26386d491b12248069ef450298d6ec02812041",
+          "rule_version": "site.site-0076-85dced96eb.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0094-8f913f6a45",
+      "name": "经年未变",
+      "url": "https://fbgbfg.www27521c.com:8443/gsb/am75.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:31.899891+00:00",
+          "source_digest": "f2096751c0faa32f9f94ebb56ea9ed0f22a1e6e9ae3b234637d47dc513aae1b4",
+          "rule_version": "site.site-0094-8f913f6a45.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0077-1a786f4440",
+      "name": "满面春风",
+      "url": "https://buzfwpox.pwp8o-vfhi5-xmrytn.xyz:16677/topic/454773.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:54:38.040480+00:00",
+          "source_digest": "fb42a63465225176de406c93b9ded57110638e9817144c472a02ed70114865b2",
+          "rule_version": "site.site-0077-1a786f4440.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0098-67f7bf6b96",
+      "name": "万里无云",
+      "url": "https://utklnwvn.xt8d7-kd9kc-csprqr.work:29488/article/admin/6a320883c9b8712c823a5ff0?url=qdz",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:54:39.062936+00:00",
+          "source_digest": "545f2d3f630e3a416f236608ef8c7a5538dcf618172fc839138e2ab929405da0",
+          "rule_version": "site.site-0098-67f7bf6b96.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0099-e9c7c0491f",
+      "name": "还珠格格",
+      "url": "https://zlkcyl.e6mlx-wj46o-rzcukg.work:29499/article/admin/6a081678e0d076537e1df816?url=hyl",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:54:40.146200+00:00",
+          "source_digest": "bc39695147473a151cc9a1fe09dba7af350616ce2307386468209a50d959b743",
+          "rule_version": "site.site-0099-e9c7c0491f.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0100-7768b012d9",
+      "name": "逐鹿中原",
+      "url": "https://asmfkb.dfkxu-0rwnp-wevqzo.work:29466/article/admin/6a09ad1b291caff3edcb902e?url=fcw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:54:42.019985+00:00",
+          "source_digest": "402f0e80a8c31d5772cc6ecbac99f06c2f1538fa7c6c58d2e16986d5774bbb8d",
+          "rule_version": "site.site-0100-7768b012d9.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0101-f385e5e392",
+      "name": "风声水启",
+      "url": "https://asmfkb.dfkxu-0rwnp-wevqzo.work:29466/article/admin/6a099746291caff3edcb8ef6?url=fcw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:54:43.484325+00:00",
+          "source_digest": "4fb90c281af22db28737a9b9fb8b34a2bab419ae1e702f7cd1420ccb6a034aca",
+          "rule_version": "site.site-0101-f385e5e392.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0102-ed443824ab",
+      "name": "历史最猛",
+      "url": "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=457",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:46.761362+00:00",
+          "source_digest": "ca9b38b3e137af5e40cea65b7bb97b354e8c7c565ca3b4d32f1a87347fddbe44",
+          "rule_version": "site.site-0102-ed443824ab.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0103-33b8c9d0f3",
+      "name": "实力非凡",
+      "url": "https://ztpqrap.m8sbq-na911-wmojzb.work:29444/article/admin/6a1450fc4346bc68aea4f153?url=gsw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:49.421740+00:00",
+          "source_digest": "1027acf7b063a8796bf9f97703c61d1943cb781ffe79c3c62a2e0bb6ac90369b",
+          "rule_version": "site.site-0103-33b8c9d0f3.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0104-61af85b2ae",
+      "name": "天地雄心",
+      "url": "https://ztpqrap.m8sbq-na911-wmojzb.work:29444/article/admin/6a2d8f101406fbf73a254f33?url=gsw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:50.308854+00:00",
+          "source_digest": "d95a010f830d91abc7d014c580de4866856f3a8141a63163a004f9efb10086b8",
+          "rule_version": "site.site-0104-61af85b2ae.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0105-f718d85b0b",
+      "name": "探彩大师",
+      "url": "https://ifnkblf.e4kce-krr7o-vuvqhd.work:29411/article/admin/6a1439d3bf0a6cb1dd38fb4c?url=scyd",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:54:51.365724+00:00",
+          "source_digest": "64760adecbae285375aa3b8763b170389c7f810bb21deea09d710051b71dc978",
+          "rule_version": "site.site-0105-f718d85b0b.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0106-c00bcbcc6d",
+      "name": "最强爆料",
+      "url": "https://xozgdo.um2zi-vbge0-emngyq.work:29422/article/admin/6a141a2cbf0a6cb1dd38fa42?url=sgnn",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:52.296649+00:00",
+          "source_digest": "712974096cfa47fb0a10e2f5434ff69be76345587ff1173603d80835ea2d4d04",
+          "rule_version": "site.site-0106-c00bcbcc6d.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0107-03a1f5a24c",
+      "name": "战场之翼",
+      "url": "https://plwyrcj.4ai8j-p62x5-pnsukp.work:29411/article/admin/6a1298f52e4e893ff42c8696?url=gjp",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:54:53.374292+00:00",
+          "source_digest": "9f9bd0ca3f8b1a9ac4afbdbd1eae100ecffd6f2c84bfae28565378489cb78acc",
+          "rule_version": "site.site-0107-03a1f5a24c.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0108-eb27970cec",
+      "name": "百鸟朝凤",
+      "url": "https://fymxwnyg.ttmzc-muvns-udlfln.work:29455/article/admin/6a096d83291caff3edcb8bed?url=lhbd",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:54:54.316804+00:00",
+          "source_digest": "624e5a37361c709305a72d1025e12d0567e7f94093b5326df1021f07b9565df4",
+          "rule_version": "site.site-0108-eb27970cec.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0109-26de8dd68c",
+      "name": "震撼人心",
+      "url": "https://18118.73829.com/read.php?tid=770",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:54:56.542703+00:00",
+          "source_digest": "538656cd1f5fe5ef36941250cf958bd5c23970ae7efe3b3fa07df73cc1af725d",
+          "rule_version": "site.site-0109-26de8dd68c.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0110-87214079f3",
+      "name": "神童爆料",
+      "url": "https://yzpbdkow.6m1ba-7p7u4-ppolcy.work:29433/article/admin/6a02d2ad8bad0a3579e9f755?url=tdg",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:54:57.731103+00:00",
+          "source_digest": "274dd4deb875f99c9ea5d4938b86c0d89c9114dbdc974bb967a60b87c0e90afa",
+          "rule_version": "site.site-0110-87214079f3.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0111-b8ae13003a",
+      "name": "美轮美奂",
+      "url": "https://utklnwvn.xt8d7-kd9kc-csprqr.work:29488/article/admin/6a043c464ea5c20141013e52?url=qdz",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:54:58.927211+00:00",
+          "source_digest": "536c101908b605350da1d1f16a153c9d79898ba113d7bbad7fe6cb550337e1dd",
+          "rule_version": "site.site-0111-b8ae13003a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0112-85c03e08be",
+      "name": "心动神移",
+      "url": "https://zxlfxpp.2n0je-9ecrg-kadbbu.work:29411/article/admin/6a141dcdbf0a6cb1dd38fa4b?url=tmw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:54:59.812703+00:00",
+          "source_digest": "b51e20c40e76be27108bf322b8e77a60e499e00d89a47c1b15caacabf2cafd6a",
+          "rule_version": "site.site-0112-85c03e08be.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0113-2c39669986",
+      "name": "选码高手",
+      "url": "https://qgyhdauu.avht7-lah7b-oavfmr.work:29444/article/admin/6a0191a99dbe5d9cedc4eb59?url=wzw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:55:01.107814+00:00",
+          "source_digest": "22de2d2aed9e543e93ad8773198dd6599e231ffe1de9f025591510b92450f1c5",
+          "rule_version": "site.site-0113-2c39669986.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0082-d962daa07a",
+      "name": "春满乡村",
+      "url": "https://zxliojf.83gjk-dnne7-kuyach.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:55:01.401626+00:00",
+          "source_digest": "b1f0104a07cee51482d41327ce1eefb64a8e3c87402a86491f3c4affe3fedb4e",
+          "rule_version": "site.site-0082-d962daa07a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0115-8fde13cf1a",
+      "name": "双管齐下",
+      "url": "https://uqdccnri.oy2bh-swrfr-gvzxkk.work:29499/article/admin/6a032e75e09a39d316b223ad?url=lcz",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:55:02.327730+00:00",
+          "source_digest": "7ed208c0a3d0aa5fd1bb73797cba2de56ff4b3c06aa5375c5652ca0aa607ac68",
+          "rule_version": "site.site-0115-8fde13cf1a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0116-66d2db297b",
+      "name": "梦丽如初",
+      "url": "https://dfgrufao.tz0ex-y6o7v-lazxsq.work:29400/article/admin/6a0409844ea5c20141013d82?url=lbw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:55:03.257850+00:00",
+          "source_digest": "cbafd198901c755d91f229f3c9a23925144f6a750f184bb0d471d2fe9cc50bbf",
+          "rule_version": "site.site-0116-66d2db297b.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0114-b86fbbd0f5",
+      "name": "醉生梦死",
+      "url": "https://gqdbokpx.ji2oa-rdhxt-girktl.work:29411/article/admin/6a02a1f4300734f7aa12dfae?url=hj",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:55:05.134336+00:00",
+          "source_digest": "8eeac4707c963a0dcbc910f30320df0eab9004baef28e7b7a5bb6ad7f02baef5",
+          "rule_version": "site.site-0114-b86fbbd0f5.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0117-96220bce0f",
+      "name": "曲高和寡",
+      "url": "https://sheuzjss.tgpcj-9w0vl-mwyhly.work:29422/article/admin/6a0457e24ea5c20141013eb2?url=zfw",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:55:05.369201+00:00",
+          "source_digest": "dd201914080bc90381132fb68ee4182b0cd8ed76f779468b694893da9e1ebd81",
+          "rule_version": "site.site-0117-96220bce0f.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0118-96e6cc38bb",
+      "name": "期期精彩",
+      "url": "https://jusbfyu.mkdwi-xa2ua-rsovan.work:29422/article/admin/6a31488f32c7c4bb3c056f9b?url=hjc",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:55:06.163756+00:00",
+          "source_digest": "a4bf88178678ae7040d2e48628496f71fc4829dc6ef5f20cde2be6179bf32fa4",
+          "rule_version": "site.site-0118-96e6cc38bb.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0119-2fd4674722",
+      "name": "星之守护",
+      "url": "https://jusbfyu.mkdwi-xa2ua-rsovan.work:29422/article/admin/6a3230d5ee2f6b74a4a35bd0?url=hjc",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:55:09.868274+00:00",
+          "source_digest": "56f593475b1da0a53938e672d9ed515a98f24527e7dc029fd3df28dfd9177018",
+          "rule_version": "site.site-0119-2fd4674722.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0120-928a01d84a",
+      "name": "天下无双",
+      "url": "https://993345.com/gsb1.aspx?id=1482",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:55:10.751549+00:00",
+          "source_digest": "72ccc61b242266b0fc9367b2edc4d2ffd09f5aa2470b918cd555196d28dc8b4b",
+          "rule_version": "site.site-0120-928a01d84a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0078-df396c6d49",
+      "name": "大地主",
+      "url": "https://jdjzpkce.osyaf-gxlte-otlblr.xyz:16677/",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:55:12.192908+00:00",
+          "source_digest": "39f620b44699659f879c65a631a1ada407602a2a957f3541b09ac063bd9267e3",
+          "rule_version": "site.site-0078-df396c6d49.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0083-d962daa07a",
+      "name": "山水诗意",
+      "url": "https://zxliojf.83gjk-dnne7-kuyach.xyz:16677/",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:55:27.013375+00:00",
+          "source_digest": "42a297a12cb60c42338c574378d5bb353a0a4901f2803155771baa6e3a867a54",
+          "rule_version": "site.site-0083-d962daa07a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0092-2eaf85270b",
+      "name": "八步毛哥",
+      "url": "https://2.www39169b.com:888/#62111",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:55:32.386776+00:00",
+          "source_digest": "d8f7f1ec41651395645b81e359b41e164602c24d3da9a47ae8d4c0cd3c95f025",
+          "rule_version": "site.site-0092-2eaf85270b.v1@config2"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0124-3b85c5a42f",
+      "name": "小筑望星",
+      "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/625574.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:55:34.775168+00:00",
+          "source_digest": "b6304cb8a4759a26c73790b9efdc198c393a35df7e0ea63e0374f7703a29f6a6",
+          "rule_version": "site.site-0124-3b85c5a42f.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0095-bf95fbda1d",
+      "name": "异口同声",
+      "url": "https://fhktrabu.zbfrm-uzct1-pmycbu.xyz:16677/topic/469065.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:55:44.779719+00:00",
+          "source_digest": "0bfd76fa668ac0a21ebb22d6e4685b3b9bf4b457014cab135709e3d7f475e410",
+          "rule_version": "site.site-0095-bf95fbda1d.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0096-ba489d8d14",
+      "name": "一身仙气",
+      "url": "https://myvvqq.30dok-2s9fd-bibfmg.work/",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:55:46.088503+00:00",
+          "source_digest": "9fb2c8da0a5e5844003159604ce9a77e0092ebedb9566af56e2b53e4d585cc6e",
+          "rule_version": "site.site-0096-ba489d8d14.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0128-899699ddb4",
+      "name": "一本万利",
+      "url": "https://mflmcobome.26222hi.app:2569/htm/bbs/top040.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:01.396101+00:00",
+          "source_digest": "4c00ce00e44c7f5452f0aae9eb7a6f6be234964cee563f6cd77023ed4d99a633",
+          "rule_version": "site.site-0128-899699ddb4.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0097-d907ba10ff",
+      "name": "天青润薮",
+      "url": "https://ykeejph.z9koz-18xjn-pvglgy.xyz:16677/topic/682107.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:56:02.116584+00:00",
+          "source_digest": "d1e2bcc5414bad505073f58c053cf2ca8fccfb9d52967b7c62e433ef3dd012fb",
+          "rule_version": "site.site-0097-d907ba10ff.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0132-f26fdf4e7e",
+      "name": "彫虫小技",
+      "url": "https://qdufkx.sjb5z-pi4k6-jlhnig.xyz:16677/topic/798409.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:08.590219+00:00",
+          "source_digest": "fd7d90a0ed2070a3852fa43043e22e3f6afa16fd71733d3c9734245fcffeba66",
+          "rule_version": "site.site-0132-f26fdf4e7e.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0121-71dc76cdb2",
+      "name": "藕断丝连",
+      "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626097.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:10.850781+00:00",
+          "source_digest": "d6bb1e9fd97905f102492cb494facad837dbe5ca257feb4afb14a62d026780a1",
+          "rule_version": "site.site-0121-71dc76cdb2.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0135-2b529722b7",
+      "name": "实力高手",
+      "url": "https://mm.979383m.com:1888/art_zhuanqu/8020",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:19.220933+00:00",
+          "source_digest": "97c8651f42e44570a0ed98cc8f9556beee89e66dee217af6dbfa4015e814f777",
+          "rule_version": "site.site-0135-2b529722b7.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0122-17b529c5f4",
+      "name": "锦上添花",
+      "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/625994.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "火行",
+          "captured_at": "2026-08-04T08:56:27.570551+00:00",
+          "source_digest": "59ea2d299d07b51a96f8cb6c6f2d627f2fb347aa4b57f4a79e6a5228177977f6",
+          "rule_version": "site.site-0122-17b529c5f4.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0137-e9add3f749",
+      "name": "求个妹子",
+      "url": "https://aa.62782b.com:1888/bbs/7983",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:56:28.788813+00:00",
+          "source_digest": "5b4f3461ab0842ee244e2eb1389447fb05d029d8752534d04a518f789d108abc",
+          "rule_version": "site.site-0137-e9add3f749.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0123-643ec5034d",
+      "name": "提心吊胆",
+      "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626101.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:30.560279+00:00",
+          "source_digest": "b063ec3382e6232717e8f143fd8a0ae571adcf625c23223c89d57ce6bfa4e834",
+          "rule_version": "site.site-0123-643ec5034d.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0139-67cfad765b",
+      "name": "男儿本色",
+      "url": "https://mxiscni.nkh6s-vfni4-lwgfvw.xyz:16677/topic/257907.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:56:37.716310+00:00",
+          "source_digest": "7c1a52f0f787a105a1ed6718c145224cbb231c5b13db6a5d20c3fc2fa423f820",
+          "rule_version": "site.site-0139-67cfad765b.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0140-74189328bd",
+      "name": "齐天大胜",
+      "url": "https://drxgkjt.uu1oc-eyjpt-uxyccu.xyz:29400/article/manager/6a33e71adfa16552b923d2b7?url=jyb",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:56:38.779766+00:00",
+          "source_digest": "6ee408af23f6c64f66f2770842b70bdaf96a5a0564c260943d50b8f8d5011804",
+          "rule_version": "site.site-0140-74189328bd.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0141-7ab1746e6e",
+      "name": "金馬快报",
+      "url": "https://hquomm.20t3f-0yztv-jiozun.xyz:29444/article/manager/6a4c273b57dc857ae1c07d6d?url=dgd",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:56:39.691599+00:00",
+          "source_digest": "d3ab96950afb4eac772ea84aa2c5e0bed73ae05bf266d31e8f46f914aa08105d",
+          "rule_version": "site.site-0141-7ab1746e6e.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0142-549719c480",
+      "name": "云容月貌",
+      "url": "https://hquomm.20t3f-0yztv-jiozun.xyz:29444/article/manager/6a329d0cb8abbf5af1a54e88?url=dgd",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:56:41.609657+00:00",
+          "source_digest": "8ea9bd45cfeff2b748cd0156ff73cb0a8849614dcb0156fc98699dac997ba6c2",
+          "rule_version": "site.site-0142-549719c480.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0143-ecdd4c3e17",
+      "name": "投资创造",
+      "url": "https://hquomm.20t3f-0yztv-jiozun.xyz:29444/article/manager/6a329de9887a9b338e851fd5?url=dgd",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:56:42.506153+00:00",
+          "source_digest": "21d9b5e6c57c298b2815a84e4eb6836358e74ba2432678e222652939b1032dab",
+          "rule_version": "site.site-0143-ecdd4c3e17.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0144-0284a02beb",
+      "name": "宝贝花园",
+      "url": "https://knfoaep.ivqs8-1depw-yoirtw.xyz:29444/article/manager/6a095494291caff3edcb8a59?url=lf",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:43.614040+00:00",
+          "source_digest": "d7125a0c983fbad2ad9f9e8f6448d9a1214f1f166a2fddf5148d4b4d7bc592ea",
+          "rule_version": "site.site-0144-0284a02beb.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0145-695c57767f",
+      "name": "醉梦人生",
+      "url": "https://mbsqhpk.8ivvt-u3cx5-enwlld.xyz:29400/article/manager/6a33d03ddfa16552b923d05c?url=lhzj",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:45.280069+00:00",
+          "source_digest": "26c99fbd331390f6bda4d8e88428020b4064fe852532cd60249ea1505a1a9c9d",
+          "rule_version": "site.site-0145-695c57767f.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0146-5904850517",
+      "name": "战胜澳彩",
+      "url": "https://mbsqhpk.8ivvt-u3cx5-enwlld.xyz:29400/article/manager/6a33d060dfa16552b923d061?url=lhzj",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:46.151449+00:00",
+          "source_digest": "1efdd2351079e186c4405c00366e5970e1c699baa9bfa8cfe5bc11fdb5a39d65",
+          "rule_version": "site.site-0146-5904850517.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0147-a365fa4e5d",
+      "name": "云过天空",
+      "url": "https://rmpsmal.hi84f-zpj90-mvqksp.xyz:29477/article/manager/6a32717e621d58df1e1bbfc2?url=jfh",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "土行",
+          "captured_at": "2026-08-04T08:56:47.103119+00:00",
+          "source_digest": "8670e980b3035ec94dfc9ed6c84d262e22f2fe60baa07d5fe0d3cae5fdf540ae",
+          "rule_version": "site.site-0147-a365fa4e5d.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0148-00a775139a",
+      "name": "黑白分明",
+      "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a323b97f21d7a093399eeeb?url=jbx",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:48.020230+00:00",
+          "source_digest": "5e911a219c7ac3381de4f855723a4bddaf42b51451ad61c0546537397357b965",
+          "rule_version": "site.site-0148-00a775139a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0129-04d88d17ae",
+      "name": "暴风骤雨",
+      "url": "https://pxgaayml.2wyk5-dwn70-cljflt.xyz:16677/topic/458324.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:48.915967+00:00",
+          "source_digest": "eae85a24ca45ae03a0ff5e3d8500f75767741eacce773c3f968904a4f206e9e7",
+          "rule_version": "site.site-0129-04d88d17ae.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0125-79fb977d90",
+      "name": "明明白白",
+      "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626065.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:56:49.732697+00:00",
+          "source_digest": "428e05c4955cc50528b23911c27371b269b1b55552f9b258b330552f0f5728d0",
+          "rule_version": "site.site-0125-79fb977d90.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0149-25599e11af",
+      "name": "四海兄弟",
+      "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a324f8ad2455bc872d9a63f?url=jbx",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:49.732697+00:00",
+          "source_digest": "39144d3c09bfaf929cc3aa09675458c96e8890f9737ab15ca42bab56b1a28f1f",
+          "rule_version": "site.site-0149-25599e11af.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0150-75af477d00",
+      "name": "夹枪带棒",
+      "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a397a60018539c611cb8977?url=jbx",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:49.847720+00:00",
+          "source_digest": "f1a0e203351d9cd981b67be175a607ec6bab3d555f6b3a58836c014421f033f4",
+          "rule_version": "site.site-0150-75af477d00.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0151-18bca6f888",
+      "name": "财到来料",
+      "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a451a5157dc857ae1be5256?url=jbx",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:56:50.641230+00:00",
+          "source_digest": "1740c3be1428eb7ef6e0fa53493835992c0aa957f2f73f9f4d5555b9299f480f",
+          "rule_version": "site.site-0151-18bca6f888.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0153-9aadb086a5",
+      "name": "典则俊雅",
+      "url": "https://wigrzse.3acpt-tc9xa-kzxasm.xyz:29444/article/manager/6a20da1dca6da63e15d01fc8?url=pg",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:56:50.764793+00:00",
+          "source_digest": "51343bed517e730714e8e2feb856c3187b427778c850ae44e3bbad553b531edb",
+          "rule_version": "site.site-0153-9aadb086a5.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0152-905c2a907a",
+      "name": "兰韵犹芳",
+      "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a326fedc50767750c400757?url=jbx",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:56:52.316843+00:00",
+          "source_digest": "e047813bc9e786a36975a07e4b6ea6917a2b15d4c3bbaa5ca442bd9b55b38765",
+          "rule_version": "site.site-0152-905c2a907a.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0131-71dd7ab351",
+      "name": "风雨无阻",
+      "url": "https://bbuueerm.pxcma-jyfok-mvduyw.xyz:16633/topic/455269.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:57:04.018550+00:00",
+          "source_digest": "8adc4a83f45e724feb13d2281cdc1e036dcab900b358d51b0ff95e91d7f4a95d",
+          "rule_version": "site.site-0131-71dd7ab351.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0130-0ca2bec444",
+      "name": "镂尘吹影",
+      "url": "https://kxglojup.fao5v-9u0oz-okhubb.work:16677/topic/782072.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "水行",
+          "captured_at": "2026-08-04T08:57:07.271123+00:00",
+          "source_digest": "2c05bea6968decc42912e8dd8a0f3a666cf3c98138f62fda8ed6f4cf6c8ec470",
+          "rule_version": "site.site-0130-0ca2bec444.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0134-ee13da1f9c",
+      "name": "迷迷糊糊",
+      "url": "https://hhsmgw.rcl5b-akta2-ylzzwv.xyz:16677/topic/282006.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:57:21.032364+00:00",
+          "source_digest": "5f2cfce179e193e11cda90ceeb1f247b332d17ec336741d9ceca4a2326046961",
+          "rule_version": "site.site-0134-ee13da1f9c.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0136-4d6b7e6955",
+      "name": "花容月貌",
+      "url": "https://wmdhoki.6su07-7lpw6-gudkzl.xyz:16677/topic/727455.html",
+      "region": "top",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "金行",
+          "captured_at": "2026-08-04T08:57:24.082089+00:00",
+          "source_digest": "5f3555899a382f7f4b9faf08794631f3f7c978f4e5fa421250cfe7f309b61c61",
+          "rule_version": "site.site-0136-4d6b7e6955.v1@config1"
+        }
+      ]
+    },
+    {
+      "site_id": "site-0138-05f53dd558",
+      "name": "诸葛神通",
+      "url": "https://hl.www25195a.com/read.php?tid=607",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 216,
+          "wuxing": "木行",
+          "captured_at": "2026-08-04T08:57:36.230897+00:00",
+          "source_digest": "e3f361a37466d8f1dd2729ec2f8e1230d71225a05f76319f441768cda479207c",
+          "rule_version": "site.site-0138-05f53dd558.v1@config1"
+        }
+      ]
+    }
+  ]
+}
