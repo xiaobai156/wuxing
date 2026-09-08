@@ -53,7 +53,7 @@ def build_runtime(
     sites = tuple(
         site
         for site in load_site_configs(config_path, allow_legacy=isinstance(payload, list))
-        if not site.archived
+        if not getattr(site, "archived", False)
     )
     registry = build_site_registry(sites)
     repository = HistoryCacheRepository(cache_path)
@@ -97,9 +97,13 @@ def append_success_lines(path: str | Path, lines: Iterable[str]) -> Path:
     with exclusive_file_lock(target):
         original = target.read_bytes() if target.exists() else b""
         existing_text = original.decode("utf-8-sig") if original else ""
-        existing_lines = {site_name: line.strip() for line in existing_text.splitlines() if (site_name := _success_site_name(line)) is not None}
+        existing_lines = {}
+        for raw in existing_text.splitlines():
+            site_name = _success_site_name(raw)
+            if site_name is not None:
+                existing_lines.setdefault(site_name, set()).add(raw.strip())
         for site_name, line in incoming.items():
-            if site_name in existing_lines and existing_lines[site_name] != line:
+            if site_name in existing_lines and existing_lines[site_name] != {line}:
                 raise ValueError(f"成功追加存在同站冲突：{site_name}")
         existing_sites = set(existing_lines)
         additions = [

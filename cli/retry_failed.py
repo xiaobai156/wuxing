@@ -13,7 +13,7 @@ PLAIN = re.compile(r'^\s*失败\s+(?P<name>.+?)\s+(?P<url>https?://\S+)\s+方向
 
 def _parse(path):
     text = Path(path).read_text(encoding='utf-8-sig'); lines = text.splitlines(keepends=True)
-    starts = [i for i, x in enumerate(lines) if x.lstrip().startswith('失败 ')]
+    starts = [i for i, x in enumerate(lines) if x.lstrip().startswith('失败') and not x.lstrip().startswith('失败分类')]
     out=[]
     for n, start in enumerate(starts):
         m = MD.match(lines[start].rstrip('\r\n')) or PLAIN.match(lines[start].rstrip('\r\n'))
@@ -36,10 +36,12 @@ def resolve_sites(records, runtime):
 
 def _hash(p): return hashlib.sha256(p.read_bytes() if p.exists() else b'').hexdigest()
 
-def _remove(path, ordinal, expected):
+def _remove(path, identity, expected):
     with exclusive_file_lock(path):
         if _hash(path)!=expected: raise RuntimeError('失败 TXT 在处理期间发生变化，已停止写入')
-        _, records=_parse(path); r=next(x for x in records if x['ordinal']==ordinal)
+        _, records=_parse(path); matches=[x for x in records if (x['name'],x['url'],x['region'],x['period'])==identity]
+        if not matches: raise RuntimeError('失败记录已被外部修改，已停止写入')
+        r=matches[0]
         lines=path.read_text(encoding='utf-8-sig').splitlines(keepends=True); payload=''.join(lines[:r['start']]+lines[r['end']:])
         temp=None
         try:
@@ -51,17 +53,20 @@ def _remove(path, ordinal, expected):
     return _hash(path)
 
 def retry_failed(failure_path, output_dir=DEFAULT_SUCCESS_DIR, timeout_seconds=20, config_path=None, cache_path=None):
-    path=Path(failure_path); _, records=_parse(path); runtime=build_runtime(config_path,cache_path); selected=resolve_sites(records,runtime); period=records[0]['period']; expected=_hash(path); service=BatchService(runtime.scrape_service); request=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.READ_ONLY); success=0
+    path=Path(failure_path); snapshot, records=_parse(path); runtime=build_runtime(config_path,cache_path); selected=resolve_sites(records,runtime); period=records[0]['period']; expected=hashlib.sha256(snapshot.encode()).hexdigest(); service=BatchService(runtime.scrape_service); request=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.READ_ONLY); submit=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.UPDATE_CACHE); success=0; seen=set()
     for record,site in selected:
+        identity=(record['name'],record['url'],record['region'],record['period'])
+        if identity in seen: continue
+        seen.add(identity)
         print(f"[验证] {site.name} | {period}期",flush=True)
         validation=service.run((site.site_id,),request,max_workers=1).results[0]
         if validation.status is not ResultStatus.SUCCESS: print(f'{site.name} 验证失败：{validation.reason}'); continue
         result=service.run((site.site_id,),request,max_workers=1).results[0]
         if result.status is not ResultStatus.SUCCESS: print(f'{site.name} 重抓失败：{result.reason}'); continue
-        report=runtime.scrape_service.update_cache((result,),request)
-        if report.errors or getattr(report,'skipped_reason',None) or report.updated_sites!=1: print(f'{site.name} 缓存更新未完成'); continue
+        report=runtime.scrape_service.update_cache((result,),submit)
+        if report.errors or getattr(report,'skipped_reason',None) or report.updated_sites!=1: print(f'{site.name} 缓存更新未完成：{report.errors or getattr(report,"skipped_reason",None)}'); continue
         append_success_lines(Path(output_dir)/f'{period}期-五行.txt',[format_success_line(result)])
-        expected=_remove(path,record['ordinal'],expected); success+=1
+        expected=_remove(path,identity,expected); success+=sum(1 for x in records if (x['name'],x['url'],x['region'],x['period'])==identity)
     remaining=len(records)-success; print(f'处理完成：成功 {success}，保留失败 {remaining}'); return 0 if not remaining else 1
 
 def main(argv=None):
