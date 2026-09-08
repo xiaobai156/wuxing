@@ -1,140 +1,71 @@
 from __future__ import annotations
-
-import argparse
-import os
-import re
-import tempfile
+import argparse, hashlib, os, re, tempfile
 from pathlib import Path
-
 from wuxing.domain.enums import ResultStatus, WritePolicy
 from wuxing.domain.models import ScrapeRequest
-from wuxing.reporting.failure import format_failure_file_text, format_failure_line
-from wuxing.reporting.success import format_success_file_lines
+from wuxing.reporting.success import format_success_line
 from wuxing.services.batch import BatchService
+from wuxing.storage.file_lock import exclusive_file_lock
+from .common import DEFAULT_SUCCESS_DIR, append_success_lines, build_runtime
 
-from .common import (
-    DEFAULT_FAILURE_DIR,
-    DEFAULT_SUCCESS_DIR,
-    RANKING_EXCLUDED_NAMES,
-    append_success_lines,
-    build_runtime,
-)
+MD = re.compile(r'^\s*失败\s+(?P<name>[^\[]+?)\s+\[(?P<url>https?://[^\]]+)\]\([^)]*\)\s+方向:\s*(?P<region>top|bottom)\s+期数:\s*0*(?P<period>\d+)\s*$')
+PLAIN = re.compile(r'^\s*失败\s+(?P<name>.+?)\s+(?P<url>https?://\S+)\s+方向:\s*(?P<region>top|bottom)\s+期数:\s*0*(?P<period>\d+)\s*$')
 
+def _parse(path):
+    text = Path(path).read_text(encoding='utf-8-sig'); lines = text.splitlines(keepends=True)
+    starts = [i for i, x in enumerate(lines) if x.lstrip().startswith('失败 ')]
+    out=[]
+    for n, start in enumerate(starts):
+        m = MD.match(lines[start].rstrip('\r\n')) or PLAIN.match(lines[start].rstrip('\r\n'))
+        if not m: raise ValueError(f'失败记录格式无法识别：第 {start+1} 行')
+        d=m.groupdict(); out.append({'ordinal':n,'start':start,'end':starts[n+1] if n+1<len(starts) else len(lines),'name':d['name'].strip(),'url':d['url'],'region':d['region'],'period':int(d['period'])})
+    if not out: raise ValueError(f'失败 TXT 没有可处理记录：{path}')
+    periods={x['period'] for x in out}
+    if len(periods)!=1: raise ValueError(f'失败 TXT 包含多个期数，拒绝混跑：{sorted(periods)}')
+    return text, out
 
-_FAILURE_RE = re.compile(
-    r"失败\s+(?P<name>[^\[]+?)\s+\[(?P<url>https?://[^\]]+)\]\([^)]*\)"
-    r"\s+方向:\s*(?P<region>top|bottom)\s+期数:\s*(?P<period>\d+)"
-)
-_PLAIN_FAILURE_RE = re.compile(
-    r"失败\s+(?P<name>\S+)\s+(?P<url>https?://\S+)\s+方向:\s*"
-    r"(?P<region>top|bottom)\s+期数:\s*(?P<period>\d+)"
-)
+def load_failure_records(path): return tuple(_parse(Path(path))[1])
 
+def resolve_sites(records, runtime):
+    result=[]
+    for r in records:
+        found=[s for s in runtime.sites if s.name==r['name'] and s.url==r['url'] and s.region.value==r['region']]
+        if len(found)!=1: raise ValueError(f"失败记录无法唯一匹配正式站点：{r['name']}")
+        result.append((r,found[0]))
+    return result
 
-def load_failure_records(path: str | Path) -> tuple[dict[str, object], ...]:
-    text = Path(path).read_text(encoding="utf-8-sig")
-    records: list[dict[str, object]] = []
-    seen: set[tuple[str, str, str, int]] = set()
-    for pattern in (_FAILURE_RE, _PLAIN_FAILURE_RE):
-        for match in pattern.finditer(text):
-            item = match.groupdict()
-            record = (item["name"].strip(), item["url"], item["region"], int(item["period"]))
-            if record not in seen:
-                seen.add(record)
-                records.append({"name": record[0], "url": record[1], "region": record[2], "period": record[3]})
-    if not records:
-        raise ValueError(f"失败 TXT 没有可处理记录：{path}")
-    periods = {int(item["period"]) for item in records}
-    if len(periods) != 1:
-        raise ValueError(f"失败 TXT 包含多个期数，拒绝混跑：{sorted(periods)}")
-    return tuple(records)
+def _hash(p): return hashlib.sha256(p.read_bytes() if p.exists() else b'').hexdigest()
 
+def _remove(path, ordinal, expected):
+    with exclusive_file_lock(path):
+        if _hash(path)!=expected: raise RuntimeError('失败 TXT 在处理期间发生变化，已停止写入')
+        _, records=_parse(path); r=next(x for x in records if x['ordinal']==ordinal)
+        lines=path.read_text(encoding='utf-8-sig').splitlines(keepends=True); payload=''.join(lines[:r['start']]+lines[r['end']:])
+        temp=None
+        try:
+            with tempfile.NamedTemporaryFile('w',encoding='utf-8-sig',newline='',dir=path.parent,delete=False) as f:
+                f.write(payload); f.flush(); os.fsync(f.fileno()); temp=Path(f.name)
+            os.replace(temp,path)
+        finally:
+            if temp: temp.unlink(missing_ok=True)
+    return _hash(path)
 
-def resolve_sites(records: tuple[dict[str, object], ...], runtime):
-    selected = []
-    for item in records:
-        matches = [
-            site for site in runtime.sites
-            if site.name == item["name"] and site.url == item["url"]
-            and site.region.value == item["region"]
-        ]
-        if len(matches) != 1:
-            raise ValueError(f"失败记录无法唯一匹配正式站点：{item['name']}")
-        selected.append((item, matches[0]))
-    return tuple(selected)
+def retry_failed(failure_path, output_dir=DEFAULT_SUCCESS_DIR, timeout_seconds=20, config_path=None, cache_path=None):
+    path=Path(failure_path); _, records=_parse(path); runtime=build_runtime(config_path,cache_path); selected=resolve_sites(records,runtime); period=records[0]['period']; expected=_hash(path); service=BatchService(runtime.scrape_service); request=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.READ_ONLY); success=0
+    for record,site in selected:
+        print(f"[验证] {site.name} | {period}期",flush=True)
+        validation=service.run((site.site_id,),request,max_workers=1).results[0]
+        if validation.status is not ResultStatus.SUCCESS: print(f'{site.name} 验证失败：{validation.reason}'); continue
+        result=service.run((site.site_id,),request,max_workers=1).results[0]
+        if result.status is not ResultStatus.SUCCESS: print(f'{site.name} 重抓失败：{result.reason}'); continue
+        report=runtime.scrape_service.update_cache((result,),request)
+        if report.errors or getattr(report,'skipped_reason',None) or report.updated_sites!=1: print(f'{site.name} 缓存更新未完成'); continue
+        append_success_lines(Path(output_dir)/f'{period}期-五行.txt',[format_success_line(result)])
+        expected=_remove(path,record['ordinal'],expected); success+=1
+    remaining=len(records)-success; print(f'处理完成：成功 {success}，保留失败 {remaining}'); return 0 if not remaining else 1
 
-
-def _rewrite_failures(path: Path, remaining: list, original: str) -> None:
-    if not remaining:
-        path.write_text("", encoding="utf-8-sig")
-        return
-    keep = []
-    for block in original.replace("\r\n", "\n").split("\n\n"):
-        if any(
-            block.startswith(f"失败 {item['name']} ")
-            and f"期数: {item['period']}" in block
-            for item in remaining
-        ):
-            keep.append(block)
-    payload = "\n\n".join(keep) + "\n"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8-sig", newline="", dir=path.parent, prefix=f".{path.name}.", suffix=".tmp", delete=False) as handle:
-        handle.write(payload)
-        handle.flush()
-        os.fsync(handle.fileno())
-        temporary = Path(handle.name)
-    os.replace(temporary, path)
-
-
-def retry_failed(
-    failure_path: str | Path,
-    output_dir: str | Path = DEFAULT_SUCCESS_DIR,
-    timeout_seconds: int = 20,
-    config_path: str | Path | None = None,
-    cache_path: str | Path | None = None,
-) -> int:
-    failure_path = Path(failure_path)
-    original = failure_path.read_text(encoding="utf-8-sig")
-    records = load_failure_records(failure_path)
-    runtime = build_runtime(config_path, cache_path)
-    selected = resolve_sites(records, runtime)
-    period = int(records[0]["period"])
-    remaining = list(records)
-    request = ScrapeRequest(periods=(period,), timeout_seconds=timeout_seconds, write_policy=WritePolicy.UPDATE_CACHE)
-    for index, (record, site) in enumerate(selected, start=1):
-        print(f"[验证 {index}/{len(selected)}] {site.name} | {period}期", flush=True)
-        validation = BatchService(runtime.scrape_service).run((site.site_id,), request, max_workers=1)
-        validated = validation.results[0]
-        if validated.status is not ResultStatus.SUCCESS:
-            print(f"{site.name} 验证失败：{validated.reason}")
-            continue
-        rerun = BatchService(runtime.scrape_service).run((site.site_id,), request, max_workers=1)
-        result = rerun.results[0]
-        if result.status is not ResultStatus.SUCCESS:
-            print(f"{site.name} 正式重跑失败：{result.reason}")
-            continue
-        report = runtime.scrape_service.update_cache((result,), request)
-        if report.errors or report.skipped_reason or report.updated_sites != 1:
-            print(f"{site.name} 缓存更新未完成：{report.errors or report.skipped_reason}")
-            continue
-        append_success_lines(Path(output_dir) / f"{period}期-五行.txt", format_success_file_lines((result,), RANKING_EXCLUDED_NAMES))
-        remaining = [item for item in remaining if item != record]
-        print(f"{site.name} 通过并已更新：{result.candidate.wuxing}", flush=True)
-    _rewrite_failures(failure_path, remaining, original)
-    print(f"处理完成：成功 {len(records) - len(remaining)}，保留失败 {len(remaining)}")
-    return 0
-
-
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="只读取失败 TXT 并定向重抓失败站点")
-    parser.add_argument("failure_txt")
-    parser.add_argument("--output", default=str(DEFAULT_SUCCESS_DIR))
-    parser.add_argument("--timeout", type=int, default=20)
-    parser.add_argument("--config")
-    parser.add_argument("--cache")
-    args = parser.parse_args(argv)
-    return retry_failed(args.failure_txt, args.output, args.timeout, args.config, args.cache)
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+def main(argv=None):
+    p=argparse.ArgumentParser(description='只读取失败 TXT 并定向重抓失败站点'); p.add_argument('failure_txt'); p.add_argument('--output',default=str(DEFAULT_SUCCESS_DIR)); p.add_argument('--timeout',type=int,default=20); p.add_argument('--config'); p.add_argument('--cache'); a=p.parse_args(argv)
+    try: return retry_failed(a.failure_txt,a.output,a.timeout,a.config,a.cache)
+    except (OSError,ValueError,RuntimeError) as e: p.error(str(e))
+if __name__=='__main__': raise SystemExit(main())
