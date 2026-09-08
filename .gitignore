@@ -1,0 +1,23 @@
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+.coverage
+.pytest_cache/
+.ruff_cache/
+
+# Local locks, temporary files, and logs
+*.lock
+*.tmp
+*.log
+*.bak
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+credentials*.json
+secrets*.json
