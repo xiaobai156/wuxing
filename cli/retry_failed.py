@@ -53,7 +53,7 @@ def _remove(path, identity, expected):
     return _hash(path)
 
 def retry_failed(failure_path, output_dir=DEFAULT_SUCCESS_DIR, timeout_seconds=20, config_path=None, cache_path=None):
-    path=Path(failure_path); snapshot, records=_parse(path); runtime=build_runtime(config_path,cache_path); selected=resolve_sites(records,runtime); period=records[0]['period']; expected=hashlib.sha256(snapshot.encode()).hexdigest(); service=BatchService(runtime.scrape_service); request=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.READ_ONLY); submit=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.UPDATE_CACHE); success=0; seen=set()
+    path=Path(failure_path); _, records=_parse(path); expected=_hash(path); runtime=build_runtime(config_path,cache_path); selected=resolve_sites(records,runtime); period=records[0]['period']; service=BatchService(runtime.scrape_service); request=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.READ_ONLY); submit=ScrapeRequest(periods=(period,),timeout_seconds=timeout_seconds,write_policy=WritePolicy.UPDATE_CACHE); success=0; seen=set()
     for record,site in selected:
         identity=(record['name'],record['url'],record['region'],record['period'])
         if identity in seen: continue
