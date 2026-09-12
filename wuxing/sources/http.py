@@ -24,6 +24,7 @@ class RequestsHttpClient:
     def __init__(self):
         self._cache: dict[str, str] = {}
         self._lock = threading.RLock()
+        self._local = threading.local()
 
     @staticmethod
     def create_session() -> requests.Session:
@@ -38,6 +39,13 @@ class RequestsHttpClient:
         with self._lock:
             self._cache.clear()
 
+    def _session(self) -> requests.Session:
+        session = getattr(self._local, "session", None)
+        if session is None:
+            session = self.create_session()
+            self._local.session = session
+        return session
+
     def fetch_text(self, url: str, timeout: int) -> str:
         with self._lock:
             cached = self._cache.get(url)
@@ -45,32 +53,32 @@ class RequestsHttpClient:
             return cached
 
         last_error: Exception | None = None
-        with self.create_session() as session:
-            for attempt in range(3):
-                try:
-                    response = session.get(url, timeout=timeout, verify=True)
-                    if response.status_code in {502, 503, 504}:
-                        raise requests.HTTPError(
-                            f"HTTP {response.status_code}: Bad Gateway", response=response
-                        )
-                    response.raise_for_status()
-                    text = self._decode_response(response)
-                    with self._lock:
-                        self._cache[url] = text
-                    return text
-                except Exception as exc:
-                    last_error = exc
-                    if self._should_use_curl(exc):
-                        try:
-                            text = self._fetch_with_curl(url, timeout)
-                            with self._lock:
-                                self._cache[url] = text
-                            return text
-                        except Exception as curl_error:
-                            last_error = curl_error
-                            break
-                    if attempt < 2:
-                        time.sleep(0.5 * (attempt + 1))
+        session = self._session()
+        for attempt in range(3):
+            try:
+                response = session.get(url, timeout=timeout, verify=True)
+                if response.status_code in {502, 503, 504}:
+                    raise requests.HTTPError(
+                        f"HTTP {response.status_code}: Bad Gateway", response=response
+                    )
+                response.raise_for_status()
+                text = self._decode_response(response)
+                with self._lock:
+                    self._cache[url] = text
+                return text
+            except Exception as exc:
+                last_error = exc
+                if self._should_use_curl(exc):
+                    try:
+                        text = self._fetch_with_curl(url, timeout)
+                        with self._lock:
+                            self._cache[url] = text
+                        return text
+                    except Exception as curl_error:
+                        last_error = curl_error
+                        break
+                if attempt < 2:
+                    time.sleep(0.5 * (attempt + 1))
         raise FetchError(f"HTTP抓取失败：{type(last_error).__name__}: {last_error}") from last_error
 
     @staticmethod
