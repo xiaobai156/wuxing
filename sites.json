@@ -538,7 +538,8 @@
     "url": "https://czcvzk.4n5g7-o871g-hqmkwz.work:29422/article/admin/6a095770291caff3edcb8a7d?url=tsp",
     "api_url": "https://czcvzk.4n5g7-o871g-hqmkwz.work:29422/api/proxy/manager-articles/6a095770291caff3edcb8a7d",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "博码招财",
@@ -748,7 +749,8 @@
     "url": "https://dfgrufao.tz0ex-y6o7v-lazxsq.work:29400/article/admin/6a0409844ea5c20141013d82?url=lbw",
     "api_url": "https://dfgrufao.tz0ex-y6o7v-lazxsq.work:29400/api/proxy/manager-articles/6a0409844ea5c20141013d82",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "曲高和寡",
