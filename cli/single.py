@@ -7,13 +7,14 @@ from wuxing.domain.enums import WritePolicy
 from wuxing.domain.models import ScrapeRequest
 from wuxing.reporting.failure import format_failure_file_text
 from wuxing.reporting.progress import format_progress
-from wuxing.reporting.success import format_success_file_lines
+from wuxing.reporting.success import format_success_file_lines, format_success_output_lines
 from wuxing.services.batch import BatchService
 
 from .common import (
     DEFAULT_FAILURE_DIR,
     DEFAULT_SUCCESS_DIR,
     RANKING_EXCLUDED_NAMES,
+    append_success_lines,
     build_runtime,
     write_text,
 )
@@ -28,6 +29,7 @@ def run_single(
     show_browser: bool = False,
     workers: int = 8,
     read_only: bool = False,
+    repair_append_success: bool = False,
 ):
     runtime = runtime or build_runtime()
     request = ScrapeRequest(
@@ -45,8 +47,12 @@ def run_single(
         max_workers=workers,
         progress_callback=progress,
     )
-    success_lines = format_success_file_lines(batch.results, RANKING_EXCLUDED_NAMES)
-    success_path = write_text(Path(output_dir) / f"{period}期-五行.txt", "\n".join(success_lines) + ("\n" if success_lines else ""))
+    success_lines = format_success_output_lines(format_success_file_lines(batch.results, RANKING_EXCLUDED_NAMES))
+    success_target = Path(output_dir) / f"{period}期-五行.txt"
+    if repair_append_success:
+        success_path = append_success_lines(success_target, success_lines)
+    else:
+        success_path = write_text(success_target, "\n".join(success_lines) + ("\n" if success_lines else ""))
     failure_path = write_text(
         Path(failure_dir) / f"{period}期-五行-失败.txt",
         format_failure_file_text(batch.failures),
@@ -56,6 +62,8 @@ def run_single(
         print("缓存更新未完成：")
         for error in cache_report.errors:
             print(f"- {error}")
+    elif cache_report.skipped_reason:
+        print(f"缓存未更新：{cache_report.skipped_reason}")
     print(f"成功 {len(batch.successes)} 个，保存到 {success_path}")
     print(f"失败 {len(batch.failures)} 个，保存到 {failure_path}")
     return batch, success_path, failure_path
@@ -72,6 +80,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--show-browser", action="store_true")
     parser.add_argument("--read-only", action="store_true")
+    parser.add_argument(
+        "--repair-append-success",
+        action="store_true",
+        help="失败站点正式修复回填时保留成功TXT原内容，只追加不存在的成功站点",
+    )
     return parser
 
 
@@ -87,6 +100,7 @@ def main(argv: list[str] | None = None) -> int:
         args.show_browser,
         args.workers,
         args.read_only,
+        args.repair_append_success,
     )
     return 0
 

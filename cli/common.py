@@ -17,6 +17,7 @@ from wuxing.registry import SiteRegistry, build_site_registry
 from wuxing.services.scrape import LiveSourceGateway, ScrapeService
 from wuxing.storage.file_lock import exclusive_file_lock
 from wuxing.storage.history_cache import HistoryCacheRepository
+from wuxing.reporting.success import RANKING_HEADER, format_ranking_lines
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -96,7 +97,12 @@ def append_success_lines(path: str | Path, lines: Iterable[str]) -> Path:
 
     with exclusive_file_lock(target):
         original = target.read_bytes() if target.exists() else b""
-        existing_text = original.decode("utf-8-sig") if original else ""
+        original_text = original.decode("utf-8-sig") if original else ""
+        ranking_position = original_text.find(RANKING_HEADER)
+        base = original[: len(original_text[:ranking_position].encode("utf-8"))] if ranking_position >= 0 else original
+        if original and original.startswith(b"\xef\xbb\xbf") and ranking_position >= 0:
+            base = b"\xef\xbb\xbf" + original_text[:ranking_position].encode("utf-8")
+        existing_text = base.decode("utf-8-sig") if base else ""
         existing_lines = {}
         for raw in existing_text.splitlines():
             site_name = _success_site_name(raw)
@@ -110,16 +116,27 @@ def append_success_lines(path: str | Path, lines: Iterable[str]) -> Path:
             line for site_name, line in incoming.items()
             if site_name not in existing_sites
         ]
-        if not additions:
+        if not additions and ranking_position >= 0:
             return target
 
         newline = b"\r\n" if b"\r\n" in original else b"\n"
         block = newline.join(line.encode("utf-8") for line in additions) + newline
-        if original:
-            separator = b"" if original.endswith((b"\r", b"\n")) else newline
-            payload = original + separator + block
+        if base:
+            separator = b"" if base.endswith((b"\r", b"\n")) else newline
+            data_payload = base + (separator + block if additions else b"")
         else:
-            payload = b"\xef\xbb\xbf" + block
+            data_payload = (b"\xef\xbb\xbf" + block) if additions else b""
+        data_text = data_payload.decode("utf-8-sig") if data_payload else ""
+        try:
+            excluded_index = data_text.splitlines().index("重复目录-不参与排行")
+            rankable = data_text.splitlines()[:excluded_index]
+        except ValueError:
+            rankable = data_text.splitlines()
+        ranking_lines = format_ranking_lines(rankable)
+        payload = data_payload
+        if ranking_lines:
+            payload += (b"" if not payload or payload.endswith((b"\r", b"\n")) else newline)
+            payload += newline.join(line.encode("utf-8") for line in ranking_lines) + newline
 
         temp_path: Path | None = None
         try:

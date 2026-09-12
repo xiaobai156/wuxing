@@ -7,7 +7,7 @@ import time
 from wuxing.domain.models import BatchResult
 from wuxing.reporting.failure import format_failure_file_text
 from wuxing.reporting.progress import format_progress
-from wuxing.reporting.success import format_success_file_lines
+from wuxing.reporting.success import format_success_file_lines, format_success_output_lines
 from wuxing.services.multi_period import MultiPeriodService
 
 from .common import DEFAULT_FAILURE_DIR, DEFAULT_SUCCESS_DIR, RANKING_EXCLUDED_NAMES, build_runtime, write_text
@@ -34,7 +34,7 @@ def run_multi(
         batch = BatchResult(period_results)
         if period_results:
             print(format_progress(index, len(periods), batch, time.monotonic() - started, f"{period}期"), flush=True)
-        success_lines = format_success_file_lines(period_results, RANKING_EXCLUDED_NAMES)
+        success_lines = format_success_output_lines(format_success_file_lines(period_results, RANKING_EXCLUDED_NAMES))
         failure_results = tuple(item for item in period_results if item.candidate is None)
         write_text(Path(output_dir) / f"{period}期-五行.txt", "\n".join(success_lines) + ("\n" if success_lines else ""))
         write_text(Path(failure_dir) / f"{period}期-五行-失败.txt", format_failure_file_text(failure_results))

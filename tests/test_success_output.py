@@ -4,7 +4,7 @@ import pytest
 
 from wuxing.domain.enums import Region, SourceKind
 from wuxing.domain.models import Candidate, ScrapeResult, SiteConfig, SourceDocument, ValidationEvidence
-from wuxing.reporting.success import format_success_file_lines
+from wuxing.reporting.success import format_success_file_lines, format_success_output_lines
 from cli.common import append_success_lines
 from cli.single import build_arg_parser
 
@@ -59,3 +59,33 @@ def test_repair_append_mode_is_explicit():
     args = build_arg_parser().parse_args(["238", "--repair-append-success"])
 
     assert args.repair_append_success is True
+
+
+def test_success_output_appends_picture_style_dense_ranking():
+    assert format_success_output_lines(
+        ["金行 甲", "木行 乙", "金行 丙", "重复目录-不参与排行", "水行 排除站"]
+    ) == [
+        "金行 甲",
+        "木行 乙",
+        "金行 丙",
+        "重复目录-不参与排行",
+        "水行 排除站",
+        "",
+        "内容\t次数\t排名",
+        "金行\t2\t1",
+        "木行\t1\t2",
+    ]
+
+
+def test_append_rebuilds_one_ranking_without_duplicates(tmp_path):
+    target = tmp_path / "252期-五行.txt"
+    append_success_lines(target, ["金行 甲", "木行 乙"])
+    first = target.read_text(encoding="utf-8-sig")
+    append_success_lines(target, ["水行 丙"])
+    second = target.read_text(encoding="utf-8-sig")
+
+    assert second.count("内容\t次数\t排名") == 1
+    assert "金行\t1\t1" in second
+    assert "木行\t1\t1" in second
+    assert "水行\t1\t1" in second
+    assert first != second
