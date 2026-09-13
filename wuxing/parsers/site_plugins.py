@@ -51,11 +51,12 @@ def parse_bajixindong(document: str) -> list[kernel.Candidate]:
 
 
 def parse_tongxin_yeli(document: str) -> list[kernel.Candidate]:
-    """Keep the complete rendered history block across period-cycle wraps.
+    """Keep the rendered tail when the page repeats a period after a cycle wrap.
 
-    This page contains an ascending block, a zero-padded cycle, and then the
-    target descending tail. The shared monotonic parser stops at the first
-    reversal, so this plugin stops only at the page's explicit block boundary.
+    The page contains an ascending block followed by a zero-padded cycle. For
+    a repeated period, the bottom-direction source is the final rendered row;
+    keeping that occurrence also prevents an earlier cycle from creating a
+    false same-period conflict.
     """
     text = kernel.clean_line(kernel.html_to_text(document))
     anchor = _TONGXIN_YELI_ANCHOR_RE.search(text)
@@ -77,7 +78,8 @@ def parse_tongxin_yeli(document: str) -> list[kernel.Candidate]:
             )
         )
         last_match_end = match.end()
-    return candidates
+    last_by_period = {candidate.period: candidate for candidate in candidates}
+    return sorted(last_by_period.values(), key=lambda candidate: candidate.order)
 
 
 SITE_PLUGINS = {
