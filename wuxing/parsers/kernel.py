@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 import html
 import re
-from typing import Iterable
+from collections.abc import Iterable
+from dataclasses import dataclass
 from urllib.parse import urlparse
 
 try:
@@ -167,7 +167,40 @@ MANAGER_ARTICLE_SITE_RULES: dict[str, tuple[str, str]] = {
 }
 
 
+NAME_SCOPED_BLOCK_URLS = {
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=663",
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=556",
+    "https://8818.www19753a.com/read.php?tid=506",
+    "https://hl.www25195a.com/read.php?tid=676",
+    "https://hl.90216a.com/read.php?tid=689",
+    "https://hll.www39731a.com/read.php?tid=682",
+    "https://hl.www73261a.com/read.php?tid=549",
+    "https://hlhl.69281.com/read.php?tid=827",
+    "https://6609960827.115646.xyz/bbs/topic.php?id=21295",
+    "https://12388990827.794555.xyz/bbs/topic.php?id=21941",
+    "https://12388990827.794555.xyz/bbs/topic.php?id=21015",
+    "https://0085680827.326455.xyz/bbs/topic.php?id=20002",
+    "https://12388990827.688756.xyz/bbs/topic.php?id=19938",
+    "https://11889900827.435458.xyz/bbs/topic.php?id=18746",
+    "https://11008880827.876657.xyz/bbs/topic.php?id=21707",
+    "https://11008880827.456732.xyz/bbs/topic.php?id=20590",
+    "https://67806780827.325346.xyz/bbs/topic.php?id=19827",
+    "https://67806780827.234535.xyz/bbs/topic.php?id=21490",
+    "https://67806780827.234535.xyz/bbs/topic.php?id=21487",
+    "https://67806780827.978754.xyz/bbs/topic.php?id=19746",
+    "https://88888020827.983654.xyz/bbs/topic.php?id=20765",
+    "https://88888020827.833567.xyz/bbs/topic.php?id=22609",
+    "https://88888020827.833567.xyz/bbs/topic.php?id=22160",
+    "https://88888020827.897657.xyz/bbs/topic.php?id=20214",
+    "https://88888020827.997595.xyz/bbs/topic.php?id=18654",
+    "https://66778800827.909776.xyz/bbs/topic.php?id=18499",
+}
+
+
 SITE_CURRENT_BLOCK_ANCHORS: dict[str, re.Pattern[str]] = {
+    "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/206556.html": re.compile(
+        r"绝杀贴.*?绝杀\s*一\s*行.*?作者\s*[:：]\s*头昏眼花"
+    ),
     "https://993345.com/gsb1.aspx?id=1482": re.compile(r"天下无双.*必杀\s*一\s*行"),
     "https://yylxuru.en4hs-c1zt6-qzcdin.xyz:16677/": re.compile(r"▼\s*绝杀\s*一\s*行\s*▼"),
     "https://ekhivjcg.llnnt-l11x5-bywtoe.xyz:16677/topic/469882.html": re.compile(r"损人利己.*发文"),
@@ -194,6 +227,9 @@ SITE_CURRENT_BLOCK_ANCHORS: dict[str, re.Pattern[str]] = {
     "https://fhktrabu.zbfrm-uzct1-pmycbu.xyz:16677/topic/469065.html": re.compile(r"\d+期.{0,80}?绝杀一行.{0,80}?异口同声\s*发表于"),
     "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626101.html": re.compile(r"\d+期\s*[:：]\s*提心吊胆.{0,50}?精杀一行.{0,50}?提心吊胆\s*发表于"),
     "https://hhsmgw.rcl5b-akta2-ylzzwv.xyz:16677/topic/282006.html": re.compile(r"\d+期.{0,50}?绝杀一行.{0,50}?已公开\s*迷迷糊糊\s*发表于"),
+    "https://pwqviw.1tcpi-45qgo-qddfnk.work:16677/topic/291140.html": re.compile(
+        r"重岩叠障\s*《绝杀一行》\s*已更新\s*作者\s*[:：]\s*重岩叠障"
+    ),
 }
 
 
@@ -220,7 +256,7 @@ SITE_CURRENT_BLOCK_BOUNDARY_RE = re.compile(
 )
 
 
-SITE_SPECIFIC_ONLY_URLS = SITE_SPECIFIC_POSITION_RULE_URLS | set(SITE_CURRENT_BLOCK_ANCHORS) | {
+SITE_SPECIFIC_ONLY_URLS = SITE_SPECIFIC_POSITION_RULE_URLS | set(SITE_CURRENT_BLOCK_ANCHORS) | NAME_SCOPED_BLOCK_URLS | {
     "https://buzfwpox.pwp8o-vfhi5-xmrytn.xyz:16677/topic/464877.html",
     "https://pxgaayml.2wyk5-dwn70-cljflt.xyz:16677/topic/458324.html",
     "https://buvwlreg.drr11-soh5x-jcaafg.xyz:16677/",
@@ -509,7 +545,7 @@ def parse_named_screenshot_candidates(
     title_pattern: re.Pattern[str],
     row_pattern: re.Pattern[str],
     require_title: bool = False,
-    max_section_lines: int = 24,
+    max_section_lines: int | None = 24,
 ) -> list[Candidate]:
     lines = text_lines(document)
     title_index = next(
@@ -521,7 +557,11 @@ def parse_named_screenshot_candidates(
     start_index = title_index or 0
     candidates: list[Candidate] = []
     for index in range(start_index, len(lines)):
-        if title_index is not None and index - start_index > max_section_lines:
+        if (
+            max_section_lines is not None
+            and title_index is not None
+            and index - start_index > max_section_lines
+        ):
             break
         line = lines[index]
         if index and any(marker in line for marker in ("上一篇", "下一篇", "点击投注", "2026年五行")):
@@ -554,12 +594,15 @@ def parse_named_screenshot_candidates(
 
 
 def parse_tianxiawushuang_candidates(document: str) -> list[Candidate]:
+    # 该站每行被 <font>/<span> 切成多段且行数随历史增长，固定行数上限会截掉最新一期
+    # （实测 267 期落在 title+163 处，160 上限导致漏取）；区块边界交给内容标记
+    # （上一篇/下一篇/点击投注/2026年五行）判定。
     split_rows = parse_named_screenshot_candidates(
         document,
         re.compile(r"天下无双.*必杀\s*一\s*行"),
         SCREENSHOT_ONE_LINE_ROW_RE,
         require_title=True,
-        max_section_lines=160,
+        max_section_lines=None,
     )
     return dedupe_candidates_only(
         Candidate(
@@ -852,14 +895,20 @@ def parse_bajixixindong_candidates(document: str) -> list[Candidate]:
 
 def parse_baiwanziliao_candidates(document: str) -> list[Candidate]:
     candidates: list[Candidate] = []
-    for index, line in enumerate(text_lines(document)):
-        match = re.search(
-            rf"(?P<period>\d{{1,4}})\s*期\s*稳杀\s*[（(]?\s*{ONE_MARKER}\s*[)）]?\s*行\s*"
-            r"[【\[]\s*(?P<wuxing>[金木水火土])\s*[】\]]",
-            line,
+    text = clean_line(html_to_text(document))
+    pattern = re.compile(
+        rf"(?P<period>\d{{1,4}})\s*期\s*稳杀\s*[（(]?\s*{ONE_MARKER}\s*[)）]?\s*行\s*"
+        r"[【\[]\s*(?P<wuxing>[金木水火土])\s*[】\]]"
+    )
+    for match in pattern.finditer(text):
+        candidates.append(
+            Candidate(
+                f"{int(match.group('period'))}期",
+                f"{match.group('wuxing')}行",
+                match.start(),
+                clean_line(match.group(0)),
+            )
         )
-        if match:
-            candidates.append(Candidate(f"{int(match.group('period'))}期", f"{match.group('wuxing')}行", index, line))
     return dedupe_candidates_only(candidates)
 
 
@@ -913,17 +962,24 @@ def parse_shanshuishiyi_candidates(document: str) -> list[Candidate]:
 
 def parse_zhugeshentong_candidates(document: str) -> list[Candidate]:
     candidates: list[Candidate] = []
-    for index, line in enumerate(text_lines(document)):
-        if "诸葛神通" not in line or "四行中特" not in line:
-            continue
+    lines = text_lines(document)
+    for index, line in enumerate(lines):
         period_match = PERIOD_RE.search(line)
         if not period_match:
             continue
-        wuxing = extract_precise_wuxing_from_block([line])
+        block = [line]
+        for follow in lines[index + 1 : index + 8]:
+            if PERIOD_RE.search(follow):
+                break
+            block.append(follow)
+        block_text = clean_line(" ".join(block))
+        if "诸葛神通" not in block_text or "四行中特" not in block_text:
+            continue
+        wuxing = extract_precise_wuxing_from_block([block_text])
         if not wuxing:
             continue
         period = f"{int(period_match.group(1))}期"
-        candidates.append(Candidate(period=period, wuxing=wuxing, order=index, raw=line))
+        candidates.append(Candidate(period=period, wuxing=wuxing, order=index, raw=block_text))
     return dedupe_candidates_only(candidates)
 
 
@@ -1136,7 +1192,7 @@ def parse_manager_article_candidates(document: str, site: Site) -> list[Candidat
         if mode == "four":
             matches = list(re.finditer(
                 r"(?<!非)(?:四|4|④)\s*行\s*中\s*特.{0,24}?[【\[（(〖]"
-                r"\s*(?P<values>[金木水火土](?:\s*[.、，/]\s*[金木水火土]){3})\s*[】\]）)〗]",
+                r"\s*(?P<values>[金木水火土](?:\s*[.、，/]\s*[金木水火土]){3})\s*[.、，/]?\s*[】\]）)〗]",
                 record,
             ))
             first_target = next(
@@ -1189,6 +1245,11 @@ def parse_manager_article_candidates(document: str, site: Site) -> list[Candidat
 def parse_site_specific_candidates(document: str, site: Site) -> list[Candidate]:
     if site.url in MANAGER_ARTICLE_SITE_RULES:
         return parse_manager_article_candidates(document, site)
+    if site.url in NAME_SCOPED_BLOCK_URLS:
+        anchor = re.compile(
+            re.escape(site.name) + r".{0,60}?(?:绝|必|精|稳)?\s*杀\s*(?:一|1)\s*行"
+        )
+        return parse_current_site_block_candidates(document, anchor)
     if site.url == "https://993345.com/gsb1.aspx?id=1482":
         return parse_tianxiawushuang_candidates(document)
     if site.url == "https://yylxuru.en4hs-c1zt6-qzcdin.xyz:16677/":
