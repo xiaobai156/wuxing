@@ -1,22 +1,24 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 import re
-from typing import Callable, Iterable
+from collections.abc import Callable, Iterable
+from dataclasses import dataclass
 
 from wuxing.config.schema import SITE_SCHEMA_VERSION
 from wuxing.domain.enums import FetchStrategy, SourceKind
 from wuxing.domain.errors import ConfigError
 from wuxing.domain.models import Candidate, SiteConfig, SourceDocument
 from wuxing.parsers import kernel
-from wuxing.sources.article_api import article_id_from_url, decode_article_api_document, is_article_detail_url
+from wuxing.sources.article_api import (
+    article_id_from_url,
+    decode_article_api_document,
+    is_article_detail_url,
+)
 from wuxing.sources.browser import BrowserPlan
-from wuxing.sources.ocr_script import IMAGE_OCR_JS
 from wuxing.sources.spa import decode_spa_forum_documents
 
 from . import registry_data
 from .parsers.site_plugins import SITE_PLUGINS, SITE_PLUGINS_BY_ID
-
 
 Parser = Callable[[tuple[SourceDocument, ...]], tuple[Candidate, ...]]
 AuthoritySelector = Callable[[tuple[SourceDocument, ...], int | None], tuple[SourceDocument, ...]]
@@ -104,6 +106,23 @@ def _collapse_cross_document_exact_echoes(candidates: list[Candidate]) -> list[C
     return kept
 
 
+def _first_contiguous_cycle_block(candidates: list[Candidate]) -> list[Candidate]:
+    """只保留页面开头那段期号连续递减的区块。
+
+    个别站点在当期区块之后又把整轮历史重排一遍（305..001 之后从 365 再递减），
+    同一期会重复出现并把方向窗口挤出范围。区块边界取「期号不再连续递减」处，
+    只截首段；跨块的重复期不进入方向计数，值冲突仍由统一校验裁决。
+    """
+    kept: list[Candidate] = []
+    expected: int | None = None
+    for candidate in sorted(candidates, key=lambda item: item.order):
+        if expected is not None and candidate.period != expected:
+            break
+        kept.append(candidate)
+        expected = candidate.period - 1
+    return kept
+
+
 def _make_parser(site: SiteConfig) -> Parser:
     kernel_site = _legacy_kernel_site(site)
     plugin = SITE_PLUGINS_BY_ID.get(site.parser_id) or SITE_PLUGINS.get(site.url)
@@ -117,6 +136,8 @@ def _make_parser(site: SiteConfig) -> Parser:
                 converted.append(_convert_candidate(site, document, candidate))
         if kernel.spa_user_id_from_url(site.url) is not None:
             converted = _collapse_cross_document_exact_echoes(converted)
+        if site.url in registry_data.CURRENT_CYCLE_FIRST_BLOCK_URLS:
+            converted = _first_contiguous_cycle_block(converted)
         return tuple(converted)
 
     return parse
@@ -128,6 +149,20 @@ def _authority_document(
 ) -> SourceDocument | None:
     exact = [document for document in source_documents if document.text == selected_text]
     return exact[0] if len(exact) == 1 else None
+
+
+def _document_has_period(document: SourceDocument, kernel_site, period: int) -> bool:
+    """该文档里是否存在指定期的合法五行候选。"""
+    try:
+        parsed = kernel.parse_candidates_for_site(document.text, kernel_site)
+    except Exception:
+        return False
+    target = f"{period}"
+    for candidate in parsed:
+        digits = "".join(character for character in str(candidate.period) if character.isdigit())
+        if digits and int(digits) == int(target):
+            return True
+    return False
 
 
 def _make_authority_selector(site: SiteConfig) -> AuthoritySelector:
@@ -156,12 +191,22 @@ def _make_authority_selector(site: SiteConfig) -> AuthoritySelector:
             and document.metadata_map.get("capture_part")
         }
         if browser_parts:
+            record = browser_parts.get("record")
+            if record is not None:
+                return (record,)
             primary_part = "body" if site.url in registry_data.BROWSER_VISIBLE_TEXT_ONLY_URLS else "page_source"
             primary = browser_parts.get(primary_part) or browser_parts.get("body")
-            if primary is None:
-                return ()
             ocr = browser_parts.get("ocr")
-            return (primary, ocr) if ocr is not None else (primary,)
+            # 一个结果只能绑定一个权威文档：主文档优先，OCR 仅在主文档取不到当期候选时单独顶上。
+            if primary is not None:
+                if period is None or _document_has_period(primary, kernel_site, period):
+                    return (primary,)
+                if ocr is not None and _document_has_period(ocr, kernel_site, period):
+                    return (ocr,)
+                return (primary,)
+            if ocr is not None:
+                return (ocr,)
+            return ()
         if kernel.spa_user_id_from_url(site.url) is not None and documents:
             target = f"{period}期" if period is not None else None
             selected = tuple(
@@ -173,7 +218,8 @@ def _make_authority_selector(site: SiteConfig) -> AuthoritySelector:
                     for candidate in kernel.parse_candidates_for_site(document.text, kernel_site)
                 )
             )
-            return selected
+            # 一个结果只能绑定一个权威文档：SPA 同期多帖时只取第一个命中文档。
+            return selected[:1]
         selected = kernel.site_authoritative_documents(
             [document.text for document in documents],
             kernel_site,
@@ -207,7 +253,7 @@ def _browser_plan(site: SiteConfig) -> BrowserPlan:
     click_text_pattern = ""
     if site.click_first and site.url not in registry_data.BROWSER_SKIP_CLICK_URLS:
         click_text_pattern = kernel.TARGET_SECTION_RE.pattern
-    if not required_text_pattern and re.search(r"/article/(?:admin|manager)/", site.url):
+    if not required_text_pattern and re.search(r"/article/(?:admin|manager|lottery)/", site.url):
         required_text_pattern = TARGET_ANCHOR_RE
     return BrowserPlan(
         tab_label_pattern=tab_pattern.pattern if tab_pattern else "",
@@ -216,7 +262,8 @@ def _browser_plan(site: SiteConfig) -> BrowserPlan:
         popup_close_selector=registry_data.BROWSER_POPUP_CLOSE_SELECTORS.get(site.url, ""),
         required_text_pattern=required_text_pattern.pattern if required_text_pattern else "",
         visible_text_only=site.url in registry_data.BROWSER_VISIBLE_TEXT_ONLY_URLS,
-        ocr_script=IMAGE_OCR_JS if site.click_first else "",
+        ocr_enabled=site.click_first,
+        record_selector=registry_data.BROWSER_RECORD_SELECTORS.get(site.url, ""),
     )
 
 

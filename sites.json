@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "name": "澳门创富网",
     "url": "https://nyekjhvz.kr4ar-cgeaj-aekfox.xyz:16677/",
@@ -9,7 +9,11 @@
     "name": "澳门第二四不像",
     "url": "https://hsnvkhhc.edqtp-en8ri-yiczbn.xyz:16677/",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "tags": [
+      "站点重复"
+    ],
+    "archived": true
   },
   {
     "name": "平特网心",
@@ -19,7 +23,7 @@
   },
   {
     "name": "智能熱門高手",
-    "url": "https://jjlachsn.4fk3e-i2rpf-vgknlh.work:16677/topic/660782.html",
+    "url": "https://mwcyukkv.agx2u-9h1th-ycwtgx.cyou:17488/topic/660782.html",
     "click_first": false,
     "region": "top",
     "config_version": 2
@@ -47,7 +51,8 @@
     "name": "溥天同庆",
     "url": "https://vbxl5.wp5pl-3ztz5-cwgbti.xyz/topic/222779.html",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "browser_fallback": true
   },
   {
     "name": "随便项链",
@@ -84,19 +89,24 @@
     "name": "置身事外",
     "url": "https://cxmdjok.8wtwc-boven-glylvt.xyz:16677/topic/437741.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "眉飞色舞",
     "url": "https://flirclg.d9n5a-2i9au-ezvqgb.xyz:16677/topic/479159.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 2
   },
   {
     "name": "雷锋",
     "url": "https://dvglkfp.mueyy-uiuci-vtqiod.work:16677/topic/205677.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 3
   },
   {
     "name": "低眉折腰",
@@ -106,15 +116,19 @@
   },
   {
     "name": "精牌谜语",
-    "url": "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273111.html",
+    "url": "https://scbnsyz.3dl0e-87g6y-coruzs.xyz:16677/topic/273111.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 2
   },
   {
     "name": "精牌谜语第二版",
-    "url": "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273106.html",
+    "url": "https://scbnsyz.3dl0e-87g6y-coruzs.xyz:16677/topic/273106.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 2
   },
   {
     "name": "广西仔",
@@ -132,7 +146,8 @@
     "name": "广西仔第二版",
     "url": "https://jldzuea.0xkqd-q7ng5-boerfb.xyz:16677/topic/677573.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true
   },
   {
     "name": "产生共鸣",
@@ -154,13 +169,13 @@
   },
   {
     "name": "狀元紅",
-    "url": "https://3.www112291a.com:2053/gengxin/16.html",
+    "url": "https://otwuomdb.882244a.app:2026/gengxin/16.html",
     "click_first": false,
     "region": "top"
   },
   {
     "name": "慈善网",
-    "url": "https://4.www337731a.com:2053/gsb/28.html",
+    "url": "https://so6f8erm.881199.app:2026/gsb/28.html",
     "click_first": false,
     "region": "top"
   },
@@ -168,7 +183,8 @@
     "name": "财神驾到",
     "url": "https://666.97561.com/read.php?tid=650",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "心如刀割",
@@ -238,7 +254,8 @@
     "name": "澳门第三四不像",
     "url": "https://hsnvkhhc.edqtp-en8ri-yiczbn.xyz:16677/topic/572238.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true
   },
   {
     "name": "王六杀一行",
@@ -252,7 +269,7 @@
     "url": "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/",
     "click_first": false,
     "region": "top",
-    "config_version": 2
+    "config_version": 4
   },
   {
     "name": "猪狗不如",
@@ -264,14 +281,15 @@
     "name": "稳稳稳",
     "url": "https://sepfsazm.th2pfx-4s7mu-aafjnm.xyz:16677/topic/680722.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true
   },
   {
     "name": "杀敌致果",
     "url": "https://v0uer.e2xs0-3tuvc-rsgtzx.xyz/topic/255638.html",
     "click_first": false,
     "region": "top",
-    "config_version": 2
+    "config_version": 3
   },
   {
     "name": "精枝玉叶",
@@ -285,13 +303,15 @@
     "url": "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/206556.html",
     "click_first": false,
     "region": "top",
-    "config_version": 2
+    "config_version": 3
   },
   {
     "name": "骂骂咧咧",
     "url": "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/558018.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 2
   },
   {
     "name": "降龙有悔",
@@ -336,7 +356,11 @@
     "name": "信封论坛",
     "url": "https://zqliou.kify1-fbyi6-lmeykn.xyz:16677/",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "tags": [
+      "站点重复"
+    ],
+    "archived": true
   },
   {
     "name": "恭喜发财",
@@ -363,21 +387,24 @@
     "url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/article/admin/6a144657597e16d57eacb65e?url=lqz",
     "api_url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/api/proxy/manager-articles/6a144657597e16d57eacb65e",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "彻头彻尾",
     "url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/article/admin/6a1449c2597e16d57eacb67a?url=lqz",
     "api_url": "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/api/proxy/manager-articles/6a1449c2597e16d57eacb67a",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "共享财富",
     "url": "https://skgdjjmz.l54vq-9httr-cmdnip.work:29477/article/admin/6a042f7e4ea5c20141013e17?url=xdr",
     "api_url": "https://skgdjjmz.l54vq-9httr-cmdnip.work:29477/api/proxy/manager-articles/6a042f7e4ea5c20141013e17",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "region": "bottom",
@@ -390,7 +417,8 @@
     "name": "重岩叠障",
     "url": "https://pwqviw.1tcpi-45qgo-qddfnk.work:16677/topic/291140.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "算法文心",
@@ -410,7 +438,8 @@
     "url": "https://tjetrfr.jocy8-cy4wk-fmpeer.xyz:16677/",
     "click_first": false,
     "region": "top",
-    "config_version": 2
+    "config_version": 2,
+    "archived": true
   },
   {
     "name": "北悸安涼",
@@ -435,7 +464,8 @@
     "name": "皇甫青崖",
     "url": "https://msbqxti.zhx2n-7v5x3-ivdpud.xyz:16677/topic/682733.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true
   },
   {
     "name": "摇摇晃晃",
@@ -567,14 +597,16 @@
     "url": "https://oofsukyp.7u9l0-zq8hd-obpxwe.work:29455/article/admin/6a02d8538bad0a3579e9f770?url=home",
     "api_url": "https://oofsukyp.7u9l0-zq8hd-obpxwe.work:29455/api/proxy/manager-articles/6a02d8538bad0a3579e9f770",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "财神致富",
     "url": "https://oofsukyp.7u9l0-zq8hd-obpxwe.work:29455/article/admin/6a02df8e6bedb2a8313d5882?url=home",
     "api_url": "https://oofsukyp.7u9l0-zq8hd-obpxwe.work:29455/api/proxy/manager-articles/6a02df8e6bedb2a8313d5882",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "如意天行",
@@ -587,7 +619,8 @@
     "url": "https://2.www39169b.com:888/#62111",
     "click_first": false,
     "region": "top",
-    "config_version": 2
+    "config_version": 2,
+    "archived": true
   },
   {
     "name": "声势浩大",
@@ -618,7 +651,11 @@
     "name": "天青润薮",
     "url": "https://ykeejph.z9koz-18xjn-pvglgy.xyz:16677/topic/682107.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "tags": [
+      "站点重复"
+    ],
+    "archived": true
   },
   {
     "name": "万里无云",
@@ -652,7 +689,8 @@
     "name": "历史最猛",
     "url": "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=457",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "实力非凡",
@@ -700,7 +738,8 @@
     "name": "震撼人心",
     "url": "https://18118.73829.com/read.php?tid=770",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "神童爆料",
@@ -801,7 +840,9 @@
     "name": "小筑望星",
     "url": "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/625574.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 2
   },
   {
     "name": "明明白白",
@@ -827,7 +868,8 @@
     "name": "一本万利",
     "url": "https://mflmcobome.26222hi.app:2569/htm/bbs/top040.html",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "暴风骤雨",
@@ -839,7 +881,8 @@
     "name": "镂尘吹影",
     "url": "https://kxglojup.fao5v-9u0oz-okhubb.work:16677/topic/782072.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "风雨无阻",
@@ -851,7 +894,9 @@
     "name": "彫虫小技",
     "url": "https://qdufkx.sjb5z-pi4k6-jlhnig.xyz:16677/topic/798409.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "browser_fallback": true,
+    "config_version": 2
   },
   {
     "name": "城北徐公",
@@ -888,7 +933,8 @@
     "name": "诸葛神通",
     "url": "https://hl.www25195a.com/read.php?tid=607",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "男儿本色",
@@ -985,7 +1031,8 @@
     "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a326fedc50767750c400757?url=jbx",
     "api_url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/api/proxy/manager-articles/6a326fedc50767750c400757",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "典则俊雅",
@@ -993,5 +1040,342 @@
     "api_url": "https://wigrzse.3acpt-tc9xa-kzxasm.xyz:29444/api/proxy/manager-articles/6a20da1dca6da63e15d01fc8",
     "click_first": false,
     "region": "bottom"
+  },
+  {
+    "site_id": "added-004-view-663",
+    "rule_id": "site.added-004-view-663.v1",
+    "parser_id": "parser.added-004-view-663.v1",
+    "name": "大哥财富",
+    "url": "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=663",
+    "click_first": false,
+    "browser_fallback": true,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-005-view-556",
+    "rule_id": "site.added-005-view-556.v1",
+    "parser_id": "parser.added-005-view-556.v1",
+    "name": "拼搏干翻",
+    "url": "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=556",
+    "click_first": false,
+    "browser_fallback": true,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-030-read-506",
+    "rule_id": "site.added-030-read-506.v1",
+    "parser_id": "parser.added-030-read-506.v1",
+    "name": "推陈出新",
+    "url": "https://8818.www19753a.com/read.php?tid=506",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ]
+  },
+  {
+    "site_id": "added-032-read-676",
+    "rule_id": "site.added-032-read-676.v1",
+    "parser_id": "parser.added-032-read-676.v1",
+    "name": "虎狼之势",
+    "url": "https://hl.www25195a.com/read.php?tid=676",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-036-read-689",
+    "rule_id": "site.added-036-read-689.v1",
+    "parser_id": "parser.added-036-read-689.v1",
+    "name": "钟灵毓秀",
+    "url": "https://hl.90216a.com/read.php?tid=689",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ]
+  },
+  {
+    "site_id": "added-037-read-682",
+    "rule_id": "site.added-037-read-682.v1",
+    "parser_id": "parser.added-037-read-682.v1",
+    "name": "至尊作品",
+    "url": "https://hll.www39731a.com/read.php?tid=682",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-038-read-549",
+    "rule_id": "site.added-038-read-549.v1",
+    "parser_id": "parser.added-038-read-549.v1",
+    "name": "一唱百和",
+    "url": "https://hl.www73261a.com/read.php?tid=549",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ]
+  },
+  {
+    "site_id": "added-039-read-827",
+    "rule_id": "site.added-039-read-827.v1",
+    "parser_id": "parser.added-039-read-827.v1",
+    "name": "峥嵘岁月",
+    "url": "https://hlhl.69281.com/read.php?tid=827",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-082-topic-21295",
+    "rule_id": "site.added-082-topic-21295.v1",
+    "parser_id": "parser.added-082-topic-21295.v1",
+    "name": "万绿丛中",
+    "url": "https://6609960827.115646.xyz/bbs/topic.php?id=21295",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-083-topic-21941",
+    "rule_id": "site.added-083-topic-21941.v1",
+    "parser_id": "parser.added-083-topic-21941.v1",
+    "name": "转念成空",
+    "url": "https://12388990827.794555.xyz/bbs/topic.php?id=21941",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-084-topic-21015",
+    "rule_id": "site.added-084-topic-21015.v1",
+    "parser_id": "parser.added-084-topic-21015.v1",
+    "name": "天天赚钱",
+    "url": "https://12388990827.794555.xyz/bbs/topic.php?id=21015",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-085-topic-20002",
+    "rule_id": "site.added-085-topic-20002.v1",
+    "parser_id": "parser.added-085-topic-20002.v1",
+    "name": "治国安民",
+    "url": "https://0085680827.326455.xyz/bbs/topic.php?id=20002",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-086-topic-19938",
+    "rule_id": "site.added-086-topic-19938.v1",
+    "parser_id": "parser.added-086-topic-19938.v1",
+    "name": "富豪爆彩",
+    "url": "https://12388990827.688756.xyz/bbs/topic.php?id=19938",
+    "click_first": false,
+    "region": "bottom",
+    "archived": true,
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ]
+  },
+  {
+    "site_id": "added-087-topic-18746",
+    "rule_id": "site.added-087-topic-18746.v1",
+    "parser_id": "parser.added-087-topic-18746.v1",
+    "name": "思念无涯",
+    "url": "https://11889900827.435458.xyz/bbs/topic.php?id=18746",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-088-topic-21707",
+    "rule_id": "site.added-088-topic-21707.v1",
+    "parser_id": "parser.added-088-topic-21707.v1",
+    "name": "开奖欢喜",
+    "url": "https://11008880827.876657.xyz/bbs/topic.php?id=21707",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-089-topic-20590",
+    "rule_id": "site.added-089-topic-20590.v1",
+    "parser_id": "parser.added-089-topic-20590.v1",
+    "name": "汝嫣澍茵",
+    "url": "https://11008880827.456732.xyz/bbs/topic.php?id=20590",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-092-topic-19827",
+    "rule_id": "site.added-092-topic-19827.v1",
+    "parser_id": "parser.added-092-topic-19827.v1",
+    "name": "天天宝典",
+    "url": "https://67806780827.325346.xyz/bbs/topic.php?id=19827",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-093-topic-21490",
+    "rule_id": "site.added-093-topic-21490.v1",
+    "parser_id": "parser.added-093-topic-21490.v1",
+    "name": "爆庄赚钱",
+    "url": "https://67806780827.234535.xyz/bbs/topic.php?id=21490",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-094-topic-21487",
+    "rule_id": "site.added-094-topic-21487.v1",
+    "parser_id": "parser.added-094-topic-21487.v1",
+    "name": "六彩丰富",
+    "url": "https://67806780827.234535.xyz/bbs/topic.php?id=21487",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-095-topic-19746",
+    "rule_id": "site.added-095-topic-19746.v1",
+    "parser_id": "parser.added-095-topic-19746.v1",
+    "name": "枝繁叶茂",
+    "url": "https://67806780827.978754.xyz/bbs/topic.php?id=19746",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-096-topic-20765",
+    "rule_id": "site.added-096-topic-20765.v1",
+    "parser_id": "parser.added-096-topic-20765.v1",
+    "name": "崇山峻岭",
+    "url": "https://88888020827.983654.xyz/bbs/topic.php?id=20765",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-097-topic-22609",
+    "rule_id": "site.added-097-topic-22609.v1",
+    "parser_id": "parser.added-097-topic-22609.v1",
+    "name": "劲爆猛料",
+    "url": "https://88888020827.833567.xyz/bbs/topic.php?id=22609",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-098-topic-22160",
+    "rule_id": "site.added-098-topic-22160.v1",
+    "parser_id": "parser.added-098-topic-22160.v1",
+    "name": "糖果妹妹",
+    "url": "https://88888020827.833567.xyz/bbs/topic.php?id=22160",
+    "click_first": false,
+    "region": "bottom",
+    "archived": true,
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ]
+  },
+  {
+    "site_id": "added-099-topic-20214",
+    "rule_id": "site.added-099-topic-20214.v1",
+    "parser_id": "parser.added-099-topic-20214.v1",
+    "name": "一彩平川",
+    "url": "https://88888020827.897657.xyz/bbs/topic.php?id=20214",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-100-topic-18654",
+    "rule_id": "site.added-100-topic-18654.v1",
+    "parser_id": "parser.added-100-topic-18654.v1",
+    "name": "澳爆出料",
+    "url": "https://88888020827.997595.xyz/bbs/topic.php?id=18654",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
+  },
+  {
+    "site_id": "added-101-topic-18499",
+    "rule_id": "site.added-101-topic-18499.v1",
+    "parser_id": "parser.added-101-topic-18499.v1",
+    "name": "宝典军师",
+    "url": "https://66778800827.909776.xyz/bbs/topic.php?id=18499",
+    "click_first": false,
+    "region": "bottom",
+    "tags": [
+      "疑似重复特例-用户批准-2026-08-27"
+    ],
+    "archived": true
   }
 ]

@@ -2,14 +2,31 @@ from __future__ import annotations
 
 import re
 
-
 BROWSER_TAB_CLICK_PATTERNS: dict[str, re.Pattern[str]] = {
     "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/": re.compile(r"^杀一行$"),
 }
 
 
+BROWSER_RECORD_SELECTORS: dict[str, str] = {
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=663": "body",
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=556": "body",
+    "https://flirclg.d9n5a-2i9au-ezvqgb.xyz:16677/topic/479159.html": "div:has(> .topic-content)",
+    "https://dvglkfp.mueyy-uiuci-vtqiod.work:16677/topic/205677.html": "div:has(> .topic-content)",
+    "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273111.html": ".detail_info_forum2_item",
+    "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273106.html": ".detail_info_forum2_item",
+    "https://scbnsyz.3dl0e-87g6y-coruzs.xyz:16677/topic/273111.html": ".detail_info_forum2_item",
+    "https://scbnsyz.3dl0e-87g6y-coruzs.xyz:16677/topic/273106.html": ".detail_info_forum2_item",
+    "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/": ".swiper-slide-active",
+    "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/206556.html": "div:has(> .topic-content)",
+    "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/558018.html": "div:has(> .topic-content)",
+    "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/625574.html": ".detail_info_forum2_item",
+    "https://qdufkx.sjb5z-pi4k6-jlhnig.xyz:16677/topic/798409.html": "div:has(> div.title)",
+}
+
+
 BROWSER_FIRST_URLS = {
     "https://jjlachsn.4fk3e-i2rpf-vgknlh.work:16677/topic/660782.html",
+    "https://mwcyukkv.agx2u-9h1th-ycwtgx.cyou:17488/topic/660782.html",
     "https://gboqrz.1grys-bnkqq-evlqkb.work/topic/507999.html",
     "https://jnf52f.mjhbr-zqt9a-ofmjce.work/topic/488506.html",
     "https://ezovboxw.uomne-2a0nc-yjyzjh.xyz:16677/topic/320728.html",
@@ -32,7 +49,7 @@ BROWSER_FIRST_URLS = {
     "https://tjetrfr.jocy8-cy4wk-fmpeer.xyz:16677/",
     "https://wxaxdfc.523mo-z7mla-owjdon.xyz:16677/",
     "https://uinpwmgx.5jl59-ok78a-ctvois.xyz:16677/topic/448284.html",
-    "https://hl.www25195a.com/read.php?tid=607",
+    "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/",
     "https://kxglojup.fao5v-9u0oz-okhubb.work:16677/topic/782072.html",
     "https://bbuueerm.pxcma-jyfok-mvduyw.xyz:16633/topic/455269.html",
     "https://hhsmgw.rcl5b-akta2-ylzzwv.xyz:16677/topic/282006.html",
@@ -41,7 +58,6 @@ BROWSER_FIRST_URLS = {
     "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626097.html",
     "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/625994.html",
     "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/626101.html",
-    "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/",
     "https://cwdcaqzn.7mj0h-75k3q-cbuvqb.work:16677/#am",
     "https://2.www39169b.com:888/#62111",
     "https://dzuojaf.rua12-mwvo8-oriqfc.xyz:16677/topic/461725.html",
@@ -56,7 +72,7 @@ BROWSER_FIRST_URLS = {
     "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/678240.html",
     "https://jldzuea.0xkqd-q7ng5-boerfb.xyz:16677/topic/455533.html",
     "https://g63.52619c.com:8443/tie1/1614.html",
-    "https://3.www112291a.com:2053/gengxin/16.html",
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html",
     "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/467884.html",
     "https://uqhuqalo.vbcyr-idr4l-jouqgu.xyz:16633/topic/417591.html",
     "https://gboqrz.d2cda-p5u2y-gwxmnf.work/topic/465446.html",
@@ -84,6 +100,8 @@ BROWSER_FIRST_URLS = {
 
 
 BROWSER_VISIBLE_TEXT_ONLY_URLS = {
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=663",
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=556",
     "https://hl.www25195a.com/read.php?tid=607",
     "https://kxglojup.fao5v-9u0oz-okhubb.work:16677/topic/782072.html",
     "https://bbuueerm.pxcma-jyfok-mvduyw.xyz:16633/topic/455269.html",
@@ -103,7 +121,7 @@ BROWSER_VISIBLE_TEXT_ONLY_URLS = {
     "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/678240.html",
     "https://jldzuea.0xkqd-q7ng5-boerfb.xyz:16677/topic/455533.html",
     "https://g63.52619c.com:8443/tie1/1614.html",
-    "https://3.www112291a.com:2053/gengxin/16.html",
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html",
     "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/467884.html",
     "https://uqhuqalo.vbcyr-idr4l-jouqgu.xyz:16633/topic/417591.html",
     "https://gboqrz.d2cda-p5u2y-gwxmnf.work/topic/465446.html",
@@ -153,11 +171,16 @@ BROWSER_NON_BLOCKING_LOAD_URLS = {
     "https://pxgaayml.2wyk5-dwn70-cljflt.xyz:16677/topic/458324.html",
     "https://2.www39169b.com:888/#62111",
     "https://dzuojaf.rua12-mwvo8-oriqfc.xyz:16677/topic/461725.html",
+    "https://kxglojup.fao5v-9u0oz-okhubb.work:16677/topic/782072.html",
 }
 
 
 BROWSER_NO_SCROLL_URLS = {
     "https://myvvqq.30dok-2s9fd-bibfmg.work/",
+    # 291期：滚动触发渲染进程崩溃（Page.evaluate: Target crashed），正文首屏已含全部期数行，跳过滚动
+    "https://gboqrz.1grys-bnkqq-evlqkb.work/topic/507999.html",
+    "https://gboqrz.d2cda-p5u2y-gwxmnf.work/topic/465446.html",
+    "https://gboqrz.sm0a0-x9x2c-xyvjdr.work/topic/205464.html",
 }
 
 
@@ -170,7 +193,7 @@ BROWSER_EXACT_CLICK_HREFS = {}
 
 
 BROWSER_POPUP_CLOSE_SELECTORS = {
-    "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/": "#pop-xyz .pop-xyz-close",
+    "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/": ".index_popup17_close",
 }
 
 
@@ -180,8 +203,49 @@ ARTICLE_API_CONFIGURED_REGION_FALLBACK_URLS = {
 
 
 BROWSER_REQUIRED_TEXT_PATTERNS: dict[str, re.Pattern[str]] = {
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=663": re.compile(
+        r"大哥财富[\s\S]{0,80}?(?:绝|必|精|稳)?\s*杀\s*(?:一|1)\s*行"
+    ),
+    "https://szfzml.mfuw8-bnsfa-gdaxhk.xyz/view.php?id=556": re.compile(
+        r"拼搏干翻[\s\S]{0,80}?(?:绝|必|精|稳)?\s*杀\s*(?:一|1)\s*行"
+    ),
+    "https://flirclg.d9n5a-2i9au-ezvqgb.xyz:16677/topic/479159.html": re.compile(
+        r"澳牛魔王[\s\S]{0,80}?作者\s*[:：]\s*眉飞色舞"
+    ),
+    "https://dvglkfp.mueyy-uiuci-vtqiod.work:16677/topic/205677.html": re.compile(
+        r"杀料榜[\s\S]{0,80}?作者\s*[:：]\s*27397[a-z][.]com"
+    ),
     "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/": re.compile(
-        r"(?:^|[\r\n])[ \t]*杀一行[ \t]*(?:[\r\n])[\s\S]{0,120}?稳杀\s*[（(]?\s*1\s*[)）]?\s*行",
+        r"(?:^|[\r\n])\s*\d{1,4}\s*期\s*稳杀\s*[（(]?\s*1\s*[)）]?\s*行",
+    ),
+    "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/206556.html": re.compile(
+        r"绝杀贴[\s\S]{0,80}?作者\s*[:：]\s*头昏眼花"
+    ),
+    "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273111.html": re.compile(
+        r"(?:^|[\r\n])\s*\d{1,4}\s*期[^\r\n]{0,24}?稳杀\s*一\s*行"
+        r"[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?[^\r\n]{0,16}?稳杀\s*一\s*行"
+    ),
+    "https://scbnsyz.3dl0e-87g6y-coruzs.xyz:16677/topic/273111.html": re.compile(
+        r"(?:^|[\r\n])\s*\d{1,4}\s*期[^\r\n]{0,24}?稳杀\s*一\s*行"
+        r"[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?[^\r\n]{0,16}?稳杀\s*一\s*行"
+    ),
+    "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/273106.html": re.compile(
+        r"(?:^|[\r\n])\s*\d{1,4}\s*期[^\r\n]{0,24}?精杀\s*一\s*行"
+        r"[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?[^\r\n]{0,16}?精杀\s*一\s*行"
+    ),
+    "https://scbnsyz.3dl0e-87g6y-coruzs.xyz:16677/topic/273106.html": re.compile(
+        r"(?:^|[\r\n])\s*\d{1,4}\s*期[^\r\n]{0,24}?精杀\s*一\s*行"
+        r"[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?[^\r\n]{0,16}?精杀\s*一\s*行"
+    ),
+    "https://rh2fgz.a96ub-s6g0d-mfbdwp.work/topic/558018.html": re.compile(
+        r"作者\s*[:：]\s*骂骂咧咧[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?\s*绝杀\s*一\s*行"
+    ),
+    "https://eebysckd.2go6k-y0pfv-fqbdsm.xyz:16677/topic/625574.html": re.compile(
+        r"小筑望星[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?\s*绝杀\s*一\s*行"
+    ),
+    "https://qdufkx.sjb5z-pi4k6-jlhnig.xyz:16677/topic/798409.html": re.compile(
+        r"作者\s*[:：]\s*彫虫小技[\s\S]{0,120}?\d{1,4}\s*期\s*[:：]?"
+        r"\s*[【\[]?\s*杀一行特"
     ),
     "https://dzuojaf.rua12-mwvo8-oriqfc.xyz:16677/topic/461725.html": re.compile(
         r"必杀\s*一\s*行[\s\S]{0,120}?而立之年"
@@ -219,7 +283,7 @@ BROWSER_REQUIRED_TEXT_PATTERNS: dict[str, re.Pattern[str]] = {
     "https://g63.52619c.com:8443/tie1/1614.html": re.compile(
         r"产生共鸣[\s\S]{0,120}?稳杀\s*一\s*行"
     ),
-    "https://3.www112291a.com:2053/gengxin/16.html": re.compile(
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html": re.compile(
         r"狀元紅[\s\S]{0,100}?绝杀\s*[①1]\s*行"
     ),
     "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/467884.html": re.compile(
@@ -272,4 +336,13 @@ BROWSER_REQUIRED_TEXT_PATTERNS: dict[str, re.Pattern[str]] = {
 
 CLICK_THROUGH_DETAIL_URLS = {
     "https://mxiscni.nkh6s-vfni4-lwgfvw.xyz:16677/topic/257907.html",
+}
+
+
+# 这些页面在当期区块之后又把整轮历史重排一遍（305..001 之后又从 365 递减回来），
+# 同一期的五行会重复出现。只取页面开头那段期号连续递减的区块（即当前周期），
+# 避免后面的历史循环把 "top" 方向窗口挤到 305 之外；不同值仍由冲突校验裁决。
+CURRENT_CYCLE_FIRST_BLOCK_URLS = {
+    "https://cxmdjok.8wtwc-boven-glylvt.xyz:16677/topic/437741.html",
+    "https://v0uer.e2xs0-3tuvc-rsgtzx.xyz/topic/255638.html",
 }
