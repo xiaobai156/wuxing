@@ -1003,7 +1003,8 @@
     "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a323b97f21d7a093399eeeb?url=jbx",
     "api_url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/api/proxy/manager-articles/6a323b97f21d7a093399eeeb",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "四海兄弟",
