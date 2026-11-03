@@ -19,6 +19,7 @@ from urllib.parse import urljoin, urlparse
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from wuxing.sources.ocr import recognize_paddle_ocr_images, validate_ocr_entries
 
 try:
     from bs4 import BeautifulSoup
@@ -41,8 +42,6 @@ REGION_TARGET_WINDOW = 3
 DOCUMENT_FETCH_WORKERS = 4
 RETRY_HTTP_WORKERS = 8
 RETRY_BROWSER_WORKERS = 2
-OCR_WUXING_SCORE_LIMIT = 100
-OCR_WUXING_MIN_GAP = 8
 SPA_STRUCTURED_RECORD_MARKER = "[SPA_STRUCTURED_USER_RECORD]"
 
 DEFAULT_HEADERS = {
@@ -92,7 +91,7 @@ SITE_SPECIFIC_CANDIDATE_PATTERNS: dict[str, tuple[re.Pattern[str], ...]] = {
             rf"(?P<period>\d{{1,4}})\s*期\s*[【\[]?\s*绝杀\s*{ONE_MARKER}\s*行\s*[】\]]?\s*[《【\[]?\s*(?P<wuxing>[金木水火土])\s*行\s*[》】\]]?"
         ),
     ),
-    "https://3.www112291a.com:2053/gengxin/16.html": (
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html": (
         re.compile(
             rf"(?P<period>\d{{1,4}})\s*期\s*[:：]?\s*绝\s*杀\s*{ONE_MARKER}\s*行\s*[【\[]\s*(?P<wuxing>[金木水火土])\s*行\s*[】\]]"
         ),
@@ -154,7 +153,7 @@ SITE_SPECIFIC_POSITION_RULE_URLS = {
     "https://mxiscni.nkh6s-vfni4-lwgfvw.xyz:16677/topic/257907.html",
     "https://ekhivjcg.llnnt-l11x5-bywtoe.xyz:16677/topic/469882.html",
     "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/439186.html",
-    "https://3.www112291a.com:2053/gengxin/16.html",
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html",
     "https://myvvqq.30dok-2s9fd-bibfmg.work/",
     "https://ykeejph.z9koz-18xjn-pvglgy.xyz:16677/topic/682107.html",
     "https://fhktrabu.zbfrm-uzct1-pmycbu.xyz:16677/topic/469065.html",
@@ -297,7 +296,6 @@ DOCUMENTS_CACHE: dict[tuple[str, int], tuple[str, ...]] = {}
 BROWSER_TEXT_CACHE: dict[tuple[str, int, bool, int | None, str, str], str] = {}
 RUNTIME_CACHE_LOCK = threading.RLock()
 HISTORY_CACHE_THREAD_LOCK = threading.RLock()
-CHROMEDRIVER_PATH: str | None = None
 SITE_SPECIFIC_ONLY_URLS = SITE_SPECIFIC_POSITION_RULE_URLS | set(SITE_CURRENT_BLOCK_ANCHORS) | {
     "https://buzfwpox.pwp8o-vfhi5-xmrytn.xyz:16677/topic/464877.html",
     "https://pxgaayml.2wyk5-dwn70-cljflt.xyz:16677/topic/458324.html",
@@ -340,12 +338,10 @@ SITES: list[Site] = []
 
 
 def clear_runtime_caches() -> None:
-    global CHROMEDRIVER_PATH
     with RUNTIME_CACHE_LOCK:
         FETCH_TEXT_CACHE.clear()
         DOCUMENTS_CACHE.clear()
         BROWSER_TEXT_CACHE.clear()
-        CHROMEDRIVER_PATH = None
 
 
 def site_uses_browser_first(site: Site) -> bool:
@@ -394,6 +390,8 @@ def load_sites(config_path: str | Path | None = None) -> list[Site]:
     for index, item in enumerate(raw_sites, start=1):
         if not isinstance(item, dict):
             raise ValueError(f"{path} item {index} is not an object")
+        if item.get("enabled", True) is False or item.get("archived", False) is True:
+            continue
         url = clean_line(str(item.get("url", "")))
         pick = clean_line(str(item.get("region", item.get("pick", "")))).lower()
         if not url:
@@ -956,255 +954,6 @@ def collect_click_through_detail_documents(site: Site, timeout: int, period: int
         return collect_documents(session, target_urls[0], timeout)
 
 
-IMAGE_OCR_JS = r"""
-const period = arguments[0] || 0;
-if (!period) return [];
-
-function isInk(data, w, x, y) {
-  const k = (y * w + x) * 4;
-  const r = data[k], g = data[k + 1], b = data[k + 2];
-  return (r < 130 && g < 130 && b < 130) || (r > 120 && g < 90 && b < 90);
-
-
-function bitsFromImage(ctx, x1, y1, w, h) {
-  const data = ctx.getImageData(x1, y1, w, h).data;
-  const bits = [];
-  for (let gy = 0; gy < 20; gy++) {
-    for (let gx = 0; gx < 20; gx++) {
-      let ink = 0, total = 0;
-      const sx = Math.floor(gx * w / 20), ex = Math.floor((gx + 1) * w / 20);
-      const sy = Math.floor(gy * h / 20), ey = Math.floor((gy + 1) * h / 20);
-      for (let y = sy; y < ey; y++) {
-        for (let x = sx; x < ex; x++) {
-          const k = (y * w + x) * 4;
-          if (data[k] < 150 && data[k + 1] < 150 && data[k + 2] < 150) ink++;
-          total++;
-        }
-      }
-      bits.push(ink > total * 0.15 ? 1 : 0);
-    }
-  }
-  return bits;
-}
-
-function bitsForChar(ch, font) {
-  const canvas = document.createElement("canvas");
-  canvas.width = 90;
-  canvas.height = 90;
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 90, 90);
-  ctx.fillStyle = "black";
-  ctx.font = font;
-  ctx.textBaseline = "top";
-  ctx.fillText(ch, 12, 6);
-  const data = ctx.getImageData(0, 0, 90, 90).data;
-  let x1 = 90, y1 = 90, x2 = 0, y2 = 0;
-  for (let y = 0; y < 90; y++) {
-    for (let x = 0; x < 90; x++) {
-      const k = (y * 90 + x) * 4;
-      if (data[k] < 150 && data[k + 1] < 150 && data[k + 2] < 150) {
-        x1 = Math.min(x1, x); x2 = Math.max(x2, x);
-        y1 = Math.min(y1, y); y2 = Math.max(y2, y);
-      }
-    }
-  }
-  return bitsFromImage(ctx, x1, y1, x2 - x1 + 1, y2 - y1 + 1);
-}
-
-function bitDistance(a, b) {
-  let d = 0;
-  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++;
-  return d;
-}
-
-function classifyTextChar(ctx, x1, y1, w, h, items, fonts, limit) {
-  const actual = bitsFromImage(ctx, x1, y1, w, h);
-  let best = null;
-  let second = null;
-  for (const font of fonts) {
-    for (const item of items) {
-      const score = bitDistance(actual, bitsForChar(item[1], font));
-      if (!best || score < best.score) {
-        second = best;
-        best = { value: item[2], score };
-      } else if (!second || score < second.score) {
-        second = { value: item[2], score };
-      }
-    }
-  }
-  if (!best || best.score >= limit) return null;
-  return {
-    value: best.value,
-    score: best.score,
-    gap: second ? second.score - best.score : limit - best.score,
-  };
-}
-
-function classifyWuxing(ctx, x1, y1, w, h) {
-  const chars = [
-    ["閲?, "\u91d1", "閲戣"],
-    ["鏈?, "\u6728", "鏈ㄨ"],
-    ["姘?, "\u6c34", "姘磋"],
-    ["鐏?, "\u706b", "鐏"],
-    ["鍦?, "\u571f", "鍦熻"],
-  ];
-  const fonts = [
-    "42px Arial",
-    "bold 42px Arial",
-    "42px Microsoft YaHei",
-    "bold 42px Microsoft YaHei",
-    "42px SimHei",
-    "bold 42px SimHei",
-  ];
-  return classifyTextChar(ctx, x1, y1, w, h, chars, fonts, 100);
-}
-
-function classifyStatus(ctx, x1, y1, w, h) {
-  const chars = [
-    ["瀵?, "\u5bf9", "瀵?],
-    ["閿?, "\u9519", "閿?],
-    ["鍑?, "\u51c6", "鍑?],
-    ["涓?, "\u4e2d", "涓?],
-    ["璧?, "\u8d62", "璧?],
-  ];
-  const fonts = [
-    "34px Arial",
-    "bold 34px Arial",
-    "34px Microsoft YaHei",
-    "bold 34px Microsoft YaHei",
-    "34px SimHei",
-    "bold 34px SimHei",
-  ];
-  return classifyTextChar(ctx, x1, y1, w, h, chars, fonts, 120);
-}
-
-function periodBandsForImage(img) {
-  const canvas = document.createElement("canvas");
-  canvas.width = img.naturalWidth;
-  canvas.height = img.naturalHeight;
-  const ctx = canvas.getContext("2d");
-  ctx.drawImage(img, 0, 0);
-  const w = canvas.width, h = canvas.height;
-  const data = ctx.getImageData(0, 0, w, h).data;
-  const ys = [];
-  for (let y = 0; y < h; y++) {
-    let count = 0;
-    for (let x = 0; x < w; x += 3) if (isInk(data, w, x, y)) count++;
-    if (count > 20) ys.push(y);
-  }
-  let bands = [];
-  for (const y of ys) {
-    if (!bands.length || y - bands[bands.length - 1].end > 3) bands.push({ start: y, end: y });
-    else bands[bands.length - 1].end = y;
-  }
-  bands = bands
-    .filter((b) => b.end - b.start >= 28 && b.end - b.start <= 40)
-    .map((b) => ({ start: b.start, end: b.end, mid: Math.round((b.start + b.end) / 2) }));
-  return { ctx, w, h, bands };
-}
-
-function componentsInRow(ctx, w, mid) {
-  const data = ctx.getImageData(0, 0, w, ctx.canvas.height).data;
-  const cols = [];
-  const xStart = Math.floor(w * 0.55);
-  const xEnd = Math.floor(w * 0.98);
-  for (let x = xStart; x < xEnd; x++) {
-    let count = 0;
-    for (let y = Math.max(0, mid - 24); y <= Math.min(ctx.canvas.height - 1, mid + 24); y++) {
-      if (isInk(data, w, x, y)) count++;
-    }
-    if (count > 1) cols.push(x);
-  }
-  const comps = [];
-  for (const x of cols) {
-    if (!comps.length || x - comps[comps.length - 1].x2 > 2) comps.push({ x1: x, x2: x });
-    else comps[comps.length - 1].x2 = x;
-  }
-  return comps.map((c) => ({ ...c, w: c.x2 - c.x1 + 1 })).filter((c) => c.w > 4);
-}
-
-function componentBox(ctx, comp, mid) {
-  const w = ctx.canvas.width;
-  const h = ctx.canvas.height;
-  const data = ctx.getImageData(0, 0, w, h).data;
-  let x1 = comp.x2, x2 = comp.x1, y1 = Math.min(h - 1, mid + 24), y2 = Math.max(0, mid - 24);
-  for (let y = Math.max(0, mid - 24); y <= Math.min(h - 1, mid + 24); y++) {
-    for (let x = comp.x1; x <= comp.x2; x++) {
-      const k = (y * w + x) * 4;
-      if (data[k] < 150 && data[k + 1] < 150 && data[k + 2] < 150) {
-        x1 = Math.min(x1, x); x2 = Math.max(x2, x);
-        y1 = Math.min(y1, y); y2 = Math.max(y2, y);
-      }
-    }
-  }
-  return { x1, y1, w: x2 - x1 + 1, h: y2 - y1 + 1 };
-}
-
-const images = Array.from(document.images)
-  .filter((img) => img.naturalWidth > 700 && img.naturalHeight > 900)
-  .sort((a, b) => (a.getBoundingClientRect().top + window.scrollY) - (b.getBoundingClientRect().top + window.scrollY));
-
-const latestDraw = "寮€:鍥剧墖璇嗗埆";
-
-for (const img of images) {
-  const item = periodBandsForImage(img);
-  if (item.bands.length < 15) continue;
-  let index = period - 100;
-  if (index < 0 || index >= item.bands.length) index = item.bands.length - 1;
-  const lines = [];
-  for (const targetPeriod of [period - 1, period]) {
-    let targetIndex = targetPeriod - 100;
-    if (targetIndex < 0 || targetIndex >= item.bands.length) continue;
-    const band = item.bands[targetIndex];
-    const comps = componentsInRow(item.ctx, item.w, band.mid);
-    const charComp = comps.find((c) => c.x1 > item.w * 0.68 && c.w >= 20 && c.w <= 45);
-    if (!charComp) continue;
-    const box = componentBox(item.ctx, charComp, band.mid);
-    const wuxing = classifyWuxing(item.ctx, box.x1, box.y1, box.w, box.h);
-    if (!wuxing) continue;
-    const statusComp = comps.slice().reverse().find((c) => c.x1 > item.w * 0.78 && c.w >= 18 && c.w <= 45);
-    let status = "";
-    let statusScore = null;
-    if (statusComp) {
-      const statusBox = componentBox(item.ctx, statusComp, band.mid);
-      const statusResult = classifyStatus(item.ctx, statusBox.x1, statusBox.y1, statusBox.w, statusBox.h);
-      if (statusResult) {
-        status = statusResult.value;
-        statusScore = statusResult.score;
-      }
-    }
-    const openComp = comps.find((c) => c.x1 > item.w * 0.76 && c.x1 < item.w * 0.88 && c.w >= 20 && c.w <= 45);
-    let openWuxing = "";
-    let openWuxingScore = null;
-    if (openComp) {
-      const openBox = componentBox(item.ctx, openComp, band.mid);
-      const openResult = classifyWuxing(item.ctx, openBox.x1, openBox.y1, openBox.w, openBox.h);
-      if (openResult) {
-        openWuxing = openResult.value.replace("琛?, "");
-        openWuxingScore = openResult.score;
-      }
-    }
-    const openText = targetPeriod === period - 1 ? latestDraw : `寮€:${openWuxing || "鍥剧墖璇嗗埆"}`;
-    const raw = `${targetPeriod}鏈?銆愬浘鐗囪瘑鍒€戙€?{wuxing.value}銆?${openText} ${status || ""}`;
-    lines.push({
-      period: targetPeriod,
-      wuxing: wuxing.value,
-      wuxingScore: wuxing.score,
-      wuxingGap: wuxing.gap,
-      openWuxing,
-      openWuxingScore,
-      status,
-      statusScore,
-      raw,
-    });
-  }
-  if (lines.some((line) => line.period === period)) return lines;
-}
-return [];
-"""
-
-
 def fetch_browser_text(
     url: str,
     timeout: int,
@@ -1343,16 +1092,8 @@ def validate_browser_record_boundary(
         raise DocumentFetchError("浏览器页面作者不匹配，拒绝解析")
 
 
-def cached_chromedriver_path(manager_factory) -> str:
-    global CHROMEDRIVER_PATH
-    with RUNTIME_CACHE_LOCK:
-        if CHROMEDRIVER_PATH is None:
-            CHROMEDRIVER_PATH = manager_factory().install()
-        return CHROMEDRIVER_PATH
-
-
 def browser_page_load_strategy(url: str) -> str:
-    return "none" if url in BROWSER_NON_BLOCKING_LOAD_URLS else "normal"
+    return "commit" if url in BROWSER_NON_BLOCKING_LOAD_URLS else "load"
 
 
 def select_unique_click_target(elements: Iterable, period: int | None):
@@ -1390,6 +1131,73 @@ def select_unique_tab_target(elements: Iterable, label_pattern: re.Pattern[str])
         detail = "未找到" if not matches else f"找到{len(matches)}条"
         raise DocumentFetchError(f"专属标签 {label_pattern.pattern} {detail}，要求唯一匹配，拒绝切换")
     return matches[0]
+
+
+class _PlaywrightLocatorElement:
+    def __init__(self, locator, timeout_ms: int):
+        self._locator = locator
+        self._timeout_ms = timeout_ms
+
+    @property
+    def text(self) -> str:
+        if not self._locator.is_visible():
+            return ""
+        return self._locator.inner_text()
+
+    def get_attribute(self, name: str):
+        return self._locator.get_attribute(name)
+
+    def scroll_into_view_if_needed(self) -> None:
+        self._locator.scroll_into_view_if_needed(timeout=self._timeout_ms)
+
+    def click(self) -> None:
+        self._locator.click(timeout=self._timeout_ms)
+
+
+def _playwright_locator_elements(page, selector: str, timeout_ms: int) -> list[_PlaywrightLocatorElement]:
+    locator = page.locator(selector)
+    return [
+        _PlaywrightLocatorElement(locator.nth(index), timeout_ms)
+        for index in range(locator.count())
+    ]
+
+
+class _PlaywrightBodyDriver:
+    def __init__(self, body_locator):
+        self._body_locator = body_locator
+
+    def find_element(self, *_args):
+        return self
+
+    @property
+    def text(self) -> str:
+        return self._body_locator.inner_text()
+
+
+def _wait_for_legacy_page_condition(page, body_locator, condition, timeout_ms: int) -> None:
+    deadline = time.monotonic() + timeout_ms / 1000
+    while True:
+        if condition(body_locator.inner_text()):
+            return
+        if time.monotonic() >= deadline:
+            raise TimeoutError("浏览器目标内容等待超时")
+        time.sleep(0.1)
+
+
+def _wait_for_legacy_target_stability(page, body_locator, period: int | None, site: Site | None, timeout_ms: int) -> None:
+    condition = target_signal_stability_condition(
+        period,
+        site=site,
+        minimum_stable_seconds=1.5,
+    )
+    deadline = time.monotonic() + timeout_ms / 1000
+    body_driver = _PlaywrightBodyDriver(body_locator)
+    while True:
+        if condition(body_driver):
+            return
+        if time.monotonic() >= deadline:
+            raise TimeoutError("浏览器目标候选未稳定")
+        time.sleep(0.1)
 
 
 def target_signal_stability_condition(
@@ -1436,43 +1244,133 @@ def target_signal_stability_condition(
 
 
 def validate_image_ocr_lines(image_lines: list, period: int | None) -> list[str]:
-    validated: list[str] = []
-    for entry in image_lines:
-        if not isinstance(entry, dict):
-            continue
-
-        raw = clean_line(str(entry.get("raw", "")))
-        wuxing = clean_line(str(entry.get("wuxing", "")))
-        try:
-            entry_period = int(entry.get("period"))
-            score = int(entry.get("wuxingScore"))
-            gap = int(entry.get("wuxingGap"))
-            independent_period = int(entry.get("independentPeriod"))
-        except Exception:
-            continue
-        independent_wuxing = clean_line(str(entry.get("independentWuxing", "")))
-        if independent_period != entry_period or independent_wuxing != wuxing:
-            continue
-        if period is not None and entry_period not in {period, period - 1}:
-            continue
-        if not is_valid_wuxing(wuxing):
-            continue
-        if score >= OCR_WUXING_SCORE_LIMIT or gap < OCR_WUXING_MIN_GAP:
-            continue
-        raw_period_match = PERIOD_RE.search(raw)
-        raw_wuxing_match = WUXING_RE.search(raw)
-        if not raw_period_match or not raw_wuxing_match:
-            continue
-        if int(raw_period_match.group(1)) != entry_period:
-            continue
-        if normalize_wuxing(raw_wuxing_match.group(1)) != wuxing:
-            continue
-        validated.append(raw)
-    return validated
+    return list(validate_ocr_entries(image_lines, period))
 
 
 def format_image_ocr_lines(image_lines: list[str]) -> str:
     return "\n".join(clean_line(line) for line in image_lines if clean_line(line))
+
+
+PLAYWRIGHT_INSTALL_HINT = (
+    "请运行 安装Playwright-Chromium.bat 安装浏览器和 OCR 依赖，或执行以下命令：\n"
+    "py -3.10 -m pip install -r requirements-playwright.txt\n"
+    "py -3.10 -m playwright install chromium"
+)
+
+
+def _playwright_dependency_message(exc: Exception) -> str:
+    return f"浏览器依赖不可用：{type(exc).__name__}: {exc}\n{PLAYWRIGHT_INSTALL_HINT}"
+
+
+def _playwright_dependency_result(exc: Exception) -> str:
+    message = str(exc)
+    if (
+        "py -3.10 -m pip install -r requirements-playwright.txt" in message
+        and "py -3.10 -m playwright install chromium" in message
+    ):
+        return message
+    return _playwright_dependency_message(exc)
+
+
+def _load_sync_playwright():
+    try:
+        from playwright.sync_api import sync_playwright
+    except Exception as exc:
+        raise RuntimeError(_playwright_dependency_message(exc)) from exc
+    return sync_playwright
+
+
+@contextmanager
+def _playwright_runtime(sync_playwright):
+    entered = False
+    try:
+        with sync_playwright() as playwright:
+            entered = True
+            yield playwright
+    except Exception as exc:
+        if not entered:
+            raise RuntimeError(_playwright_dependency_message(exc)) from exc
+        raise
+
+
+def _close_playwright_resource(resource) -> None:
+    if resource is None:
+        return
+    try:
+        resource.close()
+    except Exception:
+        pass
+
+
+def _capture_eligible_ocr_images(page, timeout_ms: int) -> list[bytes]:
+    image_locator = page.locator("img")
+    try:
+        image_count = image_locator.count()
+    except Exception as exc:
+        raise RuntimeError(f"浏览器 OCR 图片列表获取失败: {type(exc).__name__}: {exc}") from exc
+
+    candidates: list[tuple[float, float, int, object]] = []
+    for index in range(image_count):
+        image = image_locator.nth(index)
+        try:
+            if not image.is_visible():
+                continue
+            metadata = image.evaluate(
+                """
+                image => {
+                    const style = window.getComputedStyle(image);
+                    const rect = image.getBoundingClientRect();
+                    return {
+                        naturalWidth: image.naturalWidth,
+                        naturalHeight: image.naturalHeight,
+                        hidden: Boolean(
+                            image.hidden ||
+                            image.getAttribute("aria-hidden") === "true" ||
+                            style.display === "none" ||
+                            style.visibility === "hidden" ||
+                            style.visibility === "collapse" ||
+                            Number(style.opacity) === 0 ||
+                            rect.width <= 0 ||
+                            rect.height <= 0
+                        ),
+                        top: rect.top + window.scrollY,
+                        left: rect.left + window.scrollX,
+                    };
+                }
+                """
+            )
+        except Exception as exc:
+            raise RuntimeError(
+                f"浏览器 OCR 图片元数据获取失败（第{index + 1}张）: {type(exc).__name__}: {exc}"
+            ) from exc
+
+        if not isinstance(metadata, dict):
+            raise RuntimeError(f"浏览器 OCR 图片元数据无效（第{index + 1}张）")
+        if metadata.get("hidden"):
+            continue
+        try:
+            natural_width = int(metadata["naturalWidth"])
+            natural_height = int(metadata["naturalHeight"])
+            top = float(metadata["top"])
+            left = float(metadata["left"])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise RuntimeError(f"浏览器 OCR 图片元数据无效（第{index + 1}张）") from exc
+        if natural_width > 700 and natural_height > 900:
+            candidates.append((top, left, index, image))
+
+    candidates.sort(key=lambda item: (item[0], item[1], item[2]))
+    image_bytes: list[bytes] = []
+    for _, _, index, image in candidates:
+        try:
+            captured = image.screenshot(type="png", timeout=timeout_ms)
+        except Exception as exc:
+            raise RuntimeError(
+                f"浏览器 OCR 图片截图失败（第{index + 1}张）: {type(exc).__name__}: {exc}"
+            ) from exc
+        if not isinstance(captured, (bytes, bytearray)) or not captured:
+            raise RuntimeError(f"浏览器 OCR 图片截图为空（第{index + 1}张）")
+        image_bytes.append(bytes(captured))
+    return image_bytes
 
 
 def fetch_browser_text_uncached(
@@ -1484,112 +1382,133 @@ def fetch_browser_text_uncached(
     site: Site | None = None,
 ) -> str:
     try:
-        from selenium import webdriver
-        from selenium.webdriver.chrome.options import Options
-        from selenium.webdriver.common.by import By
-        from selenium.webdriver.support import expected_conditions as EC
-        from selenium.webdriver.support.ui import WebDriverWait
-        from webdriver_manager.chrome import ChromeDriverManager
-        from selenium.webdriver.chrome.service import Service
+        sync_playwright = _load_sync_playwright()
     except Exception as exc:
-        raise RuntimeError(f"娴忚鍣ㄤ緷璧栦笉鍙敤: {exc}") from exc
+        if isinstance(exc, RuntimeError) and "requirements-playwright.txt" in str(exc):
+            raise
+        raise RuntimeError(_playwright_dependency_message(exc)) from exc
 
-    options = Options()
-    if not show_browser:
-        options.add_argument("--headless=new")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--ignore-certificate-errors")
-    options.add_argument("--window-size=1280,1800")
-    options.page_load_strategy = browser_page_load_strategy(url)
-
-    try:
-        driver = webdriver.Chrome(service=Service(cached_chromedriver_path(ChromeDriverManager)), options=options)
-    except Exception:
-        driver = webdriver.Chrome(options=options)
-    try:
-        driver.set_page_load_timeout(timeout)
-        driver.get(url)
-        WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        scroll_page_to_end(driver)
-
-        tab_pattern = BROWSER_TAB_CLICK_PATTERNS.get(url)
-        if tab_pattern:
-            driver.execute_script(
-                "document.querySelectorAll('[onclick*=closePopp]').forEach((element) => element.click()); "
-                "if (typeof window.closePopp === 'function') { window.closePopp(); } "
-                "document.querySelectorAll('[class*=index_popup]').forEach((element) => element.remove());"
-            )
-            tab_target = select_unique_tab_target(
-                driver.find_elements(By.CSS_SELECTOR, "a, button, [role='tab'], li, div"),
-                tab_pattern,
-            )
-            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", tab_target)
-            time.sleep(0.3)
-            tab_target.click()
-            WebDriverWait(driver, timeout).until(
-                lambda current: bool(
-                    filter_candidates_by_period(
-                        parse_baiwanziliao_candidates(current.find_element(By.TAG_NAME, "body").text), period
-                    )
-                )
-            )
-            scroll_page_to_end(driver)
-
-        if click_first:
-            clickable = driver.find_elements(By.CSS_SELECTOR, "a, button, [role='link']")
-            target = select_site_click_target(clickable, url, period)
-            exact_href = BROWSER_EXACT_CLICK_HREFS.get(url)
-            if exact_href:
-                driver.get(urljoin(url, target.get_attribute("href")))
-                WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-            else:
-                target.click()
-            scroll_page_to_end(driver)
-
-        if tab_pattern:
-            WebDriverWait(driver, timeout).until(
-                lambda current: bool(
-                    filter_candidates_by_period(
-                        parse_baiwanziliao_candidates(current.find_element(By.TAG_NAME, "body").text), period
-                    )
-                )
-            )
-        else:
-            WebDriverWait(driver, timeout).until(
-                target_signal_stability_condition(period, site=site, minimum_stable_seconds=1.5)
-            )
-
-        image_lines: list[str] = []
-        if period:
+    timeout_ms = max(1, int(timeout * 1000))
+    with _playwright_runtime(sync_playwright) as playwright:
+        browser = None
+        context = None
+        page = None
+        try:
             try:
-                image_lines = validate_image_ocr_lines(driver.execute_script(IMAGE_OCR_JS, period) or [], period)
-            except Exception:
-                image_lines = []
+                browser = playwright.chromium.launch(headless=not show_browser)
+            except Exception as exc:
+                raise RuntimeError(_playwright_dependency_message(exc)) from exc
+            context = browser.new_context(
+                ignore_https_errors=True,
+                viewport={"width": 1280, "height": 1800},
+            )
+            page = context.new_page()
+            page.goto(
+                url,
+                wait_until=browser_page_load_strategy(url),
+                timeout=timeout_ms,
+            )
+            body = page.locator("body")
+            body.wait_for(state="attached", timeout=timeout_ms)
+            scroll_page_to_end(page)
 
-        body_text = driver.find_element(By.TAG_NAME, "body").text
-        page_source = driver.page_source
-        if site is not None:
-            validate_browser_record_boundary(site, getattr(driver, "current_url", url), page_source, body_text)
-        return compose_browser_document(
-            url,
-            page_source,
-            body_text,
-            image_lines,
-            site=site,
-        )
-    finally:
-        driver.quit()
+            tab_pattern = BROWSER_TAB_CLICK_PATTERNS.get(url)
+            if tab_pattern:
+                page.evaluate(
+                    """
+                    () => {
+                      document.querySelectorAll('[onclick*=closePopp]').forEach((element) => element.click());
+                      if (typeof window.closePopp === 'function') { window.closePopp(); }
+                      document.querySelectorAll('[class*=index_popup]').forEach((element) => element.remove());
+                    }
+                    """,
+                    None,
+                )
+                tab_target = select_unique_tab_target(
+                    _playwright_locator_elements(page, "a, button, [role='tab'], li, div", timeout_ms),
+                    tab_pattern,
+                )
+                tab_target.scroll_into_view_if_needed()
+                time.sleep(0.3)
+                tab_target.click()
+                if period is not None:
+                    page.wait_for_function(
+                        "period => Boolean(document.body && document.body.innerText.includes(String(period) + '期'))",
+                        arg=period,
+                        timeout=timeout_ms,
+                    )
+                _wait_for_legacy_page_condition(
+                    page,
+                    body,
+                    lambda text: bool(filter_candidates_by_period(parse_baiwanziliao_candidates(text), period)),
+                    timeout_ms,
+                )
+                scroll_page_to_end(page)
+
+            if click_first:
+                clickable = _playwright_locator_elements(page, "a, button, [role='link']", timeout_ms)
+                target = select_site_click_target(clickable, url, period)
+                exact_href = BROWSER_EXACT_CLICK_HREFS.get(url)
+                if exact_href:
+                    page.goto(
+                        urljoin(url, target.get_attribute("href") or ""),
+                        wait_until=browser_page_load_strategy(url),
+                        timeout=timeout_ms,
+                    )
+                    body = page.locator("body")
+                    body.wait_for(state="attached", timeout=timeout_ms)
+                else:
+                    target.click()
+                scroll_page_to_end(page)
+
+            if tab_pattern:
+                _wait_for_legacy_page_condition(
+                    page,
+                    body,
+                    lambda text: bool(filter_candidates_by_period(parse_baiwanziliao_candidates(text), period)),
+                    timeout_ms,
+                )
+            else:
+                _wait_for_legacy_target_stability(page, body, period, site, timeout_ms)
+
+            image_lines: list[str] = []
+            if period:
+                ocr_images = _capture_eligible_ocr_images(page, timeout_ms)
+                if ocr_images:
+                    try:
+                        ocr_entries = recognize_paddle_ocr_images(ocr_images, target_period=period)
+                    except Exception as exc:
+                        raise RuntimeError(f"PaddleOCR 图片识别失败: {type(exc).__name__}: {exc}") from exc
+                    try:
+                        image_lines = validate_image_ocr_lines(ocr_entries, period)
+                    except Exception as exc:
+                        raise RuntimeError(f"PaddleOCR 结果校验失败: {type(exc).__name__}: {exc}") from exc
+
+            body_text = body.inner_text()
+            page_source = page.content()
+            if site is not None:
+                validate_browser_record_boundary(site, page.url or url, page_source, body_text)
+            return compose_browser_document(
+                url,
+                page_source,
+                body_text,
+                image_lines,
+                site=site,
+            )
+        finally:
+            _close_playwright_resource(page)
+            _close_playwright_resource(context)
+            _close_playwright_resource(browser)
 
 
-def scroll_page_to_end(driver) -> None:
+def scroll_page_to_end(page) -> None:
     last_height = 0
     stable_rounds = 0
     for _ in range(8):
         try:
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            page.evaluate("() => window.scrollTo(0, document.body.scrollHeight)", None)
             time.sleep(0.8)
-            height = int(driver.execute_script("return document.body.scrollHeight") or 0)
+            height = int(page.evaluate("() => document.body.scrollHeight", None) or 0)
         except Exception:
             break
         if height <= last_height:
@@ -3036,8 +2955,6 @@ def build_success_output_lines(
         + build_excluded_ranking_lines(excluded_lines)
         + build_ranking_lines(ranked_lines, "排行表")
     )
-    if outcomes is not None:
-        output_lines += [""] + build_slow_site_lines(outcomes)
     return output_lines
 
 
@@ -3804,14 +3721,17 @@ def run_retry_scrapes(
 
 
 def check_browser_dependencies() -> str | None:
-    missing: list[str] = []
-    for module_name in ("selenium", "webdriver_manager"):
-        try:
-            __import__(module_name)
-        except Exception:
-            missing.append(module_name)
-    if missing:
-        return "浏览器依赖不可用，缺少：" + "、".join(missing)
+    try:
+        sync_playwright = _load_sync_playwright()
+        with sync_playwright() as playwright:
+            browser = None
+            try:
+                browser = playwright.chromium.launch(headless=True)
+            finally:
+                if browser is not None:
+                    browser.close()
+    except Exception as exc:
+        return _playwright_dependency_result(exc)
     return None
 
 

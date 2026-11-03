@@ -50,6 +50,13 @@ def _parse_site(
                 if url == "https://cwdcaqzn.7mj0h-75k3q-cbuvqb.work:16677/#am"
                 else f"parser.{site_id}.v2"
             )
+        raw_tags = item.get("tags", ())
+        if isinstance(raw_tags, str):
+            tags = (raw_tags.strip(),) if raw_tags.strip() else ()
+        elif isinstance(raw_tags, (list, tuple)):
+            tags = tuple(str(tag).strip() for tag in raw_tags if str(tag).strip())
+        else:
+            raise TypeError("tags 必须是字符串或数组")
         return SiteConfig(
             site_id=site_id,
             name=name,
@@ -60,8 +67,11 @@ def _parse_site(
             shared_source_id=str(item.get("shared_source_id", legacy_shared_source_id)).strip(),
             api_url=str(item.get("api_url", "")).strip(),
             click_first=bool(item.get("click_first", False)),
+            browser_fallback=bool(item.get("browser_fallback", False)),
             enabled=bool(item.get("enabled", True)),
             config_version=int(item.get("config_version", 1)),
+            tags=tags,
+            archived=bool(item.get("archived", False)),
         )
     except (TypeError, ValueError) as exc:
         raise ConfigError(f"站点配置第{index}项无效：{exc}") from exc
@@ -131,7 +141,7 @@ def load_site_configs(path: str | Path, allow_legacy: bool = False) -> list[Site
 def build_versioned_site_payload(sites: Iterable[SiteConfig]) -> dict[str, object]:
     items = []
     for site in _validate_unique(sites):
-        items.append({
+        item = {
             "site_id": site.site_id,
             "rule_id": site.rule_id,
             "parser_id": site.parser_id,
@@ -143,5 +153,12 @@ def build_versioned_site_payload(sites: Iterable[SiteConfig]) -> dict[str, objec
             "api_url": site.api_url,
             "enabled": site.enabled,
             "config_version": site.config_version,
-        })
+        }
+        if site.browser_fallback:
+            item["browser_fallback"] = True
+        if site.tags:
+            item["tags"] = list(site.tags)
+        if site.archived:
+            item["archived"] = True
+        items.append(item)
     return {"schema_version": SITE_SCHEMA_VERSION, "sites": items}

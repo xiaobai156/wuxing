@@ -19,6 +19,14 @@ def validate_authority_boundary(
     documents: tuple[SourceDocument, ...] | list[SourceDocument],
     candidate: Candidate,
 ) -> AuthorityDecision:
+    # 一个结果只能绑定一个权威文档，禁止跨文档/跨来源拼接成一条序列。
+    if len(documents) != 1:
+        return AuthorityDecision(
+            passed=False,
+            reason=f"权威文档不唯一（{len(documents)} 个），拒绝跨文档取值",
+            source_document_id=candidate.source_document_id,
+            record_id=candidate.record_id,
+        )
     matching = [document for document in documents if document.document_id == candidate.source_document_id]
     if len(matching) != 1:
         return AuthorityDecision(

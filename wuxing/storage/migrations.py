@@ -102,13 +102,18 @@ def build_legacy_cache_migration_preview(
         matched.append(site.site_id)
         if history:
             maximum_period = max(maximum_period, max(int(item["period"]) for item in history))
-        converted_sites.append({
+        converted = {
             "site_id": site.site_id,
             "name": site.name,
             "url": site.url,
             "region": site.region.value,
             "history": history,
-        })
+        }
+        if site.tags:
+            converted["tags"] = list(site.tags)
+        if site.archived:
+            converted["archived"] = True
+        converted_sites.append(converted)
 
     orphan_labels = []
     for entry in legacy_entries:

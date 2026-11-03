@@ -5,22 +5,20 @@ import json
 import re
 from urllib.parse import urlparse
 
-from wuxing.domain.enums import SourceKind
-from wuxing.domain.enums import Region
+from wuxing import registry_data
+from wuxing.domain.enums import Region, SourceKind
 from wuxing.domain.errors import FetchError
 from wuxing.domain.models import SiteConfig, SourceDocument
-from wuxing import registry_data
-
 
 ARTICLE_ID_RE = re.compile(r"^[0-9a-fA-F]{24}$")
 ARTICLE_ID_TOKEN_RE = re.compile(r"(?<![0-9a-fA-F])[0-9a-fA-F]{24}(?![0-9a-fA-F])")
-ARTICLE_DETAIL_PATH_RE = re.compile(r"/article/(?:admin|manager)/([^/]+)$")
-MANAGER_API_PATH_RE = re.compile(r"/manager-articles/([^/]+)$")
+ARTICLE_DETAIL_PATH_RE = re.compile(r"/article/(?:admin|manager|lottery)/([^/]+)$")
+ARTICLE_API_PATH_RE = re.compile(r"/(?:manager|lottery)-articles/([^/]+)$")
 
 
 def article_id_from_url(url: str) -> str | None:
     path = urlparse(url).path.rstrip("/")
-    match = ARTICLE_DETAIL_PATH_RE.search(path) or MANAGER_API_PATH_RE.search(path)
+    match = ARTICLE_DETAIL_PATH_RE.search(path) or ARTICLE_API_PATH_RE.search(path)
     if not match or not ARTICLE_ID_RE.fullmatch(match.group(1)):
         return None
     return match.group(1)
@@ -32,7 +30,7 @@ def is_article_detail_url(url: str) -> bool:
 
 def require_article_id(url: str, label: str = "article页面") -> str:
     path = urlparse(url).path.rstrip("/")
-    match = ARTICLE_DETAIL_PATH_RE.search(path) or MANAGER_API_PATH_RE.search(path)
+    match = ARTICLE_DETAIL_PATH_RE.search(path) or ARTICLE_API_PATH_RE.search(path)
     identifier = match.group(1) if match else ""
     if not identifier or not ARTICLE_ID_RE.fullmatch(identifier):
         raise FetchError(f"{label}记录ID格式无效：{identifier or '缺失'}")
@@ -89,7 +87,8 @@ def decode_article_api_document(
     api = urlparse(site.api_url)
     if (page.scheme.lower(), page.netloc.lower()) != (api.scheme.lower(), api.netloc.lower()):
         raise FetchError("article页面与API不同源")
-    if api.path != f"/api/proxy/manager-articles/{page_id}":
+    api_resource = "lottery-articles" if "/article/lottery/" in page.path else "manager-articles"
+    if api.path != f"/api/proxy/{api_resource}/{page_id}":
         raise FetchError("article API路径与页面记录ID不匹配")
 
     record = locate_unique_record(payload, page_id)
@@ -138,9 +137,11 @@ def decode_article_api_document(
                 f"article API方向栏目不唯一：{section_direction_values}"
             )
         direction_values = section_direction_values
-    if not direction_values:
-        if site.url in registry_data.ARTICLE_API_CONFIGURED_REGION_FALLBACK_URLS:
-            direction_values = [site.region.value]
+    if (
+        not direction_values
+        and site.url in registry_data.ARTICLE_API_CONFIGURED_REGION_FALLBACK_URLS
+    ):
+        direction_values = [site.region.value]
     if not direction_values:
         raise FetchError("article API方向字段缺失，拒绝解析")
     try:

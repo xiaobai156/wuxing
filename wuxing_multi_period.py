@@ -214,7 +214,6 @@ def write_period_files(
         output_dir=crawler.DEFAULT_FAILURE_OUTPUT_DIR,
     )
     output_lines = crawler.build_success_output_lines(success_lines, excluded_ranking_lines)
-    output_lines += [""] + crawler.build_slow_site_lines(outcomes, limit=max(1, len(outcomes)))
     output_path.write_text("\n".join(output_lines) + ("\n" if output_lines else ""), encoding="utf-8-sig")
 
     print(f"\n{period}期成功 {len(success_lines) + len(excluded_ranking_lines)} 行，保存到 {output_path}")

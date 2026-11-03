@@ -46,7 +46,7 @@ class ClickThroughSource:
         self.fetch_text = fetch_text
         self.documents = DocumentCollector(fetch_text)
 
-    def fetch(self, site: SiteConfig, period: int, timeout: int) -> tuple[SourceDocument, ...]:
+    def resolve_target_url(self, site: SiteConfig, period: int, timeout: int) -> str:
         parser = _AnchorCollector()
         parser.feed(self.fetch_text(site.url, timeout))
         targets: list[str] = []
@@ -59,7 +59,10 @@ class ClickThroughSource:
         if len(targets) != 1:
             detail = "未找到" if not targets else f"找到{len(targets)}条"
             raise FetchError(f"{period}期男儿本色绝杀一行专属入口{detail}，要求唯一匹配")
-        return self.documents.collect(targets[0], timeout)
+        return targets[0]
+
+    def fetch(self, site: SiteConfig, period: int, timeout: int) -> tuple[SourceDocument, ...]:
+        return self.documents.collect(self.resolve_target_url(site, period, timeout), timeout)
 
 
 __all__ = ["ClickThroughSource"]

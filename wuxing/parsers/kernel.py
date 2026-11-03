@@ -58,7 +58,7 @@ SITE_SPECIFIC_CANDIDATE_PATTERNS: dict[str, tuple[re.Pattern[str], ...]] = {
             rf"(?P<period>\d{{1,4}})\s*期\s*[【\[]?\s*绝杀\s*{ONE_MARKER}\s*行\s*[】\]]?\s*[《【\[]?\s*(?P<wuxing>[金木水火土])\s*行\s*[》】\]]?"
         ),
     ),
-    "https://3.www112291a.com:2053/gengxin/16.html": (
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html": (
         re.compile(
             rf"(?P<period>\d{{1,4}})\s*期\s*[:：]?\s*绝\s*杀\s*{ONE_MARKER}\s*行\s*[【\[]\s*(?P<wuxing>[金木水火土])\s*行\s*[】\]]"
         ),
@@ -122,7 +122,7 @@ SITE_SPECIFIC_POSITION_RULE_URLS = {
     "https://mxiscni.nkh6s-vfni4-lwgfvw.xyz:16677/topic/257907.html",
     "https://ekhivjcg.llnnt-l11x5-bywtoe.xyz:16677/topic/469882.html",
     "https://fzzmqscl.bdppk-lyf4y-teyajr.xyz:16677/topic/439186.html",
-    "https://3.www112291a.com:2053/gengxin/16.html",
+    "https://otwuomdb.882244a.app:2026/gengxin/16.html",
     "https://myvvqq.30dok-2s9fd-bibfmg.work/",
     "https://ykeejph.z9koz-18xjn-pvglgy.xyz:16677/topic/682107.html",
     "https://fhktrabu.zbfrm-uzct1-pmycbu.xyz:16677/topic/469065.html",
@@ -1521,7 +1521,25 @@ def site_authoritative_documents(
         return sunrenliji_authoritative_documents(documents, parser_fn=parser_fn)
     anchor = SITE_CURRENT_BLOCK_ANCHORS.get(site.url)
     if not anchor:
-        return documents
+        # 无配置锚点时不得整页放行：按文档逐个判断，但只允许一个文档进入权威集合。
+        # 传入的是纯文本，无法区分主文档/iframe，因此以「含指定期合法候选」为第一优先，
+        # 其次才退回「有任意合法候选」，避免把当期在后续文档的站判成找不到。
+        def _has_period(text: str) -> bool:
+            if period is None:
+                return bool(filter_valid_wuxing_candidates(parser_fn(text)))
+            for candidate in filter_valid_wuxing_candidates(parser_fn(text)):
+                digits = "".join(ch for ch in str(candidate.period) if ch.isdigit())
+                if digits and int(digits) == int(period):
+                    return True
+            return False
+
+        for document in documents:
+            if _has_period(document):
+                return [document]
+        for document in documents:
+            if filter_valid_wuxing_candidates(parser_fn(document)):
+                return [document]
+        return []
     anchored_documents: list[tuple[int, str]] = []
     for document in documents:
         text = clean_line(html_to_text(document))

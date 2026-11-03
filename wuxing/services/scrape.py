@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 import hashlib
 import threading
@@ -10,9 +10,9 @@ from typing import Iterable, Protocol
 from wuxing.domain.enums import FailureCode, FetchStrategy, ResultStatus, RunMode, WritePolicy
 from wuxing.domain.errors import CacheError, ConfigError, FetchError
 from wuxing.domain.models import ScrapeRequest, ScrapeResult, SiteConfig, SourceDocument
-from wuxing.config.settings import DEFAULT_BROWSER_WORKERS
+from wuxing.config.settings import CACHE_SUCCESS_THRESHOLD, DEFAULT_BROWSER_WORKERS
 from wuxing.registry import SiteRegistry, SiteRule
-from wuxing.sources.browser import BrowserSource, SeleniumBrowserBackend
+from wuxing.sources.browser import BrowserPlan, BrowserSource, PlaywrightBrowserBackend
 from wuxing.sources.click_through import ClickThroughSource
 from wuxing.sources.documents import DocumentCollector
 from wuxing.sources.http import RequestsHttpClient
@@ -36,7 +36,7 @@ class LiveSourceGateway:
         browser_source: BrowserSource | None = None,
     ):
         self.http_client = http_client or RequestsHttpClient()
-        self.browser_source = browser_source or BrowserSource(SeleniumBrowserBackend())
+        self.browser_source = browser_source or BrowserSource(PlaywrightBrowserBackend())
         self.documents = DocumentCollector(self.http_client.fetch_text)
         self.click_through = ClickThroughSource(self.http_client.fetch_text)
         self._browser_slots = threading.BoundedSemaphore(DEFAULT_BROWSER_WORKERS)
@@ -61,7 +61,16 @@ class LiveSourceGateway:
         if rule.fetch_strategy is FetchStrategy.BROWSER_FIRST:
             return self._fetch_browser(rule, request)
         if rule.fetch_strategy is FetchStrategy.CLICK_THROUGH:
-            return self.click_through.fetch(site, period, request.timeout_seconds)
+            detail_url = self.click_through.resolve_target_url(site, period, request.timeout_seconds)
+            detail_site = replace(site, url=detail_url)
+            with self._browser_slots:
+                return self.browser_source.fetch(
+                    detail_site,
+                    period,
+                    max(request.timeout_seconds, 20),
+                    request.show_browser,
+                    BrowserPlan(record_selector="body", visible_text_only=True),
+                )
         return self.documents.collect(site.url, request.timeout_seconds)
 
     def fetch_fallback(self, rule: SiteRule, request: ScrapeRequest) -> tuple[SourceDocument, ...]:
@@ -92,7 +101,7 @@ class LiveSourceGateway:
                 FetchStrategy.SPA_API,
                 FetchStrategy.HTTP_THEN_BROWSER,
             }
-            and "/article/" in rule.site.url
+            and (rule.site.browser_fallback or "/article/" in rule.site.url)
         )
 
 
@@ -106,6 +115,7 @@ class _Attempt:
 class CacheUpdateReport:
     updated_sites: int = 0
     errors: tuple[str, ...] = ()
+    skipped_reason: str | None = None
 
 
 class ScrapeService:
@@ -170,8 +180,11 @@ class ScrapeService:
             for result in results
             if result.status is ResultStatus.SUCCESS and result.candidate is not None
         )
-        if not successful_results:
+        if not results:
             return CacheUpdateReport()
+        # 逐站写入：成功多少写多少，失败站不得拖累成功站写缓存。
+        if not successful_results:
+            return CacheUpdateReport(skipped_reason="本次没有成功结果，缓存未更新")
         if request.mode is not RunMode.SINGLE:
             return CacheUpdateReport(
                 errors=tuple(
@@ -273,13 +286,20 @@ class ScrapeService:
     @staticmethod
     def _needs_browser_fallback(rule: SiteRule, validation: ValidationDecision) -> bool:
         return (
-            validation.failure_code is FailureCode.EMPTY_DOCUMENT
-            and rule.fetch_strategy in {
-                FetchStrategy.ARTICLE_API,
-                FetchStrategy.SPA_API,
-                FetchStrategy.HTTP_THEN_BROWSER,
-            }
-            and "/article/" in rule.site.url
+            (
+                validation.failure_code is FailureCode.EMPTY_DOCUMENT
+                and rule.fetch_strategy in {
+                    FetchStrategy.ARTICLE_API,
+                    FetchStrategy.SPA_API,
+                    FetchStrategy.HTTP_THEN_BROWSER,
+                }
+                and "/article/" in rule.site.url
+            )
+            or (
+                rule.site.browser_fallback
+                and rule.fetch_strategy is FetchStrategy.HTTP_THEN_BROWSER
+                and validation.failure_code is FailureCode.TARGET_NOT_FOUND
+            )
         )
 
     @classmethod

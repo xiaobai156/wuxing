@@ -25,8 +25,11 @@ class SiteConfig:
     shared_source_id: str = ""
     api_url: str = ""
     click_first: bool = False
+    browser_fallback: bool = False
     enabled: bool = True
     config_version: int = 1
+    tags: tuple[str, ...] = ()
+    archived: bool = False
 
     def __post_init__(self) -> None:
         if not self.site_id.strip():

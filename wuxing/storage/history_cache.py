@@ -7,7 +7,6 @@ from pathlib import Path
 import tempfile
 from typing import Iterable
 
-from wuxing.config.schema import HISTORY_SCHEMA_VERSION
 from wuxing.config.settings import HISTORY_LIMIT
 from wuxing.domain.errors import CacheConflictError, CacheError
 from wuxing.domain.enums import Region
@@ -29,8 +28,8 @@ class HistoryUpdate:
     captured_at: str
 
     def __post_init__(self) -> None:
-        if not self.site_id or self.period <= 0:
-            raise ValueError("缓存更新必须包含 site_id 和正期号")
+        if self.period <= 0:
+            raise ValueError("缓存更新必须包含正期号")
         if self.wuxing not in VALID_WUXING:
             raise ValueError(f"缓存更新不是标准五行：{self.wuxing}")
         if not isinstance(self.region, Region):
@@ -38,44 +37,52 @@ class HistoryUpdate:
 
 
 def empty_history_cache() -> dict[str, object]:
-    return {"schema_version": HISTORY_SCHEMA_VERSION, "updated_period": 0, "sites": []}
+    return {"version": 1, "updated_period": 0, "sites": []}
+
+
+def _cache_site_identity(site: dict[str, object], index: int) -> tuple[str, str, str]:
+    name = str(site.get("name", "")).strip()
+    url = str(site.get("url", "")).strip()
+    if not name or not url:
+        raise CacheError(f"历史缓存第{index}个站点缺少 name 或 url")
+    try:
+        region = Region.from_value(site.get("region", "")).value
+    except ValueError as exc:
+        raise CacheError(f"历史缓存第{index}个站点方向无效") from exc
+    return name, url, region
 
 
 def validate_history_cache(payload: object) -> dict[str, object]:
     if not isinstance(payload, dict):
         raise CacheError("历史缓存根节点必须是对象")
-    if payload.get("schema_version") != HISTORY_SCHEMA_VERSION:
-        raise CacheError(f"历史缓存 schema_version 必须是 {HISTORY_SCHEMA_VERSION}")
     sites = payload.get("sites")
     if not isinstance(sites, list):
         raise CacheError("历史缓存 sites 必须是数组")
-    seen: set[str] = set()
+    seen: set[tuple[str, str, str]] = set()
     for index, site in enumerate(sites, start=1):
         if not isinstance(site, dict):
             raise CacheError(f"历史缓存第{index}个站点必须是对象")
-        site_id = site.get("site_id")
-        if not isinstance(site_id, str) or not site_id:
-            raise CacheError(f"历史缓存第{index}个站点缺少 site_id")
-        if site_id in seen:
-            raise CacheError(f"历史缓存 site_id 重复：{site_id}")
-        seen.add(site_id)
+        identity = _cache_site_identity(site, index)
+        if identity in seen:
+            raise CacheError(f"历史缓存站点身份重复：{identity[0]} | {identity[1]} | {identity[2]}")
+        seen.add(identity)
         history = site.get("history")
         if not isinstance(history, list):
-            raise CacheError(f"历史缓存 {site_id} 的 history 必须是数组")
+            raise CacheError(f"历史缓存 {identity[0]} 的 history 必须是数组")
         if len(history) > HISTORY_LIMIT:
-            raise CacheError(f"历史缓存 {site_id} 最多保留10期，实际{len(history)}期")
+            raise CacheError(f"历史缓存 {identity[0]} 最多保留10期，实际{len(history)}期")
         periods: set[int] = set()
         for item in history:
             if not isinstance(item, dict):
-                raise CacheError(f"历史缓存 {site_id} 的历史项必须是对象")
+                raise CacheError(f"历史缓存 {identity[0]} 的历史项必须是对象")
             period = item.get("period")
             wuxing = item.get("wuxing")
             if isinstance(period, bool) or not isinstance(period, int) or period <= 0:
-                raise CacheError(f"历史缓存 {site_id} 存在无效期号")
+                raise CacheError(f"历史缓存 {identity[0]} 存在无效期号")
             if period in periods:
-                raise CacheError(f"历史缓存 {site_id} 的 {period}期重复")
+                raise CacheError(f"历史缓存 {identity[0]} 的 {period}期重复")
             if wuxing not in VALID_WUXING:
-                raise CacheError(f"历史缓存 {site_id} 的 {period}期不是标准五行")
+                raise CacheError(f"历史缓存 {identity[0]} 的 {period}期不是标准五行")
             periods.add(period)
     return payload
 
@@ -88,21 +95,27 @@ def apply_history_updates(
     validate_history_cache(cache)
     if keep <= 0 or keep > HISTORY_LIMIT:
         raise CacheError(f"缓存历史最多只能保留10期，收到 keep={keep}")
-    sites = [dict(site) for site in cache["sites"]]
-    by_id = {site["site_id"]: site for site in sites}
+    sites = []
+    by_identity: dict[tuple[str, str, str], dict[str, object]] = {}
+    for index, raw_site in enumerate(cache["sites"], start=1):
+        site = dict(raw_site)
+        site.pop("site_id", None)
+        identity = _cache_site_identity(site, index)
+        sites.append(site)
+        by_identity[identity] = site
     maximum_period = int(cache.get("updated_period", 0) or 0)
     for update in updates:
-        site = by_id.get(update.site_id)
+        identity = (update.name.strip(), update.url.strip(), update.region.value)
+        site = by_identity.get(identity)
         if site is None:
             site = {
-                "site_id": update.site_id,
                 "name": update.name,
                 "url": update.url,
                 "region": update.region.value,
                 "history": [],
             }
             sites.append(site)
-            by_id[update.site_id] = site
+            by_identity[identity] = site
         existing_history = [dict(item) for item in site.get("history", [])]
         existing = next((item for item in existing_history if item["period"] == update.period), None)
         if existing is not None and existing["wuxing"] != update.wuxing:
@@ -128,7 +141,7 @@ def apply_history_updates(
         })
         maximum_period = max(maximum_period, update.period)
     result: dict[str, object] = {
-        "schema_version": HISTORY_SCHEMA_VERSION,
+        "version": int(cache.get("version", 1) or 1),
         "updated_period": maximum_period,
         "sites": sites,
     }

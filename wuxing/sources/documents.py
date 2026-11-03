@@ -30,10 +30,13 @@ def same_origin(parent_url: str, child_url: str) -> bool:
 def should_fetch_script(page_url: str, script_url: str) -> bool:
     parsed = urlparse(script_url)
     path = parsed.path.lower()
+    # 第三方脚本内容不得进入候选池：任何脚本都必须与页面同源。
+    if not same_origin(page_url, script_url):
+        return False
     return (
         "/upload/script/" in script_url
-        or (same_origin(page_url, script_url) and path.endswith(".js"))
-        or (same_origin(page_url, script_url) and path.endswith("/view_content.php"))
+        or path.endswith(".js")
+        or path.endswith("/view_content.php")
     )
 
 

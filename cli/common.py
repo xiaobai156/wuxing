@@ -24,6 +24,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SUCCESS_DIR = DEFAULT_OUTPUT_DIR
 DEFAULT_FAILURE_DIR = DEFAULT_FAILURE_OUTPUT_DIR
 RANKING_EXCLUDED_NAMES = frozenset({"澳门第二四不像", "信封论坛", "天青润薮"})
+_UTF8_BOM = bytes((0xEF, 0xBB, 0xBF))
 
 
 @dataclass(frozen=True)
@@ -99,9 +100,15 @@ def append_success_lines(path: str | Path, lines: Iterable[str]) -> Path:
         original = target.read_bytes() if target.exists() else b""
         original_text = original.decode("utf-8-sig") if original else ""
         ranking_position = original_text.find(RANKING_HEADER)
-        base = original[: len(original_text[:ranking_position].encode("utf-8"))] if ranking_position >= 0 else original
-        if original and original.startswith(b"\xef\xbb\xbf") and ranking_position >= 0:
-            base = b"\xef\xbb\xbf" + original_text[:ranking_position].encode("utf-8")
+        if ranking_position >= 0:
+            # 数据段与排行块之间本来就有一个空行，追加时若原样保留，
+            # 会与新行、排行块的前导空行叠成多余空行，这里先去掉行尾空行再拼。
+            data_prefix = original_text[:ranking_position].rstrip()
+            base = data_prefix.encode("utf-8")
+            if base and original.startswith(_UTF8_BOM):
+                base = _UTF8_BOM + base
+        else:
+            base = original
         existing_text = base.decode("utf-8-sig") if base else ""
         existing_lines = {}
         for raw in existing_text.splitlines():
