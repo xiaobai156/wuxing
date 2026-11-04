@@ -171,7 +171,8 @@
     "name": "狀元紅",
     "url": "https://otwuomdb.882244a.app:2026/gengxin/16.html",
     "click_first": false,
-    "region": "top"
+    "region": "bottom",
+    "config_version": 2
   },
   {
     "name": "慈善网",
