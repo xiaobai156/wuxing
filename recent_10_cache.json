@@ -1,6 +1,6 @@
 ﻿{
   "version": 1,
-  "updated_period": 308,
+  "updated_period": 309,
   "sites": [
     {
       "name": "同心叶力",
@@ -8,6 +8,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:04.881472+00:00",
+          "source_digest": "84ccf15c6e4347de40eba18cd4135609f990632dcc4a288fff04e759087974e6",
+          "rule_version": "site.site-0007-27df04be2c.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -70,13 +77,6 @@
           "captured_at": "2026-10-27T10:34:42.859705+00:00",
           "source_digest": "1c08b2678752ec443209eee4f84794bb28efbcd295d95b700649173346e13095",
           "rule_version": "site.site-0007-27df04be2c.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:07.823017+00:00",
-          "source_digest": "40d3b19e397ef15fc9126be63626337a3564230db6afb8873122c359ff55cd9e",
-          "rule_version": "site.site-0007-27df04be2c.v1@config1"
         }
       ]
     },
@@ -86,6 +86,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:04.849024+00:00",
+          "source_digest": "4aec65dfa2c70a5630b8dea3dfd2d4dd0e995fde26f61fe18ea6d9a92c63a2e2",
+          "rule_version": "site.site-0006-fe65c32d71.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -148,13 +155,6 @@
           "captured_at": "2026-10-27T10:46:08.278521+00:00",
           "source_digest": "0685f79f3ef3cfdaa6f8c0e4e7b628111b86d41346d3b8110a5e94481cc58bff",
           "rule_version": "site.site-0006-fe65c32d71.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:07.789590+00:00",
-          "source_digest": "4aa2324d791851fe74b3e1e284a659fdc47e06863f797d5f58c7dac81fb7dfd4",
-          "rule_version": "site.site-0006-fe65c32d71.v1@config1"
         }
       ]
     },
@@ -164,6 +164,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:04.814906+00:00",
+          "source_digest": "e4e5baa8b0a6ab8a091e0bd02bb3161e5e5aeb3c5ae0f7fee7df24c5a47e8e9d",
+          "rule_version": "site.site-0004-39625ed2b0.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -226,13 +233,6 @@
           "captured_at": "2026-10-27T10:34:42.800586+00:00",
           "source_digest": "c1cbd1558580113725fc5bc1691d72574f25e2342db323ea35eac2de7999cd45",
           "rule_version": "site.site-0004-af2bbb0b3b.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:07.705747+00:00",
-          "source_digest": "0d85d6cdc62ddef2daa84cf361c872a4c9b9e27b7f038fe0adf34d545203c45b",
-          "rule_version": "site.site-0004-af2bbb0b3b.v1@config2"
         }
       ]
     },
@@ -242,6 +242,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:43:12.816363+00:00",
+          "source_digest": "219b75de84caeb767ee139f70c8f4b10e2073e88b446dea9603d053e89af5fb1",
+          "rule_version": "site.site-0005-94ff1cb1bd.v1@config3"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -304,13 +311,6 @@
           "captured_at": "2026-10-27T10:34:42.830684+00:00",
           "source_digest": "b031107e26880f8d004998f84e9c89a1b7718a3c8602eee84c740e192969f8b1",
           "rule_version": "site.site-0005-94ff1cb1bd.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:07.742806+00:00",
-          "source_digest": "713e8e22d77fffe6877d9159bf16cd7e3530123342724193ec5acb32311685ae",
-          "rule_version": "site.site-0005-94ff1cb1bd.v1@config2"
         }
       ]
     },
@@ -320,6 +320,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:04.775288+00:00",
+          "source_digest": "50a28486535011491d97322b7df5529603b4034a9e738199844145b5e796fc75",
+          "rule_version": "site.site-0003-77f46aa16b.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -382,13 +389,6 @@
           "captured_at": "2026-10-27T10:34:42.765145+00:00",
           "source_digest": "4ff7846ffb5ff3964393bfa8e68dd661667c7a99ed4766bcaffffd8dd61dd59f",
           "rule_version": "site.site-0003-77f46aa16b.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:07.662582+00:00",
-          "source_digest": "d0de648af384f8c4066a3c7451d24afed3a1851f088ed75a59a1ac90a23ad56e",
-          "rule_version": "site.site-0003-77f46aa16b.v1@config1"
         }
       ]
     },
@@ -398,6 +398,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:04.922584+00:00",
+          "source_digest": "7afe0ef93eef936cbe1ceb135d76f1acf71aabaddae5b44f973738367e320f15",
+          "rule_version": "site.site-0008-f8201fdf92.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -460,13 +467,6 @@
           "captured_at": "2026-10-27T10:34:42.891769+00:00",
           "source_digest": "b50dc07f4efd012c703a4c06c14351f933110f0f8be1ed79930fee02a47739c9",
           "rule_version": "site.site-0008-f8201fdf92.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T11:25:45.706073+00:00",
-          "source_digest": "2164865508d41603f89f91ed2033eb1fb71a663e33edebcb7a81629a13f101d3",
-          "rule_version": "site.site-0008-f8201fdf92.v1@config1"
         }
       ]
     },
@@ -476,6 +476,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.072486+00:00",
+          "source_digest": "b7cdd385665e8176ad6e329dde89cb72cb6ba88db867149cf1999379c84a2225",
+          "rule_version": "site.site-0012-63393f8c3a.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -538,13 +545,6 @@
           "captured_at": "2026-10-27T10:34:43.026540+00:00",
           "source_digest": "33d37513622f64e5d9ec3f96ee4f52d0cea3fd5edc9f0303e8f39799420925da",
           "rule_version": "site.site-0012-63393f8c3a.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:07.963935+00:00",
-          "source_digest": "0dc30f6c538bd013f7a3a37b98eebedead52ca686dfe55391a6091d6ef07ee8a",
-          "rule_version": "site.site-0012-63393f8c3a.v1@config2"
         }
       ]
     },
@@ -554,6 +554,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:05.135867+00:00",
+          "source_digest": "502beb0e94e0c4da16c0eb95d22cee10c57aba7d86002ae13a62d207c026181b",
+          "rule_version": "site.site-0014-f3ac719532.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -616,13 +623,6 @@
           "captured_at": "2026-10-27T10:46:21.130947+00:00",
           "source_digest": "184979bfab806e4255ddf0450c1a5273d01785e1d49104a32d6bcbfe8f83eaeb",
           "rule_version": "site.site-0014-f3ac719532.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:08.037801+00:00",
-          "source_digest": "38aa235a22d9e6c554eb51b9620d0573a0da944eb0a546caf7ce00872af5e5d8",
-          "rule_version": "site.site-0014-f3ac719532.v1@config1"
         }
       ]
     },
@@ -632,6 +632,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.169289+00:00",
+          "source_digest": "f4094d35fd4727a8aec13b905de0eab1b07f293ea724d2cb95fa55ae913cb4e1",
+          "rule_version": "site.site-0015-a182d0ce19.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -694,13 +701,6 @@
           "captured_at": "2026-10-27T10:34:43.102158+00:00",
           "source_digest": "e7f0ae2ff05d472d2dbb19a6f76f40c8e1ba42aa1c2a88ef2140e1f2732bd051",
           "rule_version": "site.site-0015-a182d0ce19.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.071877+00:00",
-          "source_digest": "bcd07734b486e98089f9e95338230fdd9cbbe0b1a19d6a1e1e7901bfc56bcd53",
-          "rule_version": "site.site-0015-a182d0ce19.v1@config2"
         }
       ]
     },
@@ -710,6 +710,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:05.205583+00:00",
+          "source_digest": "992357f5327da8bbe82dd145bc5915eacf39eeac49075e39f64c86ca2db1c706",
+          "rule_version": "site.site-0016-8547420dfc.v1@config3"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -772,13 +779,6 @@
           "captured_at": "2026-10-27T10:34:43.136127+00:00",
           "source_digest": "7dff21fdd4e4f2b9b5cf6c68f5d41bd5127f2a4b58abe4daee1a03d5d6a81a71",
           "rule_version": "site.site-0016-8547420dfc.v1@config3"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.107193+00:00",
-          "source_digest": "3d0f17eec166e4c0c02b32075b107a70e598a2c6942d6b1f4095ad348966fee9",
-          "rule_version": "site.site-0016-8547420dfc.v1@config3"
         }
       ]
     },
@@ -788,6 +788,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:05.236664+00:00",
+          "source_digest": "3d0756451b486cfa52d530447ccc591222eca8175d60e628c0414492a247c26e",
+          "rule_version": "site.site-0017-c256422e3a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -850,13 +857,6 @@
           "captured_at": "2026-10-27T10:34:43.168513+00:00",
           "source_digest": "a2cc5aefc966d1ed3684990000e6c660af7ccd13280bdfb42c3e1b97e7c813b7",
           "rule_version": "site.site-0017-c256422e3a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.139639+00:00",
-          "source_digest": "d5f0c478b33b973134c0ca6bab71403a7da8c0d24af905f71b6994b8f6664144",
-          "rule_version": "site.site-0017-c256422e3a.v1@config1"
         }
       ]
     },
@@ -866,6 +866,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:05.305424+00:00",
+          "source_digest": "fdc125104954fcfec008d52ab1e84f60557fd2950e0a79d737eaf1c9f208ef38",
+          "rule_version": "site.site-0019-b21f21f2f1.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -928,13 +935,6 @@
           "captured_at": "2026-10-27T10:34:43.239082+00:00",
           "source_digest": "0a99a79d478f9dd924a71ba5f348d333a56a33ab28a01ff12154c80bcb11b18d",
           "rule_version": "site.site-0019-b21f21f2f1.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T11:36:01.111711+00:00",
-          "source_digest": "889d370766a9aca07f82c1e4d8f1a75e91015767d4a9d3a84858a115bac74a4b",
-          "rule_version": "site.site-0019-b21f21f2f1.v1@config2"
         }
       ]
     },
@@ -944,6 +944,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:05.267620+00:00",
+          "source_digest": "d8d6f06e1fb36e800cd6dc302a26dbf1b795919deb2812049bb34545fcd6795b",
+          "rule_version": "site.site-0018-ca4859fe69.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -1006,13 +1013,6 @@
           "captured_at": "2026-10-27T10:34:43.203202+00:00",
           "source_digest": "779d05852f092c145b801574219c0b779bddf638b0551c96f296a9e7e0ea166d",
           "rule_version": "site.site-0018-ca4859fe69.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T11:35:48.592447+00:00",
-          "source_digest": "c5947a701900117404cc6284909aeb914bcec88b245bf3b1a614bf0fa18ce2b2",
-          "rule_version": "site.site-0018-ca4859fe69.v1@config2"
         }
       ]
     },
@@ -1022,6 +1022,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:04.736879+00:00",
+          "source_digest": "8cb86bdbd1a5354ba0e5deff0770b6c06e023d9e47828b9c9d679c8e99c25bec",
+          "rule_version": "site.site-0001-8e5b933fa1.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -1084,13 +1091,6 @@
           "captured_at": "2026-10-27T10:45:54.118863+00:00",
           "source_digest": "b09fd79e06da772c8e0abbc3ba5e08b39f5d8f67fcc428eb1e921d2b2dc15bd0",
           "rule_version": "site.site-0001-8e5b933fa1.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:07.620724+00:00",
-          "source_digest": "50a8317adf179dce7afbc043079729563209bd24dc846c9c6f025600265112b3",
-          "rule_version": "site.site-0001-8e5b933fa1.v1@config1"
         }
       ]
     },
@@ -1100,6 +1100,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:05.371786+00:00",
+          "source_digest": "2e8d672c49263805607cf9ec5eb68bcda863229418a776b07ab1a60146dc1645",
+          "rule_version": "site.site-0021-6a8d69d055.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -1162,13 +1169,6 @@
           "captured_at": "2026-10-27T10:34:43.309189+00:00",
           "source_digest": "bac586afee1a4a948032eb72c56b287206985f1e5a9911d99f1403bc35b89f24",
           "rule_version": "site.site-0021-6a8d69d055.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:08.218481+00:00",
-          "source_digest": "2bfd6d83d5656d477770964e9ebe261f8b94f1d0b87010402e504ea4de5721fb",
-          "rule_version": "site.site-0021-6a8d69d055.v1@config1"
         }
       ]
     },
@@ -1178,6 +1178,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:05.340277+00:00",
+          "source_digest": "ed303738efc2b0d25abb315a2b593da1ad0eec4861c4fe1ea92f152abcaccc20",
+          "rule_version": "site.site-0020-33d6b97858.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -1240,13 +1247,6 @@
           "captured_at": "2026-10-27T10:34:43.273635+00:00",
           "source_digest": "8bbf604b19790f4114290d4fbfc85ecd6555552d70e60288516fd275214170ca",
           "rule_version": "site.site-0020-33d6b97858.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.174519+00:00",
-          "source_digest": "841a6569ff3a428cbcd3037323bf42e490d2b0e553d2fb0c7c42456e32eecc4f",
-          "rule_version": "site.site-0020-33d6b97858.v1@config1"
         }
       ]
     },
@@ -1256,6 +1256,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:05.405143+00:00",
+          "source_digest": "b923c8048040c97646b19fdea2bc6c1578ca3c4c57817df9ace358e9c325654c",
+          "rule_version": "site.site-0022-7ad98ae3d2.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -1317,13 +1324,6 @@
           "wuxing": "金行",
           "captured_at": "2026-10-27T10:34:43.348000+00:00",
           "source_digest": "8338fb1bd8104d3362c830344d9c0df4d3d43bd90a99539ad7f1fe9793849e84",
-          "rule_version": "site.site-0022-7ad98ae3d2.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:08.254873+00:00",
-          "source_digest": "8b194334573fbe820f2bfd72d01497253fd4ab943b90b0cf9e1ce5acd43fe546",
           "rule_version": "site.site-0022-7ad98ae3d2.v1@config1"
         }
       ]
@@ -1387,6 +1387,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.470431+00:00",
+          "source_digest": "9d0a5702a6f52880a1e5073891f966587a5ffd1c3c9d2aaec0053ea5412227af",
+          "rule_version": "site.site-0024-41c8d0efe2.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "火行",
           "captured_at": "2026-11-04T10:33:15.332324+00:00",
@@ -1448,13 +1455,6 @@
           "captured_at": "2026-10-27T10:34:43.425707+00:00",
           "source_digest": "40ee594efa573ec343a05a26fe05d567159d186eb264d2b3087c959e25396e23",
           "rule_version": "site.site-0024-41c8d0efe2.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.339223+00:00",
-          "source_digest": "60f4188a93971ac100b76cd71de94da57abe8ac803757f8b616ba3f7f19cc6a0",
-          "rule_version": "site.site-0024-41c8d0efe2.v1@config1"
         }
       ]
     },
@@ -1464,6 +1464,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:05.503978+00:00",
+          "source_digest": "777a7684863d43dc3d7692238a1812dac5bb2ac44979c032d72b387ed0a348c4",
+          "rule_version": "site.site-0025-832954da93.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -1526,13 +1533,6 @@
           "captured_at": "2026-10-27T10:34:43.460994+00:00",
           "source_digest": "fb9efa030cc6173ee653f73dba43da8729425583651c11ec74a5336d469060a4",
           "rule_version": "site.site-0025-832954da93.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.377599+00:00",
-          "source_digest": "91aa6c7c1758601bba024edc35d6a2fe9491fd2d3c84f80c4550b5fc5bf0b3e9",
-          "rule_version": "site.site-0025-832954da93.v1@config1"
         }
       ]
     },
@@ -1542,6 +1542,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:05.438375+00:00",
+          "source_digest": "59ad298ec1dc3bf63e813113be44627d906c4d2ed54f6703a25eb4d195d2177b",
+          "rule_version": "site.site-0023-fd27f5d341.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -1604,13 +1611,6 @@
           "captured_at": "2026-10-27T10:34:43.383173+00:00",
           "source_digest": "2b909212fd5b8aeeae632f4e0140f72f2f6ee0b5b68f395cb7f6cd10f439a986",
           "rule_version": "site.site-0023-fd27f5d341.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:08.298635+00:00",
-          "source_digest": "c246e569a1aca2b4e27a3787fb2ecb1a74c3da63000a258e2d46592521723ef2",
-          "rule_version": "site.site-0023-fd27f5d341.v1@config1"
         }
       ]
     },
@@ -1669,6 +1669,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:05.577473+00:00",
+          "source_digest": "491a738297b1d01c442b64ff2cc3201c353071fe21ce8bc2387361827f49c944",
+          "rule_version": "site.site-0029-5d916fd0bc.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -1731,13 +1738,6 @@
           "captured_at": "2026-10-27T10:34:43.573116+00:00",
           "source_digest": "b5be2aa075feb73c9279c304e02dcd411829586a1c86bdeaa20f1d2900a574bc",
           "rule_version": "site.site-0029-5d916fd0bc.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.495619+00:00",
-          "source_digest": "cd3a51e2239b6f6d109dab6c23f1d48a757c4124ea11a90f30c282ed4a83aaa9",
-          "rule_version": "site.site-0029-5d916fd0bc.v1@config2"
         }
       ]
     },
@@ -1747,6 +1747,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:05.107034+00:00",
+          "source_digest": "d87e415aa319c108a687fa71d53cf930b64f849c2784334faeb2745ba43be518",
+          "rule_version": "site.site-0013-879766e68a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -1809,13 +1816,6 @@
           "captured_at": "2026-10-27T10:34:43.063772+00:00",
           "source_digest": "bc2e4a8cafceabf7104c0605edb007993085e6bafaacdf8998c30c301c0b4a06",
           "rule_version": "site.site-0013-879766e68a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:07.999675+00:00",
-          "source_digest": "25317c77e2fdbb2d847917e819c274e51f56147ae63aceee32836923f4b34891",
-          "rule_version": "site.site-0013-879766e68a.v1@config1"
         }
       ]
     },
@@ -1825,6 +1825,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:05.704956+00:00",
+          "source_digest": "ba5bb49bd3d57ccc9cbb5290258246f1b86fc2960e8b77f5a450fdb0a585e26d",
+          "rule_version": "site.site-0032-202743b81d.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -1887,13 +1894,6 @@
           "captured_at": "2026-10-27T10:34:43.674326+00:00",
           "source_digest": "51be0b0c774acf981e1dc29a9d09392c071a2d690ebf27e7fa385e153776c0ec",
           "rule_version": "site.site-0032-202743b81d.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:08.571868+00:00",
-          "source_digest": "e94b63ae0a399597a9f91400976eea7f10584014bbce726357a4d5e963d0b1af",
-          "rule_version": "site.site-0032-202743b81d.v1@config1"
         }
       ]
     },
@@ -1903,6 +1903,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.613831+00:00",
+          "source_digest": "e049e3be42e11ea98af3f5fad639fe2f25a16a2aecb6133e80f9f9f11d4de0fd",
+          "rule_version": "site.site-0030-a426726369.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -1965,13 +1972,6 @@
           "captured_at": "2026-10-27T10:34:43.604392+00:00",
           "source_digest": "f571f661454f7d39dc52661f2dd00a78a82fcff3643842dabd34c9d9667851a2",
           "rule_version": "site.site-0030-a426726369.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:44:48.748236+00:00",
-          "source_digest": "3f224d8b127e75e576268c6c94f053f23df86b37455d7d1eaa7b0c1291c07721",
-          "rule_version": "site.site-0030-a426726369.v1@config1"
         }
       ]
     },
@@ -1981,6 +1981,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:05.742558+00:00",
+          "source_digest": "e6b5d32da04c3e74ed5a48e3df6f68d0cb700f51060058236c1856cf45e73526",
+          "rule_version": "site.site-0033-5114947fc8.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -2043,13 +2050,6 @@
           "captured_at": "2026-10-27T10:34:43.710550+00:00",
           "source_digest": "c8ca0130788ae27362fceaf41478db084e6890b09928c2225eee93f942ab9acb",
           "rule_version": "site.site-0033-5114947fc8.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:08.613702+00:00",
-          "source_digest": "7bb8d7d9f2a7b157edace0a938183da9c6fe68478178aa9844ef637b35f8de40",
-          "rule_version": "site.site-0033-5114947fc8.v1@config2"
         }
       ]
     },
@@ -2059,6 +2059,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.827181+00:00",
+          "source_digest": "5921319cccddd698eb810e016691e6937a31e7907a9ed71946d04da4ee5eaaa4",
+          "rule_version": "site.site-0035-75b85fbe13.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -2121,13 +2128,6 @@
           "captured_at": "2026-10-27T10:34:43.793772+00:00",
           "source_digest": "48bb1371cea02008ec12bd0820dd0dc49d979a36b32716c21a3a7d641b916de7",
           "rule_version": "site.site-0035-75b85fbe13.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:08.691170+00:00",
-          "source_digest": "14eb340ee93c7e398c118851bbe5eb4826f19d10d6e4e1bafbf8dadcfe7377e9",
-          "rule_version": "site.site-0035-75b85fbe13.v1@config1"
         }
       ]
     },
@@ -2137,6 +2137,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:05.784628+00:00",
+          "source_digest": "376fedeba085abc062f83de240eebcd5d2a1bf3b256df12155dfed71498c7eda",
+          "rule_version": "site.site-0034-8b73b1d69f.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -2199,13 +2206,6 @@
           "captured_at": "2026-10-27T10:34:43.753383+00:00",
           "source_digest": "9495ef1c2ad1d3ac7fd37626fe722eb230d20c322927e45bc06021e4f550d866",
           "rule_version": "site.site-0034-8b73b1d69f.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.657057+00:00",
-          "source_digest": "0be2b352c0359f5aa5726870ff5d5682aa3064a2b2b5c6c150e99288066bb33b",
-          "rule_version": "site.site-0034-8b73b1d69f.v1@config2"
         }
       ]
     },
@@ -2215,6 +2215,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:05.857380+00:00",
+          "source_digest": "3b5ae52a579ef2205fc1b5791d511b38abb1488a7feb9616dc02c63acd3561d5",
+          "rule_version": "site.site-0036-de6934f015.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -2277,13 +2284,6 @@
           "captured_at": "2026-10-27T10:34:43.833316+00:00",
           "source_digest": "207bf785d49569601feab3174c31689d9f032cfee3ea8647ee450efac97efbc5",
           "rule_version": "site.site-0036-de6934f015.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:08.721877+00:00",
-          "source_digest": "2eacd5d2dee99ac89ff4672495675b07d2d1d4c0000561fdda289d6f92dd1d9f",
-          "rule_version": "site.site-0036-de6934f015.v1@config1"
         }
       ]
     },
@@ -2293,6 +2293,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:05.922772+00:00",
+          "source_digest": "8473a44b4f22d044062de75cb572f09830687bad274be016128afff59b2222b5",
+          "rule_version": "site.site-0038-e4a4163cb6.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -2355,13 +2362,6 @@
           "captured_at": "2026-10-27T10:34:43.868041+00:00",
           "source_digest": "a1a1f59867c6e4d4dde33bbcfe4d4e190425f39a78fdf6f2b5240ef7904e9aa8",
           "rule_version": "site.site-0038-e4a4163cb6.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:45:01.069838+00:00",
-          "source_digest": "e6e7d97c6b4ad8f1ac579ec52a886324c77ced950388a1bc49c6f5220301ba1c",
-          "rule_version": "site.site-0038-e4a4163cb6.v1@config1"
         }
       ]
     },
@@ -2419,6 +2419,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.004506+00:00",
+          "source_digest": "f4884f9dfe6b613f52a704a78b0e1fa7291a6751bc0b73b236d09f50dc95f080",
+          "rule_version": "site.site-0040-bb479ace8b.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -2481,13 +2488,6 @@
           "captured_at": "2026-10-27T10:34:44.041498+00:00",
           "source_digest": "39bdcac1fd04b928ceb9952249a92de5adbc5e7bdd75d4686521d561e7b312a4",
           "rule_version": "site.site-0040-bb479ace8b.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:08.833897+00:00",
-          "source_digest": "6cc8ca8e1a7301b884ac814cd20ddbe5e84ed9edad294e66346a257c2b629a91",
-          "rule_version": "site.site-0040-bb479ace8b.v1@config2"
         }
       ]
     },
@@ -2497,6 +2497,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.966711+00:00",
+          "source_digest": "719b24648b0f9114bfc033c22a267f10eab0fd437af8eccbbd16e7d4a3df4f86",
+          "rule_version": "site.site-0039-0fec320499.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -2559,13 +2566,6 @@
           "captured_at": "2026-10-27T10:34:43.905570+00:00",
           "source_digest": "4a276c37231e6b7058309fc67e6ca92a58201b4c90ecae1b9cd498f8db9e61fe",
           "rule_version": "site.site-0039-0fec320499.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.794504+00:00",
-          "source_digest": "aa282ac42380b35eeee058c89437f6db49dd06ff6ac3946628a48fbf7ff3e08d",
-          "rule_version": "site.site-0039-0fec320499.v1@config1"
         }
       ]
     },
@@ -2623,6 +2623,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:06.117203+00:00",
+          "source_digest": "aa6b753fb70364ab5b61787d318ccf91db5a6502d728195db1c8a50a7b32fe75",
+          "rule_version": "site.site-0043-cd1526a2d3.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -2685,13 +2692,6 @@
           "captured_at": "2026-10-27T10:34:44.139543+00:00",
           "source_digest": "bb5a8aecd29d024c311dafc5963dad346e3d298ee9ae42f7e540c9e8c6b302a9",
           "rule_version": "site.site-0043-cd1526a2d3.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T11:26:35.630259+00:00",
-          "source_digest": "8926d602ed2de7da98b8f3347f2019e36595ef82af56f388dfd41312af77eff1",
-          "rule_version": "site.site-0043-cd1526a2d3.v1@config1"
         }
       ]
     },
@@ -2701,6 +2701,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:06.081441+00:00",
+          "source_digest": "31a82e2ee26216f068087c38ad73eacf4238c91e9dd1e866cbbb60c8b90f748e",
+          "rule_version": "site.site-0042-500a22d559.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -2763,13 +2770,6 @@
           "captured_at": "2026-10-27T10:34:44.107492+00:00",
           "source_digest": "12961f715d436ee4bc06fcadb7aa4f0e308a42ca4b49fc31642f795c170dbb40",
           "rule_version": "site.site-0042-500a22d559.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.868625+00:00",
-          "source_digest": "f0fd29a512496bdcfcf7314356a28f08c83ebc56caa1c576153060540b97f393",
-          "rule_version": "site.site-0042-500a22d559.v1@config1"
         }
       ]
     },
@@ -2779,6 +2779,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:06.256015+00:00",
+          "source_digest": "d4e7d2261224a561222b60ce6d2f0c7923c1f4e92025f4ff4b463d112e80c91e",
+          "rule_version": "site.site-0047-6206b22c7c.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -2841,13 +2848,6 @@
           "captured_at": "2026-10-27T10:34:44.285967+00:00",
           "source_digest": "960d1a61126d6a6afe5e47515d3256ce4a6e23611364321b849adace556c70c8",
           "rule_version": "site.site-0047-6206b22c7c.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:09.026243+00:00",
-          "source_digest": "d9e47bf2c67ba0e14a73cadcb79e78aad4fa55c9ad108cc4b6f9fd6e9992bcb5",
-          "rule_version": "site.site-0047-6206b22c7c.v1@config2"
         }
       ]
     },
@@ -2857,6 +2857,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.221559+00:00",
+          "source_digest": "cbf59dd5e6cd3b3bfb8f43dafd56e9a7476fd5d212683b0537cbac5aeff72c3b",
+          "rule_version": "site.site-0046-79987777df.v1@config3"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -2919,13 +2926,6 @@
           "captured_at": "2026-10-27T10:34:44.255241+00:00",
           "source_digest": "07b8f4a511e9ad05bb2cad7bd230986ba2f61054d710865df4bcb2ac47e9ee45",
           "rule_version": "site.site-0046-79987777df.v1@config3"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:08.988903+00:00",
-          "source_digest": "e32e7b95604219c39a80773116fab78e10d5cd1942febc3a674f27d91db1569d",
-          "rule_version": "site.site-0046-79987777df.v1@config3"
         }
       ]
     },
@@ -2935,6 +2935,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:06.288593+00:00",
+          "source_digest": "be77faf60a7f373e46e7abc35942547ce3b660f74ed5a8445540372830919e30",
+          "rule_version": "site.site-0048-fe7b446e26.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -2997,13 +3004,6 @@
           "captured_at": "2026-10-27T10:46:46.843279+00:00",
           "source_digest": "76c4a3d71984f63c0058c2180834219612cf0189850210831d36c5b89731be7a",
           "rule_version": "site.site-0048-fe7b446e26.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.060710+00:00",
-          "source_digest": "d73830bbd1ceeec63c3e4835f6f788e8b9c5a221da8c37ae63c34c5ca2f674e3",
-          "rule_version": "site.site-0048-fe7b446e26.v1@config1"
         }
       ]
     },
@@ -3013,6 +3013,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:06.321274+00:00",
+          "source_digest": "53080401ecfb55b1fa6ddc6ce51f8f5d31a1eba80c4440f9619a2e1d3b844e63",
+          "rule_version": "site.site-0049-22f1d6227a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -3075,13 +3082,6 @@
           "captured_at": "2026-10-27T10:34:44.318591+00:00",
           "source_digest": "7c539ce14c45cdcd2364e290e84a9abdc2434944a71b84bcec23d75b194dd1d4",
           "rule_version": "site.site-0049-22f1d6227a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:09.097020+00:00",
-          "source_digest": "70433a3c7feee2b016b33d16da1b6474c4bca6c3211022ff1738ae359bc02c10",
-          "rule_version": "site.site-0049-22f1d6227a.v1@config1"
         }
       ]
     },
@@ -3091,6 +3091,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.152106+00:00",
+          "source_digest": "3734a64393096b27dcb980364e8b51d65ea150068e6c8a15a2957b0bc567b7a8",
+          "rule_version": "site.site-0044-5ba8bc90fb.v1@config3"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -3153,13 +3160,6 @@
           "captured_at": "2026-10-27T10:34:44.178615+00:00",
           "source_digest": "c157d2f11128948dfd40a064c5548dbf79579317b2f986967c7d2b89fc843652",
           "rule_version": "site.site-0044-5ba8bc90fb.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.904626+00:00",
-          "source_digest": "6da8db2f9e38e9b0fdfd38698d802918254eb7af5a51862ae8392aaf38ec9482",
-          "rule_version": "site.site-0044-5ba8bc90fb.v1@config2"
         }
       ]
     },
@@ -3169,6 +3169,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:06.359547+00:00",
+          "source_digest": "af451674c31a55286abebcdbb4bb2a27fae2070c2c88500d264d2fd8160cc18a",
+          "rule_version": "site.site-0050-16b6be38a1.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -3231,13 +3238,6 @@
           "captured_at": "2026-10-27T10:34:44.363172+00:00",
           "source_digest": "bb3467370ae6061dd1d78a7f0369d73ab84176cfb523fc5c6ca79f4019aa05c8",
           "rule_version": "site.site-0050-16b6be38a1.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:09.133433+00:00",
-          "source_digest": "4017ba64d17d0a21e6f0c17a67d91935eca6428d6f9b58c839bc43213ff002bb",
-          "rule_version": "site.site-0050-16b6be38a1.v1@config2"
         }
       ]
     },
@@ -3247,6 +3247,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:06.186254+00:00",
+          "source_digest": "6286ea3b688852aea453cb7259861f70825f31ce549b881604a047475f825e97",
+          "rule_version": "site.site-0045-a1adbe05c3.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -3309,13 +3316,6 @@
           "captured_at": "2026-10-27T10:34:44.222826+00:00",
           "source_digest": "a43d4819bfa0cce05a3900d1ef07167df0439847b4c775c217e1111f3683234e",
           "rule_version": "site.site-0045-a1adbe05c3.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.950065+00:00",
-          "source_digest": "82b54dd20a07b2c9d1f185a050f7b575b815cc16c717577260983b13ca2ce7c4",
-          "rule_version": "site.site-0045-a1adbe05c3.v1@config2"
         }
       ]
     },
@@ -3325,6 +3325,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.473049+00:00",
+          "source_digest": "8e3375da9ad0e4529eebc7f1b39d6de830d335345aa002a9e00564429121a18d",
+          "rule_version": "site.site-0053-53318283da.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -3387,13 +3394,6 @@
           "captured_at": "2026-10-27T10:34:44.474692+00:00",
           "source_digest": "a30c4d3b2b61e8d0737f0a188c0cd6e7f7f44f82ca38e1e999b015c5144e2dab",
           "rule_version": "site.site-0053-53318283da.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:09.242465+00:00",
-          "source_digest": "c8fc47ecd753ac76316b96363566f66ca9992d0506649f5bfb57067a4b130e33",
-          "rule_version": "site.site-0053-53318283da.v1@config2"
         }
       ]
     },
@@ -3403,6 +3403,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:06.400472+00:00",
+          "source_digest": "c42b581228c2c73cec9a555fae52511d0361db573a6743626088a21d1164c2d8",
+          "rule_version": "site.site-0051-0945f170a0.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -3465,13 +3472,6 @@
           "captured_at": "2026-10-27T10:34:44.401781+00:00",
           "source_digest": "072728eb027d7c3dad014cdc0efa374e217698faa4760e00e331fb70dba3acc0",
           "rule_version": "site.site-0051-0945f170a0.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.172438+00:00",
-          "source_digest": "8777f625dde3db48def376680633479aa44bd2e1f336a11d6b04be07a0ebc9d6",
-          "rule_version": "site.site-0051-0945f170a0.v1@config2"
         }
       ]
     },
@@ -3481,6 +3481,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:06.433885+00:00",
+          "source_digest": "4d7da9845b9282e3924ee4d10409e5b4521e052a821628b41c7bf660bf089b7f",
+          "rule_version": "site.site-0052-c898d0ab00.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -3543,13 +3550,6 @@
           "captured_at": "2026-10-27T10:34:44.440558+00:00",
           "source_digest": "68a4503df0b78ace8e1855b14f0454fe4761964fa7bdb7b6b7d7e3a390d847b1",
           "rule_version": "site.site-0052-c898d0ab00.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:09.206468+00:00",
-          "source_digest": "521015ff77aa09fcb9257931421098fa607dfa0d375a36079b242b7ec8e445f8",
-          "rule_version": "site.site-0052-c898d0ab00.v1@config1"
         }
       ]
     },
@@ -3559,6 +3559,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:06.509186+00:00",
+          "source_digest": "e32ae02a84326df323fe4d975837b21adce22acfa641ed8172dce076ed5915bd",
+          "rule_version": "site.site-0055-be23da2829.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -3620,13 +3627,6 @@
           "wuxing": "金行",
           "captured_at": "2026-10-27T10:34:44.506733+00:00",
           "source_digest": "121cf40d8ffee1b008789020f22b4c1c3648824c9beca30a919a39ce1cee8c24",
-          "rule_version": "site.site-0055-be23da2829.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:09.285742+00:00",
-          "source_digest": "2992375cd26e216d84964ffa06f8f37de37adbbebe1a9023190a3dde344fc294",
           "rule_version": "site.site-0055-be23da2829.v1@config2"
         }
       ]
@@ -3738,6 +3738,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:06.656304+00:00",
+          "source_digest": "346ee38fbf9467744a45f67596ef20381c65992f8979e1f9a2353030d0bd21b5",
+          "rule_version": "site.site-0062-d6ebbe8f62.v1@config2"
+        },
+        {
           "period": 308,
           "wuxing": "木行",
           "captured_at": "2026-11-04T10:33:16.886408+00:00",
@@ -3799,13 +3806,6 @@
           "captured_at": "2026-10-27T10:34:44.669150+00:00",
           "source_digest": "ebb33bb71fc5706546084264bcdefc0ab3a5401d546e703c3e274362fd69732a",
           "rule_version": "site.site-0062-d6ebbe8f62.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:09.400767+00:00",
-          "source_digest": "8b2be2ce23637b5d5508825e315484003fb3f7a9723be00303e1daf709a80b7d",
-          "rule_version": "site.site-0062-d6ebbe8f62.v1@config2"
         }
       ]
     },
@@ -3815,6 +3815,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.693352+00:00",
+          "source_digest": "05da3d4ac682383ba73d74bd1925c9bfb2ac5c012c98eadac4a296cd1310438a",
+          "rule_version": "site.site-0063-9abe74bd09.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -3877,13 +3884,6 @@
           "captured_at": "2026-10-27T10:46:59.558454+00:00",
           "source_digest": "0990ca40210da5e46bfb45665b6136d0264442d9c109ba3625a848a57738ed92",
           "rule_version": "site.site-0063-9abe74bd09.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:09.442802+00:00",
-          "source_digest": "be11905f93dcb226f0a22e65742e99d563b3bb80625ebbd52d8b0c4b46355453",
-          "rule_version": "site.site-0063-9abe74bd09.v1@config1"
         }
       ]
     },
@@ -3893,6 +3893,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.740248+00:00",
+          "source_digest": "64cd7a0275560d1a7fe704482167aaa3fe161ca30c676ec6c67e69ae04c364ab",
+          "rule_version": "site.site-0064-a51c8333d2.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -3955,13 +3962,6 @@
           "captured_at": "2026-10-27T10:34:44.703349+00:00",
           "source_digest": "f97cd4c2662416fa8866a96b57db087dad822a57d71b69dc8de96b25c780fbb8",
           "rule_version": "site.site-0064-a51c8333d2.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:09.485421+00:00",
-          "source_digest": "a395e2302d56b793e79fc0b12ee35029470501fe6476f8a2df3ae92c3f12ed0b",
-          "rule_version": "site.site-0064-a51c8333d2.v1@config2"
         }
       ]
     },
@@ -3971,6 +3971,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:06.553869+00:00",
+          "source_digest": "1a53ed44874384e008f5ee2ccd1c3445a15f880fd6e6b96cc6c68e6125b2fd2c",
+          "rule_version": "site.site-0056-e58d313fe2.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -4033,13 +4040,6 @@
           "captured_at": "2026-10-27T10:34:44.550165+00:00",
           "source_digest": "4730b6b51e24de949d355c7a00c25dd021ee253eba13e67572df627ec9163f35",
           "rule_version": "site.site-0056-e58d313fe2.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:47:00.853271+00:00",
-          "source_digest": "ff8f7fcc1c60012ba2ec9317dc037db8b1e12ffd2e70ee283b4c1fe121d44b56",
-          "rule_version": "site.site-0056-e58d313fe2.v1@config1"
         }
       ]
     },
@@ -4097,6 +4097,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:06.772911+00:00",
+          "source_digest": "fda26d13057406bac9ca324330a0327356c26f33c662cad9b1a83c62c694c9fc",
+          "rule_version": "site.site-0066-245f240a66.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -4159,13 +4166,6 @@
           "captured_at": "2026-10-27T10:34:44.745595+00:00",
           "source_digest": "fa2925eb47da8e1e13e88802413946d954f0a7dc3ce1a43893aaed3baf4453a6",
           "rule_version": "site.site-0066-245f240a66.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:09.630977+00:00",
-          "source_digest": "a13d1eba5f5a8f25f2e8ef6e7abf84678195f528ad73c05b99959094d8718909",
-          "rule_version": "site.site-0066-245f240a66.v1@config1"
         }
       ]
     },
@@ -4175,6 +4175,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:06.804826+00:00",
+          "source_digest": "25e400e10d74f84d548867c9791cde56d1910e50ff8ad01893c2528206cb65ad",
+          "rule_version": "site.site-0067-2c9d2f993c.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -4237,13 +4244,6 @@
           "captured_at": "2026-10-27T10:34:44.778444+00:00",
           "source_digest": "f9b96fa502522625dd099941a5e97094c185e9299f2738d03b5da3440ccbe46e",
           "rule_version": "site.site-0067-2c9d2f993c.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:09.670485+00:00",
-          "source_digest": "35f927b3cba87b2208527aeaf5437bd452070b646b9dc707540ba74940574381",
-          "rule_version": "site.site-0067-2c9d2f993c.v1@config1"
         }
       ]
     },
@@ -4253,6 +4253,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:06.946886+00:00",
+          "source_digest": "3e0d0dd53bec93b75d8c589b3c2febb6abe24a5a83a2aa95488c9d1efc934068",
+          "rule_version": "site.site-0070-4f8d2303eb.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -4315,13 +4322,6 @@
           "captured_at": "2026-10-27T10:34:44.879729+00:00",
           "source_digest": "887c80c90fefba2b978299f397aad4d341c19de49d32f471e2e0dee66306b6e6",
           "rule_version": "site.site-0070-4f8d2303eb.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:09.754547+00:00",
-          "source_digest": "cad57d88521e0560692687a22490df2fe9f476d46094f5874c46727fc8db08ab",
-          "rule_version": "site.site-0070-4f8d2303eb.v1@config1"
         }
       ]
     },
@@ -4331,6 +4331,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.910755+00:00",
+          "source_digest": "34d7a35537a875efed685e930be0827557e681bce46cc0d1f41fd1d8b88ae711",
+          "rule_version": "site.site-0069-2e3440d844.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -4393,13 +4400,6 @@
           "captured_at": "2026-10-27T10:34:44.848735+00:00",
           "source_digest": "dd11b781498db603bfa6a2a49bb498da9f27298b393baac48f845ee55f8bf117",
           "rule_version": "site.site-0069-2e3440d844.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T11:26:49.019340+00:00",
-          "source_digest": "ee65f6ac9175538da8f8347426cd4c497e6538830006b0d9091338ae011697d6",
-          "rule_version": "site.site-0069-2e3440d844.v1@config1"
         }
       ]
     },
@@ -4409,6 +4409,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.120775+00:00",
+          "source_digest": "d16153f64020e68202143185a7698fb47c2fa169a8541ddc700eb20dc24dd6ef",
+          "rule_version": "site.site-0074-ec56968ff3.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -4471,13 +4478,6 @@
           "captured_at": "2026-10-27T10:34:45.028383+00:00",
           "source_digest": "9356d42af4beb6655a5706d0e3908338c1576343dd6217f2b9df98df83a1b3af",
           "rule_version": "site.site-0074-ec56968ff3.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.829788+00:00",
-          "source_digest": "1a7ad2e583eae49ee519049420e3dfb95ab38f7c331b3e38b23308aa061eb4fe",
-          "rule_version": "site.site-0074-ec56968ff3.v1@config2"
         }
       ]
     },
@@ -4487,6 +4487,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:06.984917+00:00",
+          "source_digest": "8310c8f344aabff1b9207c83a1912d0687cf8f9b1ed1ca6916cab189c9b18ea3",
+          "rule_version": "site.site-0071-10a2a14c02.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -4548,13 +4555,6 @@
           "wuxing": "土行",
           "captured_at": "2026-10-27T10:34:44.916584+00:00",
           "source_digest": "27990bb078683d494b9ebd89747a40531d5cb2c1d98a250bf8f7f6694702ff7b",
-          "rule_version": "site.site-0071-10a2a14c02.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:47:13.544759+00:00",
-          "source_digest": "9551a4dd26cf7fa5b60fea834b1dbd9ecdd8767702a2fd69e51d8b25002824cb",
           "rule_version": "site.site-0071-10a2a14c02.v1@config1"
         }
       ]
@@ -4645,6 +4645,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.858124+00:00",
+          "source_digest": "3f61bcb74c8654796003162725b8a41f17d98e7a31e2b801aa4f883ac63e81c9",
+          "rule_version": "site.site-0068-9f3bc1fe06.v1@config2"
+        },
+        {
           "period": 308,
           "wuxing": "土行",
           "captured_at": "2026-11-04T10:33:17.082814+00:00",
@@ -4706,13 +4713,6 @@
           "captured_at": "2026-10-27T10:34:44.814416+00:00",
           "source_digest": "77b771dc194f5eb3edd5cf3ebaff6afa25f50618a463e397f197e2de9b6c15b3",
           "rule_version": "site.site-0068-9f3bc1fe06.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:09.720569+00:00",
-          "source_digest": "9662ece6eb9b40224c025cd7404808534d45e6fc74d5a40c1a414926c8035fbf",
-          "rule_version": "site.site-0068-9f3bc1fe06.v1@config2"
         }
       ]
     },
@@ -4722,6 +4722,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:07.081747+00:00",
+          "source_digest": "0d86323e4bef422c37c3b611f28c50e6f79436fcceab6e29bbd52eb3fee92020",
+          "rule_version": "site.site-0073-b0061247e3.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -4784,13 +4791,6 @@
           "captured_at": "2026-10-27T10:34:44.995949+00:00",
           "source_digest": "0b8cd20a95f38a2da27f60dbd3da33bbc594d0eb5b053c1e9f01fa3319c701f5",
           "rule_version": "site.site-0073-b0061247e3.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.792156+00:00",
-          "source_digest": "9b4da4eda7791ef72622ac5257feaff11e4cd56c26b498c23712619274133de3",
-          "rule_version": "site.site-0073-b0061247e3.v1@config2"
         }
       ]
     },
@@ -4800,6 +4800,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:07.239632+00:00",
+          "source_digest": "5f72d5cda4bdd9c70fe889fbe71935fc8ac74f73db5b4887fc4aaa056a283901",
+          "rule_version": "site.site-0077-1a786f4440.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -4862,13 +4869,6 @@
           "captured_at": "2026-10-27T10:34:45.128902+00:00",
           "source_digest": "3a26ecc23a0deaec8fe663154e248600966e83c7f86373299aa3d7c25a23a77f",
           "rule_version": "site.site-0077-1a786f4440.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.943009+00:00",
-          "source_digest": "d58970ce33cd21b090bc1f6e2a8f0e122febb5938e44971dbf6a349228c2e850",
-          "rule_version": "site.site-0077-1a786f4440.v1@config1"
         }
       ]
     },
@@ -4878,6 +4878,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.409490+00:00",
+          "source_digest": "094b2636a1876b19f61648a394978afb035ef235acaafd20f086475bfaa295a4",
+          "rule_version": "site.site-0081-51658ef5a0.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -4939,13 +4946,6 @@
           "wuxing": "水行",
           "captured_at": "2026-10-27T10:34:45.276818+00:00",
           "source_digest": "4fb6d2603215a9aeb301db468c0709841883941532f0453c42396c34ff88a578",
-          "rule_version": "site.site-0081-51658ef5a0.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.061455+00:00",
-          "source_digest": "6281f338528c0e89a415bc8e4e9486756c001efff51c9dd117ff3f02237f0163",
           "rule_version": "site.site-0081-51658ef5a0.v1@config1"
         }
       ]
@@ -5053,6 +5053,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:07.466412+00:00",
+          "source_digest": "60b6a96cd3e570ef4296cbb6522bb5e419082b153b91afe29eafa6f3b4ade5ea",
+          "rule_version": "site.site-0082-d962daa07a.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "火行",
           "captured_at": "2026-11-04T10:33:17.678545+00:00",
@@ -5114,13 +5121,6 @@
           "captured_at": "2026-10-27T10:47:13.347732+00:00",
           "source_digest": "aa6992fb55ff8d54e73bc75d0997801d3a2519de2d76c59142cca4b95f7a913a",
           "rule_version": "site.site-0082-d962daa07a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.100345+00:00",
-          "source_digest": "65be2826986aa9167e7f6ec8d870399e3a91cd7055d5532df942726c8c6f9918",
-          "rule_version": "site.site-0082-d962daa07a.v1@config1"
         }
       ]
     },
@@ -5130,6 +5130,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:07.512484+00:00",
+          "source_digest": "60b6a96cd3e570ef4296cbb6522bb5e419082b153b91afe29eafa6f3b4ade5ea",
+          "rule_version": "site.site-0083-d962daa07a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -5192,13 +5199,6 @@
           "captured_at": "2026-10-27T10:34:45.312962+00:00",
           "source_digest": "182046940506183db062800afcd543c042174400e8ef86d52196e766c6e1e2c1",
           "rule_version": "site.site-0083-d962daa07a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:48:46.688064+00:00",
-          "source_digest": "76b089d1f1b44a4bda953ef6a2ff082cf35829aae0a1fe72a8983f3e55636b85",
-          "rule_version": "site.site-0083-d962daa07a.v1@config1"
         }
       ]
     },
@@ -5208,6 +5208,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:07.286873+00:00",
+          "source_digest": "2e79a72aeeb7e4119546b8f84eef88e833bb0a7ab0adac70c9f1aac5ba514276",
+          "rule_version": "site.site-0078-df396c6d49.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -5270,13 +5277,6 @@
           "captured_at": "2026-10-27T10:34:45.167485+00:00",
           "source_digest": "122d7a875c4fe94e172ffdffab30e20803e731971ee19fc166ce707e96a6a69b",
           "rule_version": "site.site-0078-df396c6d49.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T11:33:03.903043+00:00",
-          "source_digest": "8ce969ba8767b31348f58950372b71e78c3254928a47f29683e450404910cb78",
-          "rule_version": "site.site-0078-df396c6d49.v1@config1"
         }
       ]
     },
@@ -5286,6 +5286,13 @@
       "region": "top",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:04.958705+00:00",
+          "source_digest": "3029e630939c3d5bc289303b0d9e3693b8e17a826bfb9637005d8826af8b6a7a",
+          "rule_version": "site.site-0009-4e1ee9b749.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -5348,13 +5355,6 @@
           "captured_at": "2026-10-27T10:34:42.929151+00:00",
           "source_digest": "2268beab4ddeed7d299fce59ab7cd794ceddc13d80c061f100f128509cffb3be",
           "rule_version": "site.site-0009-4e1ee9b749.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:07.854314+00:00",
-          "source_digest": "8d43cc276ee2dd7ed4496182382f1c9cbec1586a56beb902004778483aa5d088",
-          "rule_version": "site.site-0009-4e1ee9b749.v1@config1"
         }
       ]
     },
@@ -5364,6 +5364,13 @@
       "region": "top",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:04.995913+00:00",
+          "source_digest": "568fdaa3fc4e8719c7f3c3276676612fa86261c16560a26751f52a36e69ec569",
+          "rule_version": "site.site-0010-b1775c18ee.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -5426,13 +5433,6 @@
           "captured_at": "2026-10-27T10:34:42.961022+00:00",
           "source_digest": "995a7dad5ca9b04f5fef141fd04a6a4b3639fbdc422a1841d4ffb367c6ae84e0",
           "rule_version": "site.site-0010-b1775c18ee.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:07.885758+00:00",
-          "source_digest": "c142dfe8719f4e746bc22dac8b22199e4acbcd1af23353290f0334c2ce8b9944",
-          "rule_version": "site.site-0010-b1775c18ee.v1@config1"
         }
       ]
     },
@@ -5442,6 +5442,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:06.037560+00:00",
+          "source_digest": "0b7359e927b7360661d852263091982e8bbfcdd5d25d8fbbd587f8990b679018",
+          "rule_version": "site.site-0041-124373f0f9.v1@config4"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -5504,13 +5511,6 @@
           "captured_at": "2026-10-27T10:34:44.076901+00:00",
           "source_digest": "f4f21c63d99c6b5d9045e1e427bfef87dee644ac8ec6d8ca3b87716f6d359867",
           "rule_version": "site.site-0041-124373f0f9.v1@config4"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:45:54.090613+00:00",
-          "source_digest": "b42de86ca6364ae6c65c8db294f65e84ba23d5e216285a60f003f7d41fa92c3c",
-          "rule_version": "site.site-0041-124373f0f9.v1@config4"
         }
       ]
     },
@@ -5520,6 +5520,13 @@
       "region": "top",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:05.031281+00:00",
+          "source_digest": "b5ab4f9dad28397fa91562e0d1ef6b96119d172cc4724159a40a21940fd641d6",
+          "rule_version": "site.site-0011-f0b4fc6477.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -5582,13 +5589,6 @@
           "captured_at": "2026-10-27T10:34:42.991816+00:00",
           "source_digest": "e19ce24b932181c8a8067a16b5eb91da75823251ba9067ebf37ca08f7073cc7c",
           "rule_version": "site.site-0011-f0b4fc6477.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:07.924119+00:00",
-          "source_digest": "a65f952fc89a241d986255ebbe2e2c7828d2f6d6de7e8d601434d92f0652784b",
-          "rule_version": "site.site-0011-f0b4fc6477.v1@config1"
         }
       ]
     },
@@ -5598,6 +5598,13 @@
       "region": "top",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:07.025475+00:00",
+          "source_digest": "b967992adca56c4993b6ce539384d67526b94431393f6f2a70b9992ae24ca98b",
+          "rule_version": "site.site-0072-1ff548147a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -5660,13 +5667,6 @@
           "captured_at": "2026-10-27T10:34:44.964136+00:00",
           "source_digest": "250d242dfcf576afd7160b1a65e00d99d2063a26d39555cb3c861aa96a6a4f2e",
           "rule_version": "site.site-0072-1ff548147a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:48:20.513116+00:00",
-          "source_digest": "5d897f445fcb7f8902f5ad88c07175acd0c061d71ce54632a8d56569fcd16d8a",
-          "rule_version": "site.site-0072-1ff548147a.v1@config1"
         }
       ]
     },
@@ -5676,6 +5676,13 @@
       "region": "top",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:07.160439+00:00",
+          "source_digest": "d7e2c780248e140ad44750c59681c6a018b142337e33452b2c1d5966925c63d4",
+          "rule_version": "site.site-0075-559fb4f012.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -5738,13 +5745,6 @@
           "captured_at": "2026-10-27T10:34:45.060318+00:00",
           "source_digest": "2dcee431854f186ad20f0392e04ed2a0795ab7282c870c8e91f94ad355642079",
           "rule_version": "site.site-0075-559fb4f012.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:09.866319+00:00",
-          "source_digest": "27c29d4e74eb0d6331a9efa91e0d8a303972d9a9d2333b33321c446f52215340",
-          "rule_version": "site.site-0075-559fb4f012.v1@config2"
         }
       ]
     },
@@ -5754,6 +5754,13 @@
       "region": "top",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:07.205039+00:00",
+          "source_digest": "439b511624a51cf7339342f9ef43bd1e55e4d15f5c9231bae9973d921c52d091",
+          "rule_version": "site.site-0076-85dced96eb.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -5816,13 +5823,6 @@
           "captured_at": "2026-10-27T10:34:45.095570+00:00",
           "source_digest": "1c0f546b8c9a7e76c8fe65b78f57c886f6b9d74745a97e0ff3e13d1a758b7931",
           "rule_version": "site.site-0076-85dced96eb.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.902371+00:00",
-          "source_digest": "35eb3265f91fd53674da32cf8d1358db1e116403d763c73f49c1205600ec2f3e",
-          "rule_version": "site.site-0076-85dced96eb.v1@config1"
         }
       ]
     },
@@ -5832,6 +5832,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:07.326978+00:00",
+          "source_digest": "720ebcbe219c4596e2709dca221558142ee88b73ff9d3c2c11cede0d2e831d60",
+          "rule_version": "site.site-0079-59829c0139.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -5894,13 +5901,6 @@
           "captured_at": "2026-10-27T10:34:45.206493+00:00",
           "source_digest": "2aaaf481370b2cc21d5b2968876d4bfaad1fac79a443b51d04a213fb4e584c47",
           "rule_version": "site.site-0079-59829c0139.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:09.984673+00:00",
-          "source_digest": "212fca3308504caeca8e03dc09c9338591c468d9a4e879335de8f1b4ca1e7906",
-          "rule_version": "site.site-0079-59829c0139.v1@config1"
         }
       ]
     },
@@ -5910,6 +5910,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.367547+00:00",
+          "source_digest": "105d5888b595c18fd9cdd2a60ea08e1c348bc8867f0151af1e430af74d6015ac",
+          "rule_version": "site.site-0080-a8fb6e82e4.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -5972,13 +5979,6 @@
           "captured_at": "2026-10-27T10:34:45.244322+00:00",
           "source_digest": "2541a357b3730b8123ba519e444017064d96002fd36b6dbf9bf767091b55dc10",
           "rule_version": "site.site-0080-a8fb6e82e4.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.023138+00:00",
-          "source_digest": "d63bbf10954a32d9eb7fea2624e39327ca707db52a15569b0543281c1f810ea2",
-          "rule_version": "site.site-0080-a8fb6e82e4.v1@config1"
         }
       ]
     },
@@ -6036,6 +6036,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:07.568260+00:00",
+          "source_digest": "2e6b098ffa6cc653848dadd4d6cf7f3db23e491b7f8070e92fd48b2ec65d8af6",
+          "rule_version": "site.site-0084-4290892b35.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -6097,13 +6104,6 @@
           "wuxing": "土行",
           "captured_at": "2026-10-27T10:34:45.355860+00:00",
           "source_digest": "1d25dcf133bddc88f70057b34d2b5d8613e82341fef2c57d7414f71b8a213b49",
-          "rule_version": "site.site-0084-4290892b35.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.130075+00:00",
-          "source_digest": "cb1f9a919e91284b58aa21b0ec9a724084a36342a6161168b7a0002a43f9ca88",
           "rule_version": "site.site-0084-4290892b35.v1@config1"
         }
       ]
@@ -6194,6 +6194,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.611439+00:00",
+          "source_digest": "50af13f88a87fa701f6f32aa3957a2ce9d34a636803a623db788a083e29a4491",
+          "rule_version": "site.site-0086-bbed720ce3.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "火行",
           "captured_at": "2026-11-04T10:33:17.815842+00:00",
@@ -6255,13 +6262,6 @@
           "captured_at": "2026-10-27T10:34:45.394154+00:00",
           "source_digest": "a9f6aa695a5319735dfef762016c2074fb15f48e548f784004cba1bc49b5c901",
           "rule_version": "site.site-0086-bbed720ce3.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.171986+00:00",
-          "source_digest": "cc7c98d123fc30dc984a28bd35eaf17559622bfbbedaaecd9879d101722f6f25",
-          "rule_version": "site.site-0086-bbed720ce3.v1@config1"
         }
       ]
     },
@@ -6271,6 +6271,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.646184+00:00",
+          "source_digest": "2579f4dc78ef08adf1e5c2ac2898ba1fd39ccd1dfd0fe81d68c137dbb9fdccea",
+          "rule_version": "site.site-0087-c6444c44ff.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -6333,13 +6340,6 @@
           "captured_at": "2026-10-27T10:34:45.435325+00:00",
           "source_digest": "005d47ded3512cf6a132b01a2d22a1fe6f6899500296e3bc877583f88f18f96c",
           "rule_version": "site.site-0087-c6444c44ff.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:10.213767+00:00",
-          "source_digest": "108262ee4c73955af051162de471f9c76c14e9eeb332391bcd7ea8c490197ea8",
-          "rule_version": "site.site-0087-c6444c44ff.v1@config1"
         }
       ]
     },
@@ -6349,6 +6349,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.684367+00:00",
+          "source_digest": "5bef96ce9f1e49019051a29b4025740f90e3232bc6aecd81bca85b577ce58808",
+          "rule_version": "site.site-0088-74c11a3083.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -6410,13 +6417,6 @@
           "wuxing": "木行",
           "captured_at": "2026-10-27T10:34:45.467163+00:00",
           "source_digest": "6d2131163b9ca83fa274a210d87239190c7d12af1a34ed081151b3457fb4f637",
-          "rule_version": "site.site-0088-74c11a3083.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.251477+00:00",
-          "source_digest": "cc58aadb82ca8f3c7726cf7c2cca0eece60ed5a88e1871f30c9914fec5ca441a",
           "rule_version": "site.site-0088-74c11a3083.v1@config1"
         }
       ]
@@ -6634,6 +6634,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.653097+00:00",
+          "source_digest": "b8b6175f40d3e909a4ecc636ce367b8b1a777d45fca138056e625873d6b9919c",
+          "rule_version": "site.site-0031-d205e71e4d.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "金行",
           "captured_at": "2026-11-04T10:33:15.533904+00:00",
@@ -6695,13 +6702,6 @@
           "captured_at": "2026-10-27T10:34:43.637410+00:00",
           "source_digest": "d8082b06955ef4b0be4bbb7949cca91b497dd857e6e79ec9098ad08e60c95d4a",
           "rule_version": "site.site-0031-d205e71e4d.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.532804+00:00",
-          "source_digest": "8b9f3681bd13b41b581f189dd67d48665781224dffff3078d7ede3a97dfaf944",
-          "rule_version": "site.site-0031-d205e71e4d.v1@config1"
         }
       ]
     },
@@ -6711,6 +6711,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:06.586069+00:00",
+          "source_digest": "b7f8e97a33ea1ef03ea807d0ec6e6adce6f50838544b22ab3f7f258c390ff6da",
+          "rule_version": "site.site-0057-273e404575.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -6772,13 +6779,6 @@
           "wuxing": "木行",
           "captured_at": "2026-10-27T10:34:44.591651+00:00",
           "source_digest": "f9137e7b6b31e833f9320a3f71a4d8f297afde2d733c8f833b043b95fb43f54d",
-          "rule_version": "site.site-0057-273e404575.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:09.326144+00:00",
-          "source_digest": "3292e9b4c6a0d75d751525edb6b7ee8376052c3702981efbc025e43b5196436d",
           "rule_version": "site.site-0057-273e404575.v1@config1"
         }
       ]
@@ -7026,6 +7026,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:06.622840+00:00",
+          "source_digest": "e0d58076fe56b56c10c5fbac41cb22bf8f57457b3eca30e3ca9763b0fe3984e2",
+          "rule_version": "site.site-0061-95a87048ff.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:33:16.827448+00:00",
@@ -7087,13 +7094,6 @@
           "captured_at": "2026-10-27T10:34:44.630433+00:00",
           "source_digest": "e4c114e22f90d0b46bf00aecc48cced488c1ccad358a5a2fa1a42a926d3ec50e",
           "rule_version": "site.site-0061-95a87048ff.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:09.362169+00:00",
-          "source_digest": "1ab46e4c83fd4b5f98359149b7ab900008d0c37014829827527e224418f0aa16",
-          "rule_version": "site.site-0061-95a87048ff.v1@config1"
         }
       ]
     },
@@ -7103,6 +7103,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:05.891304+00:00",
+          "source_digest": "008f4e8e09de91e52e3584b3581f61b8bb3776e5f7f2bf06bae6d4b222c2e615",
+          "rule_version": "site.site-0037-c9cfe47ab2.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -7164,13 +7171,6 @@
           "wuxing": "水行",
           "captured_at": "2026-10-27T10:46:34.112662+00:00",
           "source_digest": "1197128a718ccae1dd21b264f1401eecef3fb860dc218f82c41ebabe7ff2ec80",
-          "rule_version": "site.site-0037-c9cfe47ab2.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:08.754530+00:00",
-          "source_digest": "8fd622c2e7e95a233abefc3b0eb8e4f9acbc06204e7322f8d2040514fa0e4840",
           "rule_version": "site.site-0037-c9cfe47ab2.v1@config2"
         }
       ]
@@ -7250,6 +7250,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:07.735819+00:00",
+          "source_digest": "39e203effe2bb8b4fa095d117bbab930f4a41914d06bfeec21334de4897aee78",
+          "rule_version": "site.site-0091-d00eaac9ca.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "木行",
           "captured_at": "2026-11-04T10:33:17.938996+00:00",
@@ -7310,13 +7317,6 @@
           "wuxing": "土行",
           "captured_at": "2026-10-27T10:34:45.504252+00:00",
           "source_digest": "30a3d90d48fda2aad7f0fe4e6bf5f3c10c3f73c84ef56823ca1d2ab7636f9a02",
-          "rule_version": "site.site-0091-d00eaac9ca.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.282982+00:00",
-          "source_digest": "55673b60cbc20079e17f0d258140d50de6bec62403e7566dac96c72bb472f7f8",
           "rule_version": "site.site-0091-d00eaac9ca.v1@config1"
         }
       ]
@@ -7406,6 +7406,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.778676+00:00",
+          "source_digest": "5aba542bd3c2acb1e49e845b4b31be6d53d1daa7ad774aa4ee09524ad7e1aee9",
+          "rule_version": "site.site-0093-64b9d02bcb.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:33:17.979698+00:00",
@@ -7467,13 +7474,6 @@
           "captured_at": "2026-10-27T10:34:45.539990+00:00",
           "source_digest": "23b913bd3e1e51283763f3353044aaa3a7cca339bd18619fafa8e8862814121f",
           "rule_version": "site.site-0093-64b9d02bcb.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.321220+00:00",
-          "source_digest": "46d45c29cb80c91703901266fa3e8582d31a41d5ac7e452577812ad1cece9cd5",
-          "rule_version": "site.site-0093-64b9d02bcb.v1@config1"
         }
       ]
     },
@@ -7483,6 +7483,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:07.823680+00:00",
+          "source_digest": "0ed88d41ee0560533276071040ee3f8851336d08c9999f2910fd38d1f5bd2873",
+          "rule_version": "site.site-0094-8f913f6a45.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -7545,13 +7552,6 @@
           "captured_at": "2026-10-27T10:34:45.572993+00:00",
           "source_digest": "ba3b35a9aa3b804d6a079b3de7345a462d3d1412a6b91c913b00b09ff30f4c84",
           "rule_version": "site.site-0094-8f913f6a45.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.351279+00:00",
-          "source_digest": "7df1669d0a8ace6ff391b5f6aed0d7905ea855a26ff41094a447d1a5f6e2e5e6",
-          "rule_version": "site.site-0094-8f913f6a45.v1@config1"
         }
       ]
     },
@@ -7561,6 +7561,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:07.864050+00:00",
+          "source_digest": "1c57b53aa904e356bed979941872f0a6423943af4e7d9fad93f8b51b4cd99cb3",
+          "rule_version": "site.site-0095-bf95fbda1d.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -7623,13 +7630,6 @@
           "captured_at": "2026-10-27T10:34:45.606963+00:00",
           "source_digest": "a84fa03a0fb06e45edcfd716380b4c52d27059cc5773ac0a236969be023b31f1",
           "rule_version": "site.site-0095-bf95fbda1d.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.388547+00:00",
-          "source_digest": "5a149c003f8e7ecc77df56ec346c51e67af817c6f7641508b185e2249b4fae94",
-          "rule_version": "site.site-0095-bf95fbda1d.v1@config1"
         }
       ]
     },
@@ -7651,6 +7651,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:07.906468+00:00",
+          "source_digest": "769b8022297e71039c23ba780b9c59683c22da895ac52826583d125051776358",
+          "rule_version": "site.site-0096-ba489d8d14.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -7712,13 +7719,6 @@
           "wuxing": "火行",
           "captured_at": "2026-10-27T10:34:45.640550+00:00",
           "source_digest": "11682c712e5634ed26eaf77f1f658eccac4fcca3d86d4cc94e64e3782d84274d",
-          "rule_version": "site.site-0096-ba489d8d14.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.426878+00:00",
-          "source_digest": "552ca0eefc9d75a6d47843d6e4d1af95b34a2b4f870f8546d7376417ba47d9ab",
           "rule_version": "site.site-0096-ba489d8d14.v1@config1"
         }
       ]
@@ -7782,6 +7782,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:07.949856+00:00",
+          "source_digest": "d5187682024719ce2b8f640aec221877b8ffb565363e3f1a7d2a36a40cb10fda",
+          "rule_version": "site.site-0098-67f7bf6b96.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:33:18.162827+00:00",
@@ -7843,13 +7850,6 @@
           "captured_at": "2026-10-27T10:34:45.674298+00:00",
           "source_digest": "d9982530d69bdd8dda5131ad00669869e2cd516ec94c1eaf72109edab6aa47e8",
           "rule_version": "site.site-0098-67f7bf6b96.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.465878+00:00",
-          "source_digest": "58a5943b9f53d83e7e65961b67a63c0f99d4b404d2c62a446b9c7671ca6eab6b",
-          "rule_version": "site.site-0098-67f7bf6b96.v1@config1"
         }
       ]
     },
@@ -7859,6 +7859,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:07.990755+00:00",
+          "source_digest": "47c3fb8a2f0c0508494b6ad584d5411c4a10571550b6eb44716b8d93ef7991f2",
+          "rule_version": "site.site-0099-e9c7c0491f.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -7921,13 +7928,6 @@
           "captured_at": "2026-10-27T10:34:45.703641+00:00",
           "source_digest": "7976b98be5c7a9628ff482e382980750776b1e027403b87861252bc4d6e5e1f8",
           "rule_version": "site.site-0099-e9c7c0491f.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:10.499575+00:00",
-          "source_digest": "7d88fddf546fc588ba14ad1e8207625f30b0f3beb950cba0b20ee5ca80ba3492",
-          "rule_version": "site.site-0099-e9c7c0491f.v1@config1"
         }
       ]
     },
@@ -7937,6 +7937,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:08.029164+00:00",
+          "source_digest": "7a58bf3ac7db6554eb252a1fd7c5615de5ed650b631e9fd26c85e26d0a0388ee",
+          "rule_version": "site.site-0100-7768b012d9.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -7999,13 +8006,6 @@
           "captured_at": "2026-10-27T10:34:45.742066+00:00",
           "source_digest": "2f67f986dff6f2079c3ee158d6e71e174b9a9c9e3dd5554fdaba750115c6f7f4",
           "rule_version": "site.site-0100-7768b012d9.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.542658+00:00",
-          "source_digest": "4a56d93bf24401b8a72c29892d7fd35e65b5c0813602be402a6f823033788f4c",
-          "rule_version": "site.site-0100-7768b012d9.v1@config1"
         }
       ]
     },
@@ -8015,6 +8015,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:08.063327+00:00",
+          "source_digest": "79b672a824a58494f4a1a92d7b56db82054a5d373a8e10de67f0074b11ad0c38",
+          "rule_version": "site.site-0101-f385e5e392.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -8076,13 +8083,6 @@
           "wuxing": "水行",
           "captured_at": "2026-10-27T10:34:45.785277+00:00",
           "source_digest": "21b72b435101260a06c7c2b20467af6ab1db81705972054a349d6e4eb6bfc082",
-          "rule_version": "site.site-0101-f385e5e392.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.577613+00:00",
-          "source_digest": "a368e3471aed83e99b4cfbdbf7c57a7ecbef20daa94c1b152b128d4fcde85874",
           "rule_version": "site.site-0101-f385e5e392.v1@config1"
         }
       ]
@@ -8159,6 +8159,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:08.098178+00:00",
+          "source_digest": "0aef72b0aa40392e8141092fecc36dc36101f0b9024fafda89980e9b2f3b9245",
+          "rule_version": "site.site-0103-33b8c9d0f3.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:33:18.406036+00:00",
@@ -8220,13 +8227,6 @@
           "captured_at": "2026-10-27T10:34:45.819150+00:00",
           "source_digest": "0f7895862c9bdfe6be74dfc87b1b819d172cd8e3606b72347fd7694b3c0dd8a1",
           "rule_version": "site.site-0103-33b8c9d0f3.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.612598+00:00",
-          "source_digest": "daecf87ff936e4903d84816f6037d3c35dda77266eb5c8e192bafe2046f90b65",
-          "rule_version": "site.site-0103-33b8c9d0f3.v1@config1"
         }
       ]
     },
@@ -8236,6 +8236,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:08.133853+00:00",
+          "source_digest": "f971e25b87c8f8149c3f3291ba4b36da7e63bc88ae1a3b6e88966a0325de4427",
+          "rule_version": "site.site-0104-61af85b2ae.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -8298,13 +8305,6 @@
           "captured_at": "2026-10-27T10:34:45.855495+00:00",
           "source_digest": "3d474bfaee4af677f7bb7d4139123526640f85ae01e606f322032935ebd40afc",
           "rule_version": "site.site-0104-61af85b2ae.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.654064+00:00",
-          "source_digest": "98699bfe981fa049f70915ff435eee28642e4664d825394a98e22031662fb331",
-          "rule_version": "site.site-0104-61af85b2ae.v1@config1"
         }
       ]
     },
@@ -8314,6 +8314,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:08.181869+00:00",
+          "source_digest": "05b332601ef9075e23b737dd90de0ce1c47a2911358201453c2400efa8c6cf3c",
+          "rule_version": "site.site-0105-f718d85b0b.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -8376,13 +8383,6 @@
           "captured_at": "2026-10-27T10:34:45.888609+00:00",
           "source_digest": "04bd54bab1b6840c1e9786e0062394b16e7f28671bb5c744d0df46828cfcd201",
           "rule_version": "site.site-0105-f718d85b0b.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:10.687406+00:00",
-          "source_digest": "e9d5b616b99f40c1dc01ff63edb045c45f4ef65be3ec9ed247c98482b926000f",
-          "rule_version": "site.site-0105-f718d85b0b.v1@config1"
         }
       ]
     },
@@ -8392,6 +8392,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:08.216691+00:00",
+          "source_digest": "fb0a1700eca998cc1757c1cbe8fe9db0a1da26f7ec8d2c87cd31fa671b2ccc58",
+          "rule_version": "site.site-0106-c00bcbcc6d.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -8454,13 +8461,6 @@
           "captured_at": "2026-10-27T10:34:45.923647+00:00",
           "source_digest": "4644ac2800b221c9bfbd8d03cac71c4972471d5c2e47095d2328d91c98bc3252",
           "rule_version": "site.site-0106-c00bcbcc6d.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.718112+00:00",
-          "source_digest": "3a0fc0a8616febd93295a84dcb86145b340c00a7f406ac476202bdccf380053e",
-          "rule_version": "site.site-0106-c00bcbcc6d.v1@config1"
         }
       ]
     },
@@ -8470,6 +8470,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:08.361887+00:00",
+          "source_digest": "ae8c8dd1ce1adec124bd25ac341b2d878e6a9fe7b6bc9fcbf2e067963087487d",
+          "rule_version": "site.site-0107-03a1f5a24c.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -8532,13 +8539,6 @@
           "captured_at": "2026-10-27T10:34:45.959418+00:00",
           "source_digest": "fac6a8aa068d708a72acaae942c94902e1fe9935af1e9af59182b0e880bf97e2",
           "rule_version": "site.site-0107-03a1f5a24c.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.755753+00:00",
-          "source_digest": "20785702771b7e27c4bfa2c09878e180c05ae27340217e7ec35189353e441396",
-          "rule_version": "site.site-0107-03a1f5a24c.v1@config1"
         }
       ]
     },
@@ -8548,6 +8548,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:08.400921+00:00",
+          "source_digest": "da0643e61c42bc2c17d0409d3b64d4d8e2f0729736c43d9bae24d836ec83d382",
+          "rule_version": "site.site-0108-eb27970cec.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -8609,13 +8616,6 @@
           "wuxing": "水行",
           "captured_at": "2026-10-27T10:34:45.989490+00:00",
           "source_digest": "8f12104c55761c62351509ab1353bc1f56b03a5ba17de403f23a45297d3b0007",
-          "rule_version": "site.site-0108-eb27970cec.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.789524+00:00",
-          "source_digest": "f637ab31ed738df2ac6f31558ffa5ba7034d01d25f66e9112c08274b4935eddd",
           "rule_version": "site.site-0108-eb27970cec.v1@config1"
         }
       ]
@@ -8706,6 +8706,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:08.442244+00:00",
+          "source_digest": "b3519afca39bfdfa1431fe4a44c9f05870fad4f4322194ee2b278d1faf6d99cf",
+          "rule_version": "site.site-0110-87214079f3.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "金行",
           "captured_at": "2026-11-04T10:33:18.644721+00:00",
@@ -8767,13 +8774,6 @@
           "captured_at": "2026-10-27T10:34:46.061515+00:00",
           "source_digest": "ff8b261506a1bb31d61746ef3b3f970e67abe0a5711044f10481cbb23343ebe2",
           "rule_version": "site.site-0110-87214079f3.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:10.854748+00:00",
-          "source_digest": "17ebb023f8a969307fd3d73ff002ce96fc02867e55481c5cb55a7636d3c81c5b",
-          "rule_version": "site.site-0110-87214079f3.v1@config1"
         }
       ]
     },
@@ -8783,6 +8783,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:08.495164+00:00",
+          "source_digest": "774710696424b315e270a591ee70e4ee98af99a1f6765cd9ea5e9e730cccd165",
+          "rule_version": "site.site-0111-b8ae13003a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -8845,13 +8852,6 @@
           "captured_at": "2026-10-27T10:34:46.102471+00:00",
           "source_digest": "019c8221e93d83c89f68e1a0dc85a2a20e29bb7f04ed07a99e92ad988c08fe60",
           "rule_version": "site.site-0111-b8ae13003a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:10.893212+00:00",
-          "source_digest": "47cf28a0544056b4594b70501bf0dad1d7776e3b5b0518e74ce25a1727ad6aff",
-          "rule_version": "site.site-0111-b8ae13003a.v1@config1"
         }
       ]
     },
@@ -8861,6 +8861,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:08.537946+00:00",
+          "source_digest": "c74730029ee4048b9c975195ff59b863024f27eb0d53075f03af3c984e6a4219",
+          "rule_version": "site.site-0112-85c03e08be.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -8923,13 +8930,6 @@
           "captured_at": "2026-10-27T10:34:46.139952+00:00",
           "source_digest": "c4b8dd72505279da1ac804dc49f31c6a1140db205f3272d9c94099e06702dab4",
           "rule_version": "site.site-0112-85c03e08be.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:10.936401+00:00",
-          "source_digest": "a723a4810f6eebb16e61b4eb1e818558efb2aee17fc246dea210f0eed3de0b0c",
-          "rule_version": "site.site-0112-85c03e08be.v1@config1"
         }
       ]
     },
@@ -8939,6 +8939,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:08.643264+00:00",
+          "source_digest": "e7a832be49fb904b8f6e7eb421b9bb2e63c45d4606d8431945daf5d7cf8d28c9",
+          "rule_version": "site.site-0114-b86fbbd0f5.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -9001,13 +9008,6 @@
           "captured_at": "2026-10-27T10:34:46.219555+00:00",
           "source_digest": "507c720289b6585d44f08d0f9c4b3f979bd4f6b42f4204863a830f80006d1cdc",
           "rule_version": "site.site-0114-b86fbbd0f5.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.002362+00:00",
-          "source_digest": "de5147c248360ce527b7d8a8199d5a6fc5a86e1c7b7ba1fc85788985b00b3989",
-          "rule_version": "site.site-0114-b86fbbd0f5.v1@config1"
         }
       ]
     },
@@ -9017,6 +9017,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:08.700088+00:00",
+          "source_digest": "c704c560b5be7a5d7bfae8482cddb6e63062f6142b7a01fb0931b19a880e11e7",
+          "rule_version": "site.site-0115-8fde13cf1a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -9078,13 +9085,6 @@
           "wuxing": "木行",
           "captured_at": "2026-10-27T10:34:46.255395+00:00",
           "source_digest": "4427eecfe220cb1e0df5fe4fd7a9692c1831ea03280998dfbd68060bd08e864b",
-          "rule_version": "site.site-0115-8fde13cf1a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:11.040547+00:00",
-          "source_digest": "c73b8554b321d294ede63b4d8bbc12ae3c3c730dcd17b1c7bd6b05392f77df2c",
           "rule_version": "site.site-0115-8fde13cf1a.v1@config1"
         }
       ]
@@ -9175,6 +9175,13 @@
       "click_first": true,
       "history": [
         {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:08.753955+00:00",
+          "source_digest": "6ca8fb0e24ac2c81ac919eba737cd7048f7c0ee66f6f22c3b0f54c334b7d1834",
+          "rule_version": "site.site-0117-96220bce0f.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "火行",
           "captured_at": "2026-11-04T10:33:19.053748+00:00",
@@ -9236,13 +9243,6 @@
           "captured_at": "2026-10-27T10:34:46.285699+00:00",
           "source_digest": "82c0f6539755f160d60ecf4884c4e8025ff8fb14fda6743fbe88e066c3b32c2f",
           "rule_version": "site.site-0117-96220bce0f.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.073641+00:00",
-          "source_digest": "71e53d56e81ab3471c5d630ca4be70310680edbe92e512d9636f283d9674f2ef",
-          "rule_version": "site.site-0117-96220bce0f.v1@config1"
         }
       ]
     },
@@ -9252,6 +9252,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:08.801004+00:00",
+          "source_digest": "d91c78e96e9ac1015b5be7ca6a03b0caa2e8ec438ba593fe828d6b42c6a79eef",
+          "rule_version": "site.site-0118-96e6cc38bb.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -9314,13 +9321,6 @@
           "captured_at": "2026-10-27T10:34:46.318394+00:00",
           "source_digest": "20508f42c7c3c5052de06da04eb9df190c35bfdd0f30e0214a4f3d0f68b2f34e",
           "rule_version": "site.site-0118-96e6cc38bb.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:11.113116+00:00",
-          "source_digest": "87c07dd1fbe9f7908f2652c24861d4745e1d67019b2f4a248fcba7d989e0df87",
-          "rule_version": "site.site-0118-96e6cc38bb.v1@config1"
         }
       ]
     },
@@ -9330,6 +9330,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:08.838992+00:00",
+          "source_digest": "5786c0aaf5d65384ee1f250c2612b168a1b96b6259579f04fd4727c42c792b70",
+          "rule_version": "site.site-0119-2fd4674722.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -9392,13 +9399,6 @@
           "captured_at": "2026-10-27T10:34:46.355085+00:00",
           "source_digest": "979cf693253648760718e75b7bc8af9988803ce147922c21c6150dd6379460f4",
           "rule_version": "site.site-0119-2fd4674722.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:11.152487+00:00",
-          "source_digest": "a6cdc93ff166088c43b241f3d45d7563cd6eb45b139f1e306cf10ce3d9c8a03f",
-          "rule_version": "site.site-0119-2fd4674722.v1@config1"
         }
       ]
     },
@@ -9408,6 +9408,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:08.877660+00:00",
+          "source_digest": "6ea2b49621fae174253bd360b5251b6deed52b2486323d5cdc3d7d6479066973",
+          "rule_version": "site.site-0120-928a01d84a.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -9470,13 +9477,6 @@
           "captured_at": "2026-10-27T10:34:46.384362+00:00",
           "source_digest": "1e8be98a44254e363f86b59c7b382a8c6876ecacd0ae2cd2deca3819e8c469ec",
           "rule_version": "site.site-0120-928a01d84a.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.194571+00:00",
-          "source_digest": "d54ff325d7b36225583c3dc6815c7b9d18745b1e2c735a2a00307affae78a609",
-          "rule_version": "site.site-0120-928a01d84a.v1@config1"
         }
       ]
     },
@@ -9486,6 +9486,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:08.913637+00:00",
+          "source_digest": "0de8f7b409c68a7d46b702eb6aef142693e7561e5d2ae24943c63809d76dab3f",
+          "rule_version": "site.site-0121-71dc76cdb2.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -9548,13 +9555,6 @@
           "captured_at": "2026-10-27T10:34:46.424072+00:00",
           "source_digest": "1ff283d79c2dc30564aa7446e55d022c74a219918558f209d1169d892702dc4d",
           "rule_version": "site.site-0121-71dc76cdb2.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.228244+00:00",
-          "source_digest": "3daaa5fd3d4160d6ac6cd88f62cbf7d02a18e7fabbbd98a2d132e0a1e4d2d580",
-          "rule_version": "site.site-0121-71dc76cdb2.v1@config1"
         }
       ]
     },
@@ -9564,6 +9564,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:08.951593+00:00",
+          "source_digest": "14aae337f837ef323a88b439669bc00ad13b574c5b38f1d7443615917063633d",
+          "rule_version": "site.site-0122-17b529c5f4.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -9626,13 +9633,6 @@
           "captured_at": "2026-10-27T10:34:46.459357+00:00",
           "source_digest": "a21b655a3f6051c0920c0f3a490e600a94bed5f96c8d9b4c6832027acabf111f",
           "rule_version": "site.site-0122-17b529c5f4.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.257895+00:00",
-          "source_digest": "633feecfea9588d45a3b3884b35468621ded84e61f378adfc0a0440728a2c7ec",
-          "rule_version": "site.site-0122-17b529c5f4.v1@config1"
         }
       ]
     },
@@ -9642,6 +9642,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:08.996332+00:00",
+          "source_digest": "1735fcbb37724221718396f62f58fbb88b6e9e7d571b044f81add7e031eed6cb",
+          "rule_version": "site.site-0123-643ec5034d.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -9704,13 +9711,6 @@
           "captured_at": "2026-10-27T10:34:46.499474+00:00",
           "source_digest": "49ec97c08be06d568d4b54ae3e8779f10719961db90441482af4aa5ddd153a40",
           "rule_version": "site.site-0123-643ec5034d.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.299305+00:00",
-          "source_digest": "aa0d81e132efde486624f4275976378b84670d841e18c203c1ef83d24d359669",
-          "rule_version": "site.site-0123-643ec5034d.v1@config1"
         }
       ]
     },
@@ -9720,6 +9720,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:09.039253+00:00",
+          "source_digest": "377ed908b924f3d63f5f861b89395b1f3fd77763fed278ad20fc622cbf51a665",
+          "rule_version": "site.site-0124-3b85c5a42f.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -9782,13 +9789,6 @@
           "captured_at": "2026-10-27T10:34:46.533621+00:00",
           "source_digest": "f672fca25f29b6d4a4036fa00942e773487814b84d1c74663cac78708b641e11",
           "rule_version": "site.site-0124-3b85c5a42f.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.336477+00:00",
-          "source_digest": "6141157c31f7cb2e1517eb13fd2123447e7a762ffe56ebe201ef88ce7a4e816d",
-          "rule_version": "site.site-0124-3b85c5a42f.v1@config2"
         }
       ]
     },
@@ -9798,6 +9798,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.091501+00:00",
+          "source_digest": "4605453b044a31ade50916235d6dd8e7b2d493f1d0930cfd50fef031695597cb",
+          "rule_version": "site.site-0125-79fb977d90.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -9860,13 +9867,6 @@
           "captured_at": "2026-10-27T10:34:46.568663+00:00",
           "source_digest": "aa0cc5a518a38836e83ab217414149c4e784db0419a6ac4ee4139169dad84fb2",
           "rule_version": "site.site-0125-79fb977d90.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.380926+00:00",
-          "source_digest": "bfa9891a4eb0e410722170839416761da8925f840a0d097bdf6c1ce489578ccd",
-          "rule_version": "site.site-0125-79fb977d90.v1@config1"
         }
       ]
     },
@@ -9876,6 +9876,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:09.134252+00:00",
+          "source_digest": "4f1188d9315e10e645b9648a3d870a74c317d53aa98139ae8d50d3d5ff8639c1",
+          "rule_version": "site.site-0126-a4b3c62136.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -9938,13 +9945,6 @@
           "captured_at": "2026-10-27T10:34:46.604306+00:00",
           "source_digest": "6c7397ac60c12e2f9f65339ade10e28bc6006580c795f3250007ded643241946",
           "rule_version": "site.site-0126-a4b3c62136.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.420614+00:00",
-          "source_digest": "55ad8a9d5dba947613bebb61001d1037ba5da30f003b8ae20917975a296fcbb6",
-          "rule_version": "site.site-0126-a4b3c62136.v1@config2"
         }
       ]
     },
@@ -9954,6 +9954,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:09.176517+00:00",
+          "source_digest": "c7e64fac42484dc77e97a3485e797abea38d593f3eeefb61336f9d0255cbb38b",
+          "rule_version": "site.site-0127-a6fb015b56.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -10015,13 +10022,6 @@
           "wuxing": "土行",
           "captured_at": "2026-10-27T10:34:46.644368+00:00",
           "source_digest": "67de66f9d93ef6fedd3372edd05d5674ff7a8a00ad5d1d1ab7c89fd71cf5ee69",
-          "rule_version": "site.site-0127-a6fb015b56.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:11.456392+00:00",
-          "source_digest": "905d1f66d5965f2d710a118365ae5200b9a9d777d840b84614231a4e6d9d1471",
           "rule_version": "site.site-0127-a6fb015b56.v1@config2"
         }
       ]
@@ -10152,6 +10152,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:09.214010+00:00",
+          "source_digest": "33529ab2345e6c41aeaefd576d4aaa818ba6ca9af764bedcb4b4f73d3544946c",
+          "rule_version": "site.site-0129-04d88d17ae.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "火行",
           "captured_at": "2026-11-04T10:33:19.679771+00:00",
@@ -10213,13 +10220,6 @@
           "captured_at": "2026-10-27T10:34:46.672919+00:00",
           "source_digest": "8c590df255e2d4f4416b1b1503a087233a06b696f73e5fc6bb744836d7c86ab8",
           "rule_version": "site.site-0129-04d88d17ae.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.487478+00:00",
-          "source_digest": "9f40bee4e2cbb30dc66bf29c68ad5ab37fbd0175ac8d9e20cb016644d1fbf56b",
-          "rule_version": "site.site-0129-04d88d17ae.v1@config1"
         }
       ]
     },
@@ -10229,6 +10229,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:09.250049+00:00",
+          "source_digest": "aa917009a6addd948d3864f165c54c775aa8f8469534d35531bc6a76ecaf065a",
+          "rule_version": "site.site-0130-0ca2bec444.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -10291,13 +10298,6 @@
           "captured_at": "2026-10-27T10:47:27.527198+00:00",
           "source_digest": "216ae37e8681bad82c34b7c3b9e0324b37cb4eab3c060b2796aa9411dbc0d446",
           "rule_version": "site.site-0130-0ca2bec444.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.528773+00:00",
-          "source_digest": "3f5d04fbe6750683ab683ec5b78cd3325b23efdac56340cf3834aec6f8329095",
-          "rule_version": "site.site-0130-0ca2bec444.v1@config2"
         }
       ]
     },
@@ -10307,6 +10307,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:09.295615+00:00",
+          "source_digest": "688cbc3c8551e62538024c6f7113d75fb413f66593e255a023ae868c24d83c53",
+          "rule_version": "site.site-0131-71dd7ab351.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -10369,13 +10376,6 @@
           "captured_at": "2026-10-27T10:34:46.703535+00:00",
           "source_digest": "28d65ced83c04481928c966fa0d07e059c5279d30398808be8ee9f4e86adb86f",
           "rule_version": "site.site-0131-71dd7ab351.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:11.573246+00:00",
-          "source_digest": "4a19c86320f6601131f6b2e9e4c217ddbb00d3b3b2a61b4ac88d59984815a4f6",
-          "rule_version": "site.site-0131-71dd7ab351.v1@config1"
         }
       ]
     },
@@ -10385,6 +10385,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:09.337287+00:00",
+          "source_digest": "8c3a7327c8f9284d2ab8c854ae39b6ab58ca0a3cc0c519c98d350a84b616ec3d",
+          "rule_version": "site.site-0132-f26fdf4e7e.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "木行",
@@ -10447,13 +10454,6 @@
           "captured_at": "2026-10-27T10:34:46.746166+00:00",
           "source_digest": "65254627e0641b5bd9bffc0b44a61250b4de1598f8216ea994c9d4c2f0b5a8af",
           "rule_version": "site.site-0132-f26fdf4e7e.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.607678+00:00",
-          "source_digest": "3b92e9fa18c6c39077bda795c6f6030a0926253506a8be8bfc4a1a2d9fdc2ecd",
-          "rule_version": "site.site-0132-f26fdf4e7e.v1@config2"
         }
       ]
     },
@@ -10463,6 +10463,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:09.381237+00:00",
+          "source_digest": "cf826d7e2405ecceb12c7e686822808cf764652c8b6e7823f6c0b2964f795e70",
+          "rule_version": "site.site-0133-7933677f33.v1@config2"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -10525,13 +10532,6 @@
           "captured_at": "2026-10-27T10:34:46.788240+00:00",
           "source_digest": "48ced753f33498b8f91e4c22527b49363123355d0e50b42eca5fb595ce81560f",
           "rule_version": "site.site-0133-7933677f33.v1@config2"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.641450+00:00",
-          "source_digest": "e320e4a6545379ea62d012b371cd897666c4a2841b97230a82a8a3525cb7b10d",
-          "rule_version": "site.site-0133-7933677f33.v1@config2"
         }
       ]
     },
@@ -10541,6 +10541,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.424560+00:00",
+          "source_digest": "53fee4748f68f3c8b7d1f5d7a1961dc31ed025cad26d8fce0dc35ed7c4595197",
+          "rule_version": "site.site-0134-ee13da1f9c.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -10603,13 +10610,6 @@
           "captured_at": "2026-10-27T10:34:46.819142+00:00",
           "source_digest": "7b578826dfce19e3bbcfd9dc457c34d93f4ed5087b871690e5f8092ab0d14133",
           "rule_version": "site.site-0134-ee13da1f9c.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.676733+00:00",
-          "source_digest": "e79b63e2c38637952f9e9186d8eafab59ba051bee3b2dd65a0d72e8dd09f5e2c",
-          "rule_version": "site.site-0134-ee13da1f9c.v1@config1"
         }
       ]
     },
@@ -10619,6 +10619,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:09.464698+00:00",
+          "source_digest": "d7179b41fa4da6cc1b38786847db5eb4cb5190309c9df86cbbb151693edc3308",
+          "rule_version": "site.site-0135-2b529722b7.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -10681,13 +10688,6 @@
           "captured_at": "2026-10-27T10:34:46.849555+00:00",
           "source_digest": "53ff72476c26c990db33e30e308dff399fd772a6614c94ce6edc5abf4c3509aa",
           "rule_version": "site.site-0135-2b529722b7.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.713196+00:00",
-          "source_digest": "f52948520801479b479a3b3d38a3370ac19ccac9dd49d9e7d1eac616311ff223",
-          "rule_version": "site.site-0135-2b529722b7.v1@config1"
         }
       ]
     },
@@ -10697,6 +10697,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.500935+00:00",
+          "source_digest": "7b4329a2b4c05a717b6688aa4aba3457c67527a095c43324dbf5982a754643ef",
+          "rule_version": "site.site-0136-4d6b7e6955.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -10759,13 +10766,6 @@
           "captured_at": "2026-10-27T10:34:46.879837+00:00",
           "source_digest": "2196a78fdc5401b77a28833dde6fff09113dc7a63a5ad1be139ba2b0c58b4ad6",
           "rule_version": "site.site-0136-4d6b7e6955.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.754939+00:00",
-          "source_digest": "4bae32946a7ba35850c9e775b768cdda0edbc2a1e7018669268d61bb51f5ff7a",
-          "rule_version": "site.site-0136-4d6b7e6955.v1@config1"
         }
       ]
     },
@@ -10775,6 +10775,13 @@
       "region": "top",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:33:09.535638+00:00",
+          "source_digest": "6dd3a89a2874324e67d2d0caf4a39f80d9b762d23a70076943e203028f4e059f",
+          "rule_version": "site.site-0137-e9add3f749.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -10837,13 +10844,6 @@
           "captured_at": "2026-10-27T10:34:46.908401+00:00",
           "source_digest": "82c843a1fe99f48f23e6c51467e4512c746e1cf8d5a0f9d231db74577c9a6e28",
           "rule_version": "site.site-0137-e9add3f749.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.785209+00:00",
-          "source_digest": "66330bca5ab05803aa7e067629c03594d0afa315706b20ef81d7b647eece6630",
-          "rule_version": "site.site-0137-e9add3f749.v1@config1"
         }
       ]
     },
@@ -10853,6 +10853,13 @@
       "region": "bottom",
       "click_first": true,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:08.585808+00:00",
+          "source_digest": "ea49cf6387f399cadc9468ab960da9b864504e058bba65ea35767ebaf54b99e3",
+          "rule_version": "site.site-0113-2c39669986.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -10915,91 +10922,6 @@
           "captured_at": "2026-10-27T10:34:46.183765+00:00",
           "source_digest": "6bbe5c836e81959a61dcb474e2558abc04200e37d00c405e5097902a4c209a7b",
           "rule_version": "site.site-0113-2c39669986.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:10.970243+00:00",
-          "source_digest": "daf4b01e7fd34049fe878f928b835bd6b427096eb407891633f56240951c641e",
-          "rule_version": "site.site-0113-2c39669986.v1@config1"
-        }
-      ]
-    },
-    {
-      "name": "慈善网",
-      "url": "https://so6f8erm.881199.app:2026/gsb/28.html",
-      "region": "top",
-      "click_first": false,
-      "history": [
-        {
-          "period": 308,
-          "wuxing": "水行",
-          "captured_at": "2026-11-04T10:33:15.411054+00:00",
-          "source_digest": "156b8de3690686e0752ffa0b4047fdfc2c2df3707c9db30f84462f3a2662fc4c",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 307,
-          "wuxing": "土行",
-          "captured_at": "2026-11-03T10:32:40.422783+00:00",
-          "source_digest": "ee46973614fcc0b46eb0e1c5e9f294b0f53f0f5930ca2cb7f28b4ce551ff2af8",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 306,
-          "wuxing": "金行",
-          "captured_at": "2026-11-02T10:31:41.994085+00:00",
-          "source_digest": "081f32fd6f3863e0282f7e51b672edc101dd020d3a96b5a5415c5d70912a20b4",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 305,
-          "wuxing": "火行",
-          "captured_at": "2026-11-01T10:36:31.991064+00:00",
-          "source_digest": "6fb7d65fbbd965849021e7b3e89d5e38355c8d3866259f3cdc84d9b09621968e",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 304,
-          "wuxing": "水行",
-          "captured_at": "2026-10-31T10:33:27.458803+00:00",
-          "source_digest": "96a1c9df738d7319c3d40ffa64cacdad269220fa534ef98af0738803004f5d33",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 303,
-          "wuxing": "土行",
-          "captured_at": "2026-10-30T10:33:40.568813+00:00",
-          "source_digest": "532d4161f8e9a2afd6589b86b80c858e20a22ad4d6ef0eaa6a6d08dfb6aee661",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 302,
-          "wuxing": "金行",
-          "captured_at": "2026-10-29T11:55:10.548334+00:00",
-          "source_digest": "0ff84eab3a5a2be77ce0483c61f48e336fdb7f4aeab60d88c41fcba704bb8b95",
-          "rule_version": "site.site-0027-586535802c.v1@config1"
-        },
-        {
-          "period": 301,
-          "wuxing": "火行",
-          "captured_at": "2026-10-28T10:36:36.924810+00:00",
-          "source_digest": "ce871b61de45c36e50ea1e16eb4d63657f0018579d6663808bd1a5d8ad54d231",
-          "rule_version": "site.site-0027-8353c3f1dd.v1@config1"
-        },
-        {
-          "period": 300,
-          "wuxing": "土行",
-          "captured_at": "2026-10-27T10:34:43.532304+00:00",
-          "source_digest": "197a56e611929dc5621186a072ce982fb7b10f6131f1929ae08c477c15fe95d7",
-          "rule_version": "site.site-0027-8353c3f1dd.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:08.452033+00:00",
-          "source_digest": "05484b554360adcdf7a8042ceed98da3c1d0b57b3d22298e66edaeca74e74845",
-          "rule_version": "site.site-0027-8353c3f1dd.v1@config1"
         }
       ]
     },
@@ -11088,6 +11010,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:09.584908+00:00",
+          "source_digest": "0ab589058a6b1077fd5a247e4f11a0b0e7c7ca94527ae6bb6287a8f370afc4d3",
+          "rule_version": "site.site-0139-67cfad765b.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "木行",
           "captured_at": "2026-11-04T10:33:20.106009+00:00",
@@ -11149,13 +11078,6 @@
           "captured_at": "2026-10-27T10:34:46.939344+00:00",
           "source_digest": "a80dfce850dc446895d7a94847561abd94a35e54657190c26664e8e37ba4d2f6",
           "rule_version": "site.site-0139-67cfad765b.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.821576+00:00",
-          "source_digest": "ed35f970c427c2bb96ed32b2ef16e575b65a6516aed44df8444bae01dc4fb5f0",
-          "rule_version": "site.site-0139-67cfad765b.v1@config1"
         }
       ]
     },
@@ -11165,6 +11087,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.627407+00:00",
+          "source_digest": "4ac6daf8119ef39ceb95260811339f5fc3c0b1939047038e76cfaf2d5de8dbaa",
+          "rule_version": "site.site-0140-74189328bd.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -11227,13 +11156,6 @@
           "captured_at": "2026-10-27T10:34:46.972093+00:00",
           "source_digest": "dc2c0d5ea145141551b66b134357177b35d1580405eb85eef321eafd6e8cb3e4",
           "rule_version": "site.site-0140-74189328bd.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.859479+00:00",
-          "source_digest": "1bd9afacd0f24ffa1bd82c220590c9cbf649db080826cc78ab196542e3768005",
-          "rule_version": "site.site-0140-74189328bd.v1@config1"
         }
       ]
     },
@@ -11243,6 +11165,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.669213+00:00",
+          "source_digest": "59d2cdf093d5d689bb7ff6917f2d0e9da6bfabe253e706aa0f0a42328b08c2ec",
+          "rule_version": "site.site-0141-7ab1746e6e.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "火行",
@@ -11305,13 +11234,6 @@
           "captured_at": "2026-10-27T10:34:47.004432+00:00",
           "source_digest": "1788d71e2739579d1f5ac14917b37da5ea732d971007f00ca8e5d9f5f63be6be",
           "rule_version": "site.site-0141-7ab1746e6e.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:11.890124+00:00",
-          "source_digest": "493a350e66504b19be999d3d06f8a9168835ef7a3f5f367147ca273e98dc47d2",
-          "rule_version": "site.site-0141-7ab1746e6e.v1@config1"
         }
       ]
     },
@@ -11321,6 +11243,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.716351+00:00",
+          "source_digest": "8257d92b6c3579452b0bb74b84c3195446bf15b54de07b0e7ebfef727b767c44",
+          "rule_version": "site.site-0142-549719c480.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -11383,13 +11312,6 @@
           "captured_at": "2026-10-27T10:34:47.038224+00:00",
           "source_digest": "88b635891f878750a32e20be85a327f7a1f7fcf803d99646733d8bb771b6c67b",
           "rule_version": "site.site-0142-549719c480.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.925151+00:00",
-          "source_digest": "ac075107385401c2e6a16225507c544315b34eb5aadd19165f5bacca97578a24",
-          "rule_version": "site.site-0142-549719c480.v1@config1"
         }
       ]
     },
@@ -11399,6 +11321,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.757876+00:00",
+          "source_digest": "7ee87115255003526cd63650d0ef646a62943652f058682b196ae37f86263a58",
+          "rule_version": "site.site-0143-ecdd4c3e17.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -11461,13 +11390,6 @@
           "captured_at": "2026-10-27T10:34:47.069769+00:00",
           "source_digest": "062a6d05eec6abf5ff20acd44e554dbcf0d31b41167ef40a091ca13b0a6678e4",
           "rule_version": "site.site-0143-ecdd4c3e17.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:11.960949+00:00",
-          "source_digest": "764145981752ac554ed4dd54f461d0aa4d2c932a6b854eb01a6015d37c9c29e7",
-          "rule_version": "site.site-0143-ecdd4c3e17.v1@config1"
         }
       ]
     },
@@ -11477,6 +11399,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.796061+00:00",
+          "source_digest": "4ca01926b5673d0df89ee5984ea4575aafabecbd85a319e53439d4d528d40571",
+          "rule_version": "site.site-0144-0284a02beb.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -11539,13 +11468,6 @@
           "captured_at": "2026-10-27T10:34:47.099116+00:00",
           "source_digest": "48452e4bbd373a02b2d55aad115bcbcb8ce42598fc19eb302f621ca38fcea6b3",
           "rule_version": "site.site-0144-0284a02beb.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:11.994741+00:00",
-          "source_digest": "50d890e403f01ca6ec47ee09ec88bf77aa16159110c71897b5d33904870661de",
-          "rule_version": "site.site-0144-0284a02beb.v1@config1"
         }
       ]
     },
@@ -11555,6 +11477,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:09.829097+00:00",
+          "source_digest": "db6e14fa5ed4e5611d992f4208d26b2fccc3785b5edb6ebf8db125fb84710ba5",
+          "rule_version": "site.site-0145-695c57767f.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -11617,13 +11546,6 @@
           "captured_at": "2026-10-27T10:34:47.131680+00:00",
           "source_digest": "9799fd643c1ce8fdfdd01c9a91c75796541fe3f866f86889f8248310dba22aad",
           "rule_version": "site.site-0145-695c57767f.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:12.033094+00:00",
-          "source_digest": "af71b4bd028105d504a4eb7b0d4402708da997335a1b49e0678417ed190430fe",
-          "rule_version": "site.site-0145-695c57767f.v1@config1"
         }
       ]
     },
@@ -11633,6 +11555,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:09.866765+00:00",
+          "source_digest": "782c231aa15bd303eb238c84935b80eed80f6d8143d4c7a7d36c244a99ce07d0",
+          "rule_version": "site.site-0146-5904850517.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "土行",
@@ -11695,13 +11624,6 @@
           "captured_at": "2026-10-27T10:34:47.161355+00:00",
           "source_digest": "6f440f8ac75ad2133368a5696a00a2fa69bdf16665f9687d6a2e76899ac8cda2",
           "rule_version": "site.site-0146-5904850517.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:12.070962+00:00",
-          "source_digest": "170f6018b1fa51f16a7dd351a519edee816c06916d4a58b1648de1e5b5b0e05d",
-          "rule_version": "site.site-0146-5904850517.v1@config1"
         }
       ]
     },
@@ -11711,6 +11633,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:09.902216+00:00",
+          "source_digest": "6f07cfe16d0ae17a8d4875872a15656fe6ba8f0dcc2d89cec246c297d64c2f64",
+          "rule_version": "site.site-0147-a365fa4e5d.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -11772,13 +11701,6 @@
           "wuxing": "金行",
           "captured_at": "2026-10-27T10:34:47.191490+00:00",
           "source_digest": "967e43a82534cdf00d73287b74684f75d97cc9afcacdafc338b0c9d06ebb5152",
-          "rule_version": "site.site-0147-a365fa4e5d.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:12.104811+00:00",
-          "source_digest": "4a5d66709aa36ae880c2010a0a4c7cf9e728ac19905bd3377c1788fa3c8eecbf",
           "rule_version": "site.site-0147-a365fa4e5d.v1@config1"
         }
       ]
@@ -11869,6 +11791,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:33:09.945574+00:00",
+          "source_digest": "868c49b270d64fed9fd76e6d1b0d9a07966a53d78fc50925561ec99f632aa3f0",
+          "rule_version": "site.site-0149-25599e11af.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:33:20.616956+00:00",
@@ -11930,13 +11859,6 @@
           "captured_at": "2026-10-27T10:34:47.263968+00:00",
           "source_digest": "1fc8137dce230d7b2d5a3c2fd1eac859b49fd1fb7d34b97a22e1f485cb80fffc",
           "rule_version": "site.site-0149-25599e11af.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:12.165522+00:00",
-          "source_digest": "c3d117d190820cb77835bd8cb71139ca37644c0f0281ba504944c4dac685bf94",
-          "rule_version": "site.site-0149-25599e11af.v1@config1"
         }
       ]
     },
@@ -11946,6 +11868,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:09.989085+00:00",
+          "source_digest": "bf30d179ae213d8fec6527c91fa4f58092407485363705f33b0fa61e0731953b",
+          "rule_version": "site.site-0150-75af477d00.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "金行",
@@ -12008,13 +11937,6 @@
           "captured_at": "2026-10-27T10:34:47.301285+00:00",
           "source_digest": "5f1190c1e311e035da430d2c9ae6015f3772de399ae1b3da59e7be78ae3eaa11",
           "rule_version": "site.site-0150-75af477d00.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "水行",
-          "captured_at": "2026-10-26T10:32:12.200197+00:00",
-          "source_digest": "bbafe982d4577c619fb204d836fe80a161572a9dbbc8e45e1df306b774749534",
-          "rule_version": "site.site-0150-75af477d00.v1@config1"
         }
       ]
     },
@@ -12024,6 +11946,13 @@
       "region": "bottom",
       "click_first": false,
       "history": [
+        {
+          "period": 309,
+          "wuxing": "火行",
+          "captured_at": "2026-11-05T10:33:10.033334+00:00",
+          "source_digest": "1fadf0531c31dcfb7e6d4170b0fa1a3c05261c0f851aee514b83687472204d4b",
+          "rule_version": "site.site-0151-18bca6f888.v1@config1"
+        },
         {
           "period": 308,
           "wuxing": "水行",
@@ -12085,13 +12014,6 @@
           "wuxing": "水行",
           "captured_at": "2026-10-27T10:34:47.333010+00:00",
           "source_digest": "4fc9f85f880bd936fb13f4a5da74a26df654f6b0ace68271a4b433dd2bf74c25",
-          "rule_version": "site.site-0151-18bca6f888.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "火行",
-          "captured_at": "2026-10-26T10:32:12.237823+00:00",
-          "source_digest": "33cdc7f0ea16f006e652a7d2be717bd006ee4fd3423b408614df7909c85cdfce",
           "rule_version": "site.site-0151-18bca6f888.v1@config1"
         }
       ]
@@ -12182,6 +12104,13 @@
       "click_first": false,
       "history": [
         {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:10.080138+00:00",
+          "source_digest": "0c02aeefa711514228d93f1a1d1191517318e3d9bc72d4dcfdd660cae465c29a",
+          "rule_version": "site.site-0153-9aadb086a5.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "金行",
           "captured_at": "2026-11-04T10:33:20.761146+00:00",
@@ -12242,13 +12171,6 @@
           "wuxing": "火行",
           "captured_at": "2026-10-27T10:34:47.370417+00:00",
           "source_digest": "ef895d95d0749d010a52a4d3fe807f5c9f1f9b31cf464dc644fbd979aede36a8",
-          "rule_version": "site.site-0153-9aadb086a5.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "木行",
-          "captured_at": "2026-10-26T10:32:12.270028+00:00",
-          "source_digest": "1b30708f6302199db54d0b290d9b44e0ed8de28fb24541c295d56a654f167e6d",
           "rule_version": "site.site-0153-9aadb086a5.v1@config1"
         }
       ]
@@ -12359,6 +12281,13 @@
       "region": "bottom",
       "history": [
         {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:39:15.557364+00:00",
+          "source_digest": "891565b1ea853e391ebf4e94afa5a832fe5e67ba12575f58c4ed1d368106e171",
+          "rule_version": "site.added-030-read-506.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "金行",
           "captured_at": "2026-11-04T10:43:27.025233+00:00",
@@ -12419,13 +12348,6 @@
           "wuxing": "水行",
           "captured_at": "2026-10-27T10:34:47.409244+00:00",
           "source_digest": "941a79e72cdff8e989d737952d178a08686a1388eb0d0c5309a8046f7c82f276",
-          "rule_version": "site.added-030-read-506.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:12.305096+00:00",
-          "source_digest": "01c451c7e13f98e1e925828bc9d222d7f33342c22022ef697fe87db7f0bf687f",
           "rule_version": "site.added-030-read-506.v1@config1"
         }
       ]
@@ -12514,6 +12436,13 @@
       "region": "bottom",
       "history": [
         {
+          "period": 309,
+          "wuxing": "木行",
+          "captured_at": "2026-11-05T10:33:10.120575+00:00",
+          "source_digest": "d5f929a6cc696574428208d855645b1af2368d9a7c6020c1211bb6f5b6e69fe3",
+          "rule_version": "site.added-036-read-689.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "金行",
           "captured_at": "2026-11-04T10:33:20.816861+00:00",
@@ -12574,13 +12503,6 @@
           "wuxing": "火行",
           "captured_at": "2026-10-27T10:34:47.442854+00:00",
           "source_digest": "19975d2832283cae139cb273870356e018ce8fa3040946b815f206f837bd90aa",
-          "rule_version": "site.added-036-read-689.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:12.338378+00:00",
-          "source_digest": "1a5a409b99c2ccfc22833a9c2080715728f0755e0ac106999e0ef726836f503a",
           "rule_version": "site.added-036-read-689.v1@config1"
         }
       ]
@@ -12669,6 +12591,13 @@
       "region": "bottom",
       "history": [
         {
+          "period": 309,
+          "wuxing": "水行",
+          "captured_at": "2026-11-05T10:39:17.598386+00:00",
+          "source_digest": "988c1ef491d7fd6fe6bfc40a8bcd4bd501b51387762be23a5a5205631abe5fe1",
+          "rule_version": "site.added-038-read-549.v1@config1"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:43:32.184565+00:00",
@@ -12729,13 +12658,6 @@
           "wuxing": "土行",
           "captured_at": "2026-10-27T10:34:47.472503+00:00",
           "source_digest": "c19f360e32e9ec7b2760476a02a11363df94476b7237855efb63deecf8909f0c",
-          "rule_version": "site.added-038-read-549.v1@config1"
-        },
-        {
-          "period": 299,
-          "wuxing": "土行",
-          "captured_at": "2026-10-26T10:32:12.367818+00:00",
-          "source_digest": "aace91c15f30049c782fcd8629b5a5287e20936f14ff68f24aa86548dd9a7c52",
           "rule_version": "site.added-038-read-549.v1@config1"
         }
       ]
@@ -13987,6 +13909,13 @@
       "region": "bottom",
       "history": [
         {
+          "period": 309,
+          "wuxing": "土行",
+          "captured_at": "2026-11-05T10:33:05.542677+00:00",
+          "source_digest": "29180d2422779f879d4cb4d99400edf4e656343e3d6030dad24400a1428af56b",
+          "rule_version": "site.site-0026-6067952de7.v1@config2"
+        },
+        {
           "period": 308,
           "wuxing": "水行",
           "captured_at": "2026-11-04T10:49:05.244622+00:00",
@@ -14048,13 +13977,83 @@
           "captured_at": "2026-10-27T10:34:43.492838+00:00",
           "source_digest": "43f1afeacef58cea39d01502222e90dadbfdf89a5468f983daf3d71a26f5270d",
           "rule_version": "site.site-0026-f9fc8f41aa.v1@config1"
+        }
+      ]
+    },
+    {
+      "name": "慈善网",
+      "url": "https://so6f8erm.881199.app:2026/gsb/28.html",
+      "region": "bottom",
+      "history": [
+        {
+          "period": 309,
+          "wuxing": "金行",
+          "captured_at": "2026-11-05T10:43:15.527503+00:00",
+          "source_digest": "d80e33cd8e8bc9d8350039ddfc1ddd4c7d58470d85bab2b5d91e5c400dba04cb",
+          "rule_version": "site.site-0027-586535802c.v1@config2"
         },
         {
-          "period": 299,
+          "period": 308,
+          "wuxing": "水行",
+          "captured_at": "2026-11-04T10:33:15.411054+00:00",
+          "source_digest": "156b8de3690686e0752ffa0b4047fdfc2c2df3707c9db30f84462f3a2662fc4c",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 307,
+          "wuxing": "土行",
+          "captured_at": "2026-11-03T10:32:40.422783+00:00",
+          "source_digest": "ee46973614fcc0b46eb0e1c5e9f294b0f53f0f5930ca2cb7f28b4ce551ff2af8",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 306,
           "wuxing": "金行",
-          "captured_at": "2026-10-26T10:32:08.414480+00:00",
-          "source_digest": "38e6bdba0a25cbc5eb702e443bef51e2103af4b16d1b072609e3e518cb1b236c",
-          "rule_version": "site.site-0026-f9fc8f41aa.v1@config1"
+          "captured_at": "2026-11-02T10:31:41.994085+00:00",
+          "source_digest": "081f32fd6f3863e0282f7e51b672edc101dd020d3a96b5a5415c5d70912a20b4",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 305,
+          "wuxing": "火行",
+          "captured_at": "2026-11-01T10:36:31.991064+00:00",
+          "source_digest": "6fb7d65fbbd965849021e7b3e89d5e38355c8d3866259f3cdc84d9b09621968e",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 304,
+          "wuxing": "水行",
+          "captured_at": "2026-10-31T10:33:27.458803+00:00",
+          "source_digest": "96a1c9df738d7319c3d40ffa64cacdad269220fa534ef98af0738803004f5d33",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 303,
+          "wuxing": "土行",
+          "captured_at": "2026-10-30T10:33:40.568813+00:00",
+          "source_digest": "532d4161f8e9a2afd6589b86b80c858e20a22ad4d6ef0eaa6a6d08dfb6aee661",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 302,
+          "wuxing": "金行",
+          "captured_at": "2026-10-29T11:55:10.548334+00:00",
+          "source_digest": "0ff84eab3a5a2be77ce0483c61f48e336fdb7f4aeab60d88c41fcba704bb8b95",
+          "rule_version": "site.site-0027-586535802c.v1@config1"
+        },
+        {
+          "period": 301,
+          "wuxing": "火行",
+          "captured_at": "2026-10-28T10:36:36.924810+00:00",
+          "source_digest": "ce871b61de45c36e50ea1e16eb4d63657f0018579d6663808bd1a5d8ad54d231",
+          "rule_version": "site.site-0027-8353c3f1dd.v1@config1"
+        },
+        {
+          "period": 300,
+          "wuxing": "土行",
+          "captured_at": "2026-10-27T10:34:43.532304+00:00",
+          "source_digest": "197a56e611929dc5621186a072ce982fb7b10f6131f1929ae08c477c15fe95d7",
+          "rule_version": "site.site-0027-8353c3f1dd.v1@config1"
         }
       ]
     }
