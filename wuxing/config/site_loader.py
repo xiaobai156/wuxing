@@ -68,6 +68,7 @@ def _parse_site(
             api_url=str(item.get("api_url", "")).strip(),
             click_first=bool(item.get("click_first", False)),
             browser_fallback=bool(item.get("browser_fallback", False)),
+            browser_channel=str(item.get("browser_channel", "") or "").strip(),
             enabled=bool(item.get("enabled", True)),
             config_version=int(item.get("config_version", 1)),
             tags=tags,
@@ -156,6 +157,8 @@ def build_versioned_site_payload(sites: Iterable[SiteConfig]) -> dict[str, objec
         }
         if site.browser_fallback:
             item["browser_fallback"] = True
+        if site.browser_channel:
+            item["browser_channel"] = site.browser_channel
         if site.tags:
             item["tags"] = list(site.tags)
         if site.archived:

@@ -26,6 +26,7 @@ class SiteConfig:
     api_url: str = ""
     click_first: bool = False
     browser_fallback: bool = False
+    browser_channel: str = ""
     enabled: bool = True
     config_version: int = 1
     tags: tuple[str, ...] = ()

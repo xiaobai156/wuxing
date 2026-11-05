@@ -269,7 +269,10 @@ class PlaywrightBrowserBackend:
                 page = None
                 try:
                     try:
-                        browser = playwright.chromium.launch(headless=not show_browser)
+                        launch_options: dict[str, object] = {"headless": not show_browser}
+                        if site.browser_channel:
+                            launch_options["channel"] = site.browser_channel
+                        browser = playwright.chromium.launch(**launch_options)
                     except Exception as exc:
                         raise FetchError(_playwright_dependency_message(exc)) from exc
                     context = browser.new_context(
