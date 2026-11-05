@@ -33,7 +33,8 @@
     "url": "https://gboqrz.1grys-bnkqq-evlqkb.work/topic/507999.html",
     "click_first": false,
     "region": "bottom",
-    "config_version": 2
+    "browser_channel": "chrome",
+    "config_version": 3
   },
   {
     "name": "桃李不言",
@@ -178,7 +179,8 @@
     "name": "慈善网",
     "url": "https://so6f8erm.881199.app:2026/gsb/28.html",
     "click_first": false,
-    "region": "top"
+    "region": "bottom",
+    "config_version": 2
   },
   {
     "name": "财神驾到",
