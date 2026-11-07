@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import subprocess
 import threading
 import time
@@ -90,6 +91,38 @@ class RequestsHttpClient:
         return raw.decode(encoding, errors="ignore")
 
     @staticmethod
+    def _decode_bytes(raw: bytes) -> str:
+        """按 BOM → 严格 utf-8 → 文档声明 charset → 编码探测器 的顺序解码原始字节。
+
+        curl 分支拿不到 requests 的 apparent_encoding，若固定按 utf-8 解码会把
+        GBK/GB2312 站点（如 read.php 系列）解成乱码，导致期号与正文全部匹配失败。
+        """
+        if raw.startswith(b"\xef\xbb\xbf"):
+            return raw.decode("utf-8-sig", errors="ignore")
+        try:
+            return raw.decode("utf-8")
+        except UnicodeDecodeError:
+            pass
+        match = re.search(
+            rb"charset\s*=\s*[\"']?\s*([a-zA-Z0-9_\-]+)", raw[:8192], re.IGNORECASE
+        )
+        if match:
+            charset = match.group(1).decode("ascii", errors="ignore").strip().lower()
+            try:
+                return raw.decode(charset, errors="ignore")
+            except LookupError:
+                pass
+        try:
+            from charset_normalizer import from_bytes
+
+            best = from_bytes(raw).best()
+            if best is not None:
+                return str(best)
+        except Exception:  # noqa: BLE001
+            pass
+        return raw.decode("utf-8", errors="ignore")
+
+    @staticmethod
     def _should_use_curl(error: Exception) -> bool:
         value = f"{type(error).__name__}: {error}".lower()
         return any(marker in value for marker in (
@@ -118,4 +151,4 @@ class RequestsHttpClient:
         if completed.returncode != 0:
             message = completed.stderr.decode("utf-8", errors="ignore").strip()
             raise FetchError(f"curl exit {completed.returncode}: {message}")
-        return completed.stdout.decode("utf-8", errors="ignore")
+        return RequestsHttpClient._decode_bytes(completed.stdout)
