@@ -10,7 +10,14 @@ from wuxing.reporting.progress import format_progress
 from wuxing.reporting.success import format_success_file_lines, format_success_output_lines
 from wuxing.services.multi_period import MultiPeriodService
 
-from .common import DEFAULT_FAILURE_DIR, DEFAULT_SUCCESS_DIR, RANKING_EXCLUDED_NAMES, build_runtime, write_text
+from .common import (
+    DEFAULT_FAILURE_DIR,
+    DEFAULT_SUCCESS_DIR,
+    RANKING_EXCLUDED_NAMES,
+    build_runtime,
+    write_failure_text,
+    write_text,
+)
 
 
 def run_multi(
@@ -37,14 +44,17 @@ def run_multi(
         success_lines = format_success_output_lines(format_success_file_lines(period_results, RANKING_EXCLUDED_NAMES))
         failure_results = tuple(item for item in period_results if item.candidate is None)
         write_text(Path(output_dir) / f"{period}期-五行.txt", "\n".join(success_lines) + ("\n" if success_lines else ""))
-        write_text(Path(failure_dir) / f"{period}期-五行-失败.txt", format_failure_file_text(failure_results))
+        write_failure_text(Path(failure_dir) / f"{period}期-五行-失败.txt", format_failure_file_text(failure_results))
 
     summary_results = tuple(item for attempts in result.all_failures for item in attempts)
-    summary_path = write_text(
+    summary_path = write_failure_text(
         Path(failure_dir) / "多期-全部失败汇总.txt",
         format_failure_file_text(summary_results),
     )
-    print(f"多期全部失败汇总保存到 {summary_path}")
+    if summary_path is None:
+        print("多期无失败记录，未生成全部失败汇总")
+    else:
+        print(f"多期全部失败汇总保存到 {summary_path}")
     return result
 
 

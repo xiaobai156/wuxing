@@ -137,7 +137,7 @@ def _remove_records(
     path: Path,
     identity: tuple[str, str, str, int],
     expected: str,
-) -> str:
+) -> str | None:
     with exclusive_file_lock(path):
         raw, records = _read_snapshot(path)
         if _hash_bytes(raw) != expected:
@@ -151,11 +151,15 @@ def _remove_records(
         remaining = [
             record for record in records if _identity(record) not in removed
         ]
-        payload = "" if not remaining else "".join(
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not remaining:
+            # 失败清单清空后不留空壳文件：没有失败记录就删除该 TXT。
+            path.unlink(missing_ok=True)
+            return None
+        payload = "".join(
             "".join(lines[record["start"] : record["end"]])
             for record in remaining
         )
-        path.parent.mkdir(parents=True, exist_ok=True)
         _atomic_write(path, payload)
     return _hash_bytes(path.read_bytes())
 
@@ -168,7 +172,14 @@ def retry_failed(
     cache_path=None,
 ) -> int:
     path = Path(failure_path)
-    raw, records = _read_snapshot(path)
+    raw = path.read_bytes()
+    text = raw.decode("utf-8-sig")
+    if not text.strip():
+        # 失败 TXT 里没有任何失败记录：不留空壳文件，直接删除。
+        path.unlink(missing_ok=True)
+        print(f"失败 TXT 没有失败记录，已删除：{path.name}", flush=True)
+        return 0
+    records = _parse_text(text, path)
     expected = _hash_bytes(raw)
     runtime = build_runtime(config_path, cache_path)
     selected = resolve_sites(records, runtime)
@@ -223,9 +234,13 @@ def retry_failed(
             Path(output_dir) / f"{period}期-五行.txt",
             [format_success_line(result)],
         )
-        expected = _remove_records(path, identity, expected)
+        updated_hash = _remove_records(path, identity, expected)
         successful_records += sum(1 for item in records if _identity(item) == identity)
         print(f"{site.name} 已更新：{result.candidate.wuxing}", flush=True)
+        if updated_hash is None:
+            print(f"失败记录已全部清除，删除失败 TXT：{path.name}", flush=True)
+            break
+        expected = updated_hash
 
     remaining = len(records) - successful_records
     print(f"处理完成：成功 {successful_records}，保留失败 {remaining}")

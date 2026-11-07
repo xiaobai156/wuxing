@@ -16,6 +16,7 @@ from .common import (
     RANKING_EXCLUDED_NAMES,
     append_success_lines,
     build_runtime,
+    write_failure_text,
     write_text,
 )
 
@@ -53,7 +54,7 @@ def run_single(
         success_path = append_success_lines(success_target, success_lines)
     else:
         success_path = write_text(success_target, "\n".join(success_lines) + ("\n" if success_lines else ""))
-    failure_path = write_text(
+    failure_path = write_failure_text(
         Path(failure_dir) / f"{period}期-五行-失败.txt",
         format_failure_file_text(batch.failures),
     )
@@ -65,7 +66,10 @@ def run_single(
     elif cache_report.skipped_reason:
         print(f"缓存未更新：{cache_report.skipped_reason}")
     print(f"成功 {len(batch.successes)} 个，保存到 {success_path}")
-    print(f"失败 {len(batch.failures)} 个，保存到 {failure_path}")
+    if failure_path is None:
+        print("失败 0 个，无失败清单文件")
+    else:
+        print(f"失败 {len(batch.failures)} 个，保存到 {failure_path}")
     return batch, success_path, failure_path
 
 

@@ -74,6 +74,14 @@ def write_text(path: str | Path, text: str) -> Path:
     return target
 
 
+def write_failure_text(path: str | Path, text: str) -> Path | None:
+    """写失败清单；没有失败记录时不留空壳文件，删除旧文件并返回 None。"""
+    if text.strip():
+        return write_text(path, text)
+    Path(path).unlink(missing_ok=True)
+    return None
+
+
 def _success_site_name(line: str) -> str | None:
     parts = line.strip().split(maxsplit=1)
     if len(parts) != 2 or parts[0] not in VALID_WUXING:
