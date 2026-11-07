@@ -277,7 +277,7 @@ class PlaywrightBrowserBackend:
                         raise FetchError(_playwright_dependency_message(exc)) from exc
                     context = browser.new_context(
                         ignore_https_errors=True,
-                        viewport={"width": 1280, "height": 1800},
+                        viewport=self._viewport(site),
                     )
                     page = context.new_page()
                     page.goto(
@@ -292,7 +292,7 @@ class PlaywrightBrowserBackend:
                     body.wait_for(state="attached", timeout=timeout_ms)
                     if plan.popup_close_selector:
                         self._dismiss_popup(page, plan.popup_close_selector, timeout_ms)
-                    if site.url not in registry_data.BROWSER_NO_SCROLL_URLS:
+                    if self._should_scroll(site):
                         self._scroll(page)
                     if plan.tab_label_pattern:
                         self._click_unique_text(page, plan.tab_label_pattern, timeout_ms)
@@ -305,7 +305,7 @@ class PlaywrightBrowserBackend:
                         arg=period,
                         timeout=timeout_ms,
                     )
-                    if site.url not in registry_data.BROWSER_NO_SCROLL_URLS:
+                    if self._should_scroll(site):
                         self._scroll(page)
                     if is_article_detail_url(site.url):
                         record_scope = self._extract_record_scope(page, site, plan)
@@ -388,6 +388,29 @@ class PlaywrightBrowserBackend:
     @staticmethod
     def _wait_until(url: str) -> str:
         return "commit" if url in registry_data.BROWSER_NON_BLOCKING_LOAD_URLS else "load"
+
+    @staticmethod
+    def _viewport(site: SiteConfig) -> dict[str, int]:
+        """站点级视口。内容巨大的页面在大视口下会撑爆渲染进程，可按站点调小。"""
+        default = {"width": 1280, "height": 1800}
+        raw = (site.browser_viewport or "").strip().lower()
+        if not raw:
+            return default
+        try:
+            width_text, height_text = raw.replace(" ", "").split("x", 1)
+            width, height = int(width_text), int(height_text)
+        except (TypeError, ValueError):
+            return default
+        if width < 320 or height < 240:
+            return default
+        return {"width": width, "height": height}
+
+    @staticmethod
+    def _should_scroll(site: SiteConfig) -> bool:
+        """滚动用于触发懒加载；巨型页面滚到底会崩渲染进程，因此支持站点级关闭。"""
+        if site.browser_no_scroll:
+            return False
+        return site.url not in registry_data.BROWSER_NO_SCROLL_URLS
 
     @staticmethod
     def _is_hijack_gate(body_text: str) -> bool:

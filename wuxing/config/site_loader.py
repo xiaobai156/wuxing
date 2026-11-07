@@ -69,6 +69,8 @@ def _parse_site(
             click_first=bool(item.get("click_first", False)),
             browser_fallback=bool(item.get("browser_fallback", False)),
             browser_channel=str(item.get("browser_channel", "") or "").strip(),
+            browser_viewport=str(item.get("browser_viewport", "") or "").strip(),
+            browser_no_scroll=bool(item.get("browser_no_scroll", False)),
             enabled=bool(item.get("enabled", True)),
             config_version=int(item.get("config_version", 1)),
             tags=tags,
@@ -159,6 +161,10 @@ def build_versioned_site_payload(sites: Iterable[SiteConfig]) -> dict[str, objec
             item["browser_fallback"] = True
         if site.browser_channel:
             item["browser_channel"] = site.browser_channel
+        if site.browser_viewport:
+            item["browser_viewport"] = site.browser_viewport
+        if site.browser_no_scroll:
+            item["browser_no_scroll"] = True
         if site.tags:
             item["tags"] = list(site.tags)
         if site.archived:
