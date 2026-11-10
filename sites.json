@@ -234,7 +234,8 @@
     "name": "千言万语",
     "url": "https://gboqrz.d2cda-p5u2y-gwxmnf.work/topic/465446.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "archived": true
   },
   {
     "name": "损人利己",
@@ -416,7 +417,8 @@
     "url": "https://flrmed.u3l95-7ktwf-clwwtq.work:29455/article/admin/6a13fd7b741e3e91a04e59d1?url=sgnn",
     "api_url": "https://flrmed.u3l95-7ktwf-clwwtq.work:29455/api/proxy/manager-articles/6a13fd7b741e3e91a04e59d1",
     "name": "爆发钱庄",
-    "click_first": true
+    "click_first": true,
+    "archived": true
   },
   {
     "name": "重岩叠障",
