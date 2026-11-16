@@ -29,6 +29,7 @@ class SiteConfig:
     browser_channel: str = ""
     browser_viewport: str = ""
     browser_no_scroll: bool = False
+    browser_reveal_content: bool = False
     enabled: bool = True
     config_version: int = 1
     tags: tuple[str, ...] = ()

@@ -213,7 +213,7 @@ BROWSER_REQUIRED_TEXT_PATTERNS: dict[str, re.Pattern[str]] = {
         r"澳牛魔王[\s\S]{0,80}?作者\s*[:：]\s*眉飞色舞"
     ),
     "https://dvglkfp.mueyy-uiuci-vtqiod.work:16677/topic/205677.html": re.compile(
-        r"杀料榜[\s\S]{0,80}?作者\s*[:：]\s*27397[a-z][.]com"
+        r"杀料榜[\s\S]{0,80}?作者\s*[:：]\s*\d{4,6}[a-z]{0,2}[.]com"
     ),
     "https://swnrapsd.74wyl-mm601-cbpzhn.xyz:16677/": re.compile(
         r"(?:^|[\r\n])\s*\d{1,4}\s*期\s*稳杀\s*[（(]?\s*1\s*[)）]?\s*行",
@@ -345,4 +345,5 @@ CLICK_THROUGH_DETAIL_URLS = {
 CURRENT_CYCLE_FIRST_BLOCK_URLS = {
     "https://cxmdjok.8wtwc-boven-glylvt.xyz:16677/topic/437741.html",
     "https://v0uer.e2xs0-3tuvc-rsgtzx.xyz/topic/255638.html",
+    "https://uqhuqalo.vbcyr-idr4l-jouqgu.xyz:16633/topic/417591.html",
 }

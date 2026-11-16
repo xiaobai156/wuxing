@@ -307,6 +307,9 @@ class PlaywrightBrowserBackend:
                     )
                     if self._should_scroll(site):
                         self._scroll(page)
+                    # 滚动只能展开当前视口，滚过头后区块会被重新裁剪，故读完前统一展开。
+                    if site.browser_reveal_content:
+                        self._reveal_content_visibility(page)
                     if is_article_detail_url(site.url):
                         record_scope = self._extract_record_scope(page, site, plan)
                     else:
@@ -599,6 +602,34 @@ class PlaywrightBrowserBackend:
             "text": text,
             "html": element.evaluate("node => node.outerHTML || ''"),
         }
+
+    @staticmethod
+    def _reveal_content_visibility(page) -> None:
+        """展开 content-visibility:auto 的离屏区块。
+
+        这类站点用 content-visibility:auto 折叠长列表：只要区块不在视口内，
+        浏览器就跳过它的渲染，innerText 拿不到里面的答案行（滚动只能逐个展开
+        当前视口，滚过头会被重新裁剪）。这里把 auto 一律改为 visible 后重排，
+        让整页正文一次性可读。只放宽 auto，不动 display:none / visibility:hidden
+        等真正的隐藏内容，避免凭空造出页面本不展示的数据。
+        """
+        try:
+            page.evaluate(
+                """() => {
+                    for (const element of document.querySelectorAll('*')) {
+                        if (getComputedStyle(element).contentVisibility === 'auto') {
+                            element.style.setProperty('content-visibility', 'visible', 'important');
+                        }
+                    }
+                }"""
+            )
+        except Exception:
+            return
+        try:
+            page.wait_for_load_state("load", timeout=5000)
+        except Exception:
+            pass
+        time.sleep(0.5)
 
     @staticmethod
     def _scroll(page) -> None:

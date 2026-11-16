@@ -71,6 +71,7 @@ def _parse_site(
             browser_channel=str(item.get("browser_channel", "") or "").strip(),
             browser_viewport=str(item.get("browser_viewport", "") or "").strip(),
             browser_no_scroll=bool(item.get("browser_no_scroll", False)),
+            browser_reveal_content=bool(item.get("browser_reveal_content", False)),
             enabled=bool(item.get("enabled", True)),
             config_version=int(item.get("config_version", 1)),
             tags=tags,
@@ -165,6 +166,8 @@ def build_versioned_site_payload(sites: Iterable[SiteConfig]) -> dict[str, objec
             item["browser_viewport"] = site.browser_viewport
         if site.browser_no_scroll:
             item["browser_no_scroll"] = True
+        if site.browser_reveal_content:
+            item["browser_reveal_content"] = True
         if site.tags:
             item["tags"] = list(site.tags)
         if site.archived:
