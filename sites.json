@@ -3,9 +3,11 @@
     "name": "澳门创富网",
     "url": "https://nyekjhvz.kr4ar-cgeaj-aekfox.xyz:16677/",
     "click_first": false,
+    "browser_reveal_content": true,
     "region": "top",
     "browser_viewport": "1280x720",
-    "browser_no_scroll": true
+    "browser_no_scroll": true,
+    "config_version": 2
   },
   {
     "name": "澳门第二四不像",
@@ -86,7 +88,9 @@
     "name": "澳门精吊桶",
     "url": "https://yylxuru.en4hs-c1zt6-qzcdin.xyz:16677/",
     "click_first": false,
-    "region": "top"
+    "browser_reveal_content": true,
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "置身事外",
@@ -109,7 +113,8 @@
     "click_first": false,
     "region": "top",
     "browser_fallback": true,
-    "config_version": 3
+    "browser_reveal_content": true,
+    "config_version": 4
   },
   {
     "name": "低眉折腰",
@@ -214,7 +219,8 @@
     "name": "今非昔比",
     "url": "https://uqhuqalo.vbcyr-idr4l-jouqgu.xyz:16633/topic/417591.html",
     "click_first": false,
-    "region": "top"
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "雕虫小事",
@@ -510,8 +516,9 @@
     "name": "八级心动",
     "url": "https://cwdcaqzn.7mj0h-75k3q-cbuvqb.work:16677/#am",
     "click_first": false,
+    "browser_reveal_content": true,
     "region": "top",
-    "config_version": 2
+    "config_version": 3
   },
   {
     "name": "飞瀑流泉",
@@ -555,13 +562,17 @@
     "name": "春满乡村",
     "url": "https://zxliojf.83gjk-dnne7-kuyach.xyz:16677/",
     "click_first": false,
-    "region": "top"
+    "browser_reveal_content": true,
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "山水诗意",
     "url": "https://zxliojf.83gjk-dnne7-kuyach.xyz:16677/",
     "click_first": false,
-    "region": "bottom"
+    "browser_reveal_content": true,
+    "region": "bottom",
+    "config_version": 2
   },
   {
     "name": "帅气小子",
@@ -652,7 +663,9 @@
     "name": "一身仙气",
     "url": "https://myvvqq.30dok-2s9fd-bibfmg.work/",
     "click_first": false,
-    "region": "bottom"
+    "browser_reveal_content": true,
+    "region": "bottom",
+    "config_version": 2
   },
   {
     "name": "天青润薮",
