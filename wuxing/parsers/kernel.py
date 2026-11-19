@@ -151,6 +151,7 @@ CHUNMAN_SHANSHUI_URLS = {
 MANAGER_ARTICLE_SITE_RULES: dict[str, tuple[str, str]] = {
     "https://cahgjib.5blx9-z8506-ekiwxc.work:29488/article/admin/6a1449c2597e16d57eacb67a?url=lqz": ("彻头彻尾", "four"),
     "https://drxgkjt.uu1oc-eyjpt-uxyccu.xyz:29400/article/manager/6a33e71adfa16552b923d2b7?url=jyb": ("齐天大胜", "four"),
+    "https://fymxwnyg.ttmzc-muvns-udlfln.work:29455/article/admin/6a096d83291caff3edcb8bed?url=lhbd": ("百鸟朝凤", "single"),
     "https://hquomm.20t3f-0yztv-jiozun.xyz:29444/article/manager/6a4c273b57dc857ae1c07d6d?url=dgd": ("金馬快报", "single"),
     "https://hquomm.20t3f-0yztv-jiozun.xyz:29444/article/manager/6a329d0cb8abbf5af1a54e88?url=dgd": ("云容月貌", "single"),
     "https://hquomm.20t3f-0yztv-jiozun.xyz:29444/article/manager/6a329de9887a9b338e851fd5?url=dgd": ("投资创造", "four"),
