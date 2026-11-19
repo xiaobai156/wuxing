@@ -752,7 +752,8 @@
     "url": "https://fymxwnyg.ttmzc-muvns-udlfln.work:29455/article/admin/6a096d83291caff3edcb8bed?url=lhbd",
     "api_url": "https://fymxwnyg.ttmzc-muvns-udlfln.work:29455/api/proxy/manager-articles/6a096d83291caff3edcb8bed",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "config_version": 2
   },
   {
     "name": "震撼人心",
@@ -967,7 +968,8 @@
     "url": "https://drxgkjt.uu1oc-eyjpt-uxyccu.xyz:29400/article/manager/6a33e71adfa16552b923d2b7?url=jyb",
     "api_url": "https://drxgkjt.uu1oc-eyjpt-uxyccu.xyz:29400/api/proxy/manager-articles/6a33e71adfa16552b923d2b7",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "金馬快报",
@@ -1038,7 +1040,8 @@
     "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a397a60018539c611cb8977?url=jbx",
     "api_url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/api/proxy/manager-articles/6a397a60018539c611cb8977",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "财到来料",

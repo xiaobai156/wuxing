@@ -266,13 +266,13 @@ def test_head_dizzy_parser_stops_at_period_cycle_rollover(tmp_path):
 
 def test_manager_four_line_reverse_allows_trailing_separator():
     runtime = build_runtime(config_path="sites.json", cache_path="unused-cache.json")
-    site = next(site for site in runtime.sites if site.name == "齐天大胜")
+    site = next(site for site in runtime.sites if site.name == "云过天空")
     rule = runtime.registry.require(site.site_id)
     document = SourceDocument(
-        document_id="qitian-dasheng-243",
+        document_id="yun-guo-tian-kong-243",
         url=site.url,
         source_kind=SourceKind.API,
-        text="243期：【齐天大胜】④行中特【金.土.火.木.】开:00准",
+        text="243期：【云过天空】④行中特【金.土.火.木.】开:00准",
         order=0,
     )
 
