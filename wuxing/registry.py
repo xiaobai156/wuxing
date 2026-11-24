@@ -106,6 +106,19 @@ def _collapse_cross_document_exact_echoes(candidates: list[Candidate]) -> list[C
     return kept
 
 
+def _last_cycle_occurrence(candidates: list[Candidate]) -> list[Candidate]:
+    """整年循环页面里同一期会出现两次时，只保留最后一次出现。
+
+    这类页面从当期的上一轮开始，按 324..365..001..324 排满一整年，
+    开头那条是去年同期的记录，结尾那条才是本期。方向窗口按页面顺序取尾部，
+    若两处都算候选就会把本期挤出窗口；故同一期只留后出现的一条。
+    """
+    latest: dict[str, Candidate] = {}
+    for candidate in sorted(candidates, key=lambda item: item.order):
+        latest[candidate.period] = candidate
+    return sorted(latest.values(), key=lambda item: item.order)
+
+
 def _first_contiguous_cycle_block(candidates: list[Candidate]) -> list[Candidate]:
     """只保留页面开头那段期号连续递减的区块。
 
@@ -138,6 +151,8 @@ def _make_parser(site: SiteConfig) -> Parser:
             converted = _collapse_cross_document_exact_echoes(converted)
         if site.url in registry_data.CURRENT_CYCLE_FIRST_BLOCK_URLS:
             converted = _first_contiguous_cycle_block(converted)
+        if site.url in registry_data.CURRENT_CYCLE_LAST_OCCURRENCE_URLS:
+            converted = _last_cycle_occurrence(converted)
         return tuple(converted)
 
     return parse

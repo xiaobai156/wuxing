@@ -347,3 +347,9 @@ CURRENT_CYCLE_FIRST_BLOCK_URLS = {
     "https://v0uer.e2xs0-3tuvc-rsgtzx.xyz/topic/255638.html",
     "https://uqhuqalo.vbcyr-idr4l-jouqgu.xyz:16633/topic/417591.html",
 }
+
+# 这些页面把一整年排一遍：当期区块在前，又从 001 递增回本期，同一期出现两次；
+# 开头那次是去年同期的旧记录。同一期只保留后出现的一条，避免方向窗口判空。
+CURRENT_CYCLE_LAST_OCCURRENCE_URLS = {
+    "https://buzfwpox.pwp8o-vfhi5-xmrytn.xyz:16677/topic/454773.html",
+}
