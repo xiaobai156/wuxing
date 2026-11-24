@@ -120,7 +120,8 @@
     "name": "低眉折腰",
     "url": "https://fszatrw.xhwqs-gffny-zzdfsq.work:16677/topic/678240.html",
     "click_first": false,
-    "region": "bottom"
+    "region": "top",
+    "config_version": 2
   },
   {
     "name": "精牌谜语",
@@ -530,7 +531,8 @@
     "name": "满面春风",
     "url": "https://buzfwpox.pwp8o-vfhi5-xmrytn.xyz:16677/topic/454773.html",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "config_version": 2
   },
   {
     "name": "大地主",
@@ -745,7 +747,8 @@
     "url": "https://plwyrcj.4ai8j-p62x5-pnsukp.work:29411/article/admin/6a1298f52e4e893ff42c8696?url=gjp",
     "api_url": "https://plwyrcj.4ai8j-p62x5-pnsukp.work:29411/api/proxy/manager-articles/6a1298f52e4e893ff42c8696",
     "click_first": true,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "百鸟朝凤",
