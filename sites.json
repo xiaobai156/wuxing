@@ -1051,7 +1051,8 @@
     "url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/article/manager/6a451a5157dc857ae1be5256?url=jbx",
     "api_url": "https://xjsjbkv.b3e4x-wxhjo-lbdbjg.xyz:29477/api/proxy/manager-articles/6a451a5157dc857ae1be5256",
     "click_first": false,
-    "region": "bottom"
+    "region": "bottom",
+    "archived": true
   },
   {
     "name": "兰韵犹芳",
